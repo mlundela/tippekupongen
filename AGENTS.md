@@ -13,6 +13,7 @@ One phone-first Norwegian page per Norsk Tipping coupon (`SATURDAY`, `SUNDAY`, `
    - `_coupon`: `headline`, `intro` (paragraphs): where the public and the odds disagree most.
    - Per match, keyed by NT `gameEngineEventId`: `headline`, `take` (two paragraphs), `signal` (`[{stat, text}]`, shown as «Tallene som støtter oddsen»: data that *supports the odds*, i.e. why the favourite is favourite or why the odds see a close match), `noise` (`[{stat, text}]`, shown as «Dette kan snu kampen»: what could *turn the match the other way*, such as luck that may run out, absences, fatigue or a strength the odds underrate), `crowd` (how the public's split differs from the odds).
    - Separate quality from luck with `underlying` in `facts.json`: xG vs goals, shots on target for and against, conversion, save %, PDO (1,00 is neutral), plus `restDays` and `table.withdrawnPoints`. Compare with league averages (≈0,34 goals per shot on target).
+   - Naming a player in the text gives them a key-player card with league stats from `facts.json` `players` (`render._mentioned()`). Use the full name on first mention; a bare surname only matches when no other player on the two teams shares it.
    - The tendens is computed by `render.tendens()` from `facts.json` `odds.implied` against the public's split; don't write one.
    - Every number must come from `facts.json`. Check each claim against it before rendering, and re-run `facts` first if tables may have moved (Friday matches).
 3. `python3 -m altomfotball render DAY` writes `site/<…>.html`.

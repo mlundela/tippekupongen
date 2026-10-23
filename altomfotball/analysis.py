@@ -293,6 +293,7 @@ def team_facts(team_id, kickoff, match_stage):
     rated = [p for p in players.values() if p["avgRating"] and len(p["ratings"]) >= 5]
     facts["bestRated"] = [_public(p) for p in sorted(rated, key=lambda p: p["avgRatingLast5"], reverse=True)[:3]]
     facts["absences"] = _absences(players, played, league, kickoff, match_stage, team_id)
+    facts["players"] = _player_cards(players, facts["absences"], team_id, facts["overall"]["gf"])
     return facts
 
 
@@ -321,6 +322,26 @@ def _underlying(stats, overall):
 def _public(p):
     return {k: p[k] for k in ("id", "name", "apps", "starts", "minutes", "goals", "penalties", "assists",
                               "last5Goals", "last5Assists", "yellows", "reds", "avgRating", "avgRatingLast5")}
+
+
+def _player_cards(players, absences, team_id, team_goals):
+    """League stats for every player who has played, for the key-player boxes on the page."""
+    squad = {p["id"]: p for p in nifs.get(f"teams/{team_id}/persons/", max_age=6 * 3600)}
+    severity = ("suspended", "missing", "returning", "card_risk")
+    status = {}
+    for a in sorted(absences, key=lambda a: severity.index(a["kind"])):
+        status.setdefault(a["id"], {"kind": a["kind"], "reason": a["reason"]})
+    cards = []
+    for p in players.values():
+        if not p["apps"] and p["id"] not in status:
+            continue
+        s = squad.get(p["id"]) or {}
+        cards.append({**_public(p),
+                      "position": (s.get("position") or {}).get("position"),
+                      "shirtNumber": s.get("shirtNumber"),
+                      "goalShare": round(p["goals"] / team_goals, 2) if team_goals else None,
+                      "status": status.get(p["id"])})
+    return sorted(cards, key=lambda c: (c["goals"] + c["assists"], c["minutes"]), reverse=True)
 
 
 def _absences(players, played, league, kickoff, match_stage, team_id):

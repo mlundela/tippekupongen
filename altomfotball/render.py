@@ -6,6 +6,7 @@ from Oddsen's margin-free odds against the public's split.
 """
 
 import json
+import re
 from datetime import datetime
 from html import escape
 from pathlib import Path
@@ -15,6 +16,8 @@ MONTHS = ["januar", "februar", "mars", "april", "mai", "juni", "juli", "august",
           "september", "oktober", "november", "desember"]
 SIGNS = (("home", "H"), ("draw", "U"), ("away", "B"))
 KIND = ["", "spik", "halvgardering", "helgardering"]
+POSITIONS = {"Keeper": "Keeper", "Defender": "Forsvar", "Midfielder": "Midtbane", "Attacker": "Angrep"}
+STATUS = {"suspended": "Trolig utestengt", "missing": "Ute av troppen", "returning": "Tilbake", "card_risk": "Karantenefare"}
 VALUE_GAP = 5  # percentage points the odds sit above the public before a sign counts as undervalued
 SPIKE_AT = 55  # odds-implied % for a single sign
 KEEP_AT = 45   # odds-implied % a sign needs to stay in a two-sign hedge regardless of the public
@@ -121,6 +124,24 @@ article.match { background: var(--slip); border: 1px solid var(--rule); border-r
 .mark { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--pen); color: var(--pen); display: grid; place-items: center; font: 700 13px/1 var(--ui) }
 .odds { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums }
 
+/* Key players: one card per player named in the analysis */
+.players h3 { margin: 0 0 8px; font: 700 11px/1 var(--ui); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
+.p-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 10px }
+.player { border: 1px solid var(--rule); border-radius: 6px; padding: 12px; display: grid; gap: 10px; background: var(--paper); min-width: 0 }
+.p-head { display: grid; gap: 2px }
+.p-name { font: 700 16px/1.2 var(--display); font-stretch: 90% }
+.p-meta { font-size: 12.5px; color: var(--muted) }
+.p-status { justify-self: start; margin-top: 4px; font: 600 11px/1 var(--ui); letter-spacing: .04em; padding: 4px 6px; border-radius: 3px; border: 1px solid currentColor }
+.p-status.s-suspended, .p-status.s-missing { color: var(--warn) }
+.p-status.s-returning { color: var(--pitch) }
+.p-status.s-card_risk { color: var(--muted) }
+.p-why { font-size: 12.5px; color: var(--muted); margin: 0 }
+.p-stats { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 6px }
+.p-stats div { display: grid; gap: 1px; min-width: 0 }
+.p-stats dt { font-size: 11px; color: var(--muted); line-height: 1.2 }
+.p-stats dd { margin: 0; font: 700 17px/1.2 var(--ui); font-variant-numeric: tabular-nums }
+.p-stats dd small { font: 400 11.5px/1 var(--ui); color: var(--muted) }
+
 .empty { color: var(--muted); font-size: 14px; margin: 0 }
 footer { font-size: 12.5px; color: var(--muted); display: grid; gap: 8px; max-width: 65ch }
 footer dl { margin: 0; display: grid; gap: 4px }
@@ -165,6 +186,64 @@ def _reads(css, title, items):
     return f'<section class="read {css}"><h3>{title}</h3><ul>{lis}</ul></section>'
 
 
+def _dec(x, digits=1):
+    return f"{x:.{digits}f}".replace(".", ",")
+
+
+def _mentioned(f, a):
+    """Players from either team named in the match text, in order of first mention.
+    A bare surname counts only when no other player on the two teams shares it."""
+    parts = [a["headline"], *a["take"], a.get("crowd", "")]
+    parts += [f'{i["stat"]} {i["text"]}' for i in (a.get("signal") or []) + (a.get("noise") or [])]
+    text = " ".join(parts)
+    pool = [(side, p) for side in ("home", "away") for p in f[side].get("players") or []]
+    surnames = {}
+    for _, p in pool:
+        surnames[p["name"].split()[-1]] = surnames.get(p["name"].split()[-1], 0) + 1
+    found = {}
+    for side, p in pool:
+        last = p["name"].split()[-1]
+        needles = [p["name"]] + ([last] if len(last) >= 4 and surnames[last] == 1 else [])
+        hits = [m.start() for n in needles for m in re.finditer(rf"(?<!\w){re.escape(n)}(?!\w)", text)]
+        if hits and p["id"] not in found:
+            found[p["id"]] = (min(hits), side, p)
+    return [(side, p) for _, side, p in sorted(found.values(), key=lambda t: t[0])]
+
+
+def _player_card(team, p):
+    meta = [team["name"]] + ([POSITIONS.get(p["position"])] if POSITIONS.get(p["position"]) else [])
+    meta += [f'nr. {p["shirtNumber"]}'] if p.get("shirtNumber") else []
+    stats = []
+    if p["goals"] or p["assists"]:
+        pens = f' <small>({p["penalties"]} str.)</small>' if p["penalties"] else ""
+        stats += [("Mål", f'{p["goals"]}{pens}'), ("Målgivende", p["assists"]),
+                  ("Siste 5", f'{p["last5Goals"]}+{p["last5Assists"]} <small>mål+mg</small>')]
+    stats += [("Kamper", f'{p["apps"]} <small>({p["starts"]} fra start)</small>'), ("Minutter", p["minutes"])]
+    if p["goals"] and p.get("goalShare") is not None:
+        stats.append(("Andel av lagets mål", f'{round(100 * p["goalShare"])} %'))
+    if p["yellows"] or p["reds"]:
+        stats.append(("Kort", f'{p["yellows"]} gule' + (f', {p["reds"]} rødt' if p["reds"] else "")))
+    if p.get("avgRatingLast5"):
+        stats.append(("Karakter siste 5", _dec(p["avgRatingLast5"])))
+    tiles = "".join(f"<div><dt>{escape(k)}</dt><dd>{v}</dd></div>" for k, v in stats)
+    st = p.get("status")
+    badge = f'<span class="p-status s-{st["kind"]}">{STATUS[st["kind"]]}</span>' if st else ""
+    why = f'<p class="p-why">{escape(st["reason"][:1].upper() + st["reason"][1:])}.</p>' if st else ""
+    league = escape(team["league"]["name"]) if team.get("league") else "serien"
+    return (f'<div class="player"><div class="p-head"><span class="p-name">{escape(p["name"])}</span>'
+            f'<span class="p-meta">{escape(" · ".join(meta))}</span>{badge}</div>'
+            f'<dl class="p-stats" aria-label="Tall fra {league}">{tiles}</dl>{why}</div>')
+
+
+def _players(f, a):
+    named = _mentioned(f, a)
+    if not named:
+        return ""
+    league = f["home"].get("league", {}).get("name", "serien")
+    cards = "".join(_player_card(f[side], p) for side, p in named)
+    return f'<section class="players"><h3>Nøkkelspillere · {escape(league)}</h3><div class="p-grid">{cards}</div></section>'
+
+
 def _match(f, a, idx):
     h, aw = f["home"]["name"], f["away"]["name"]
     tips = f["nt"]["tips"]["fullTime"]
@@ -200,6 +279,7 @@ def _match(f, a, idx):
     {_reads("signal", "Tallene som støtter oddsen", a.get("signal"))}
     {_reads("noise", "Dette kan snu kampen", a.get("noise"))}
   </div>
+  {_players(f, a)}
   <section class="crowd">
     <h3>Folket mot oddsen</h3>
     {dist}

@@ -2,7 +2,7 @@
  "_coupon": {
   "headline": "Der folket og oddsen er uenige",
   "intro": [
-   "Oddsen viser hva bookmakeren mener, og folkets fordeling viser hva tipperne tror. På denne kupongen er de mest uenige om Stoke (60 % hos folket, 39 i oddsen), Blackburn (49 mot 34), Arsenal (75 mot 65) og Chelsea (61 mot 52).",
+   "Oddsen viser hva bookmakeren mener, og folkets fordeling viser hva tipperne tror. På denne kupongen er de mest uenige om Stoke (60 % hos folket, 39 i oddsen), Blackburn (49 mot 34), Arsenal (75 mot 64) og Chelsea (61 mot 52).",
    "For hver kamp viser vi først tallene som støtter oddsen, og deretter det som kan snu kampen i en annen retning. Tendensen følger oddsen: spik når favoritten har minst 55 % sjanse, ellers halvgardering med tegnene folket undervurderer mest."
   ]
  },
@@ -59,7 +59,7 @@
  "2416582": {
   "headline": "Arsenal er rett favoritt, men folket er for sikre",
   "take": [
-   "Oddsen gir Arsenal 65 %, folket 75. Tallene støtter favorittstatusen: Arsenal har bare sluppet til sjanser for 5,2 xG på sju kamper, og har vunnet alle tre hjemmekampene.",
+   "Oddsen gir Arsenal 64 %, folket 75. Tallene støtter favorittstatusen: Arsenal har bare sluppet til sjanser for 5,2 xG på sju kamper, og har vunnet alle tre hjemmekampene.",
    "Avviket mellom folket og oddsen handler trolig om timeplanen. Arsenal spilte 2–2 mot Bayern i München onsdag og har tre dager hvile. Everton er vanskelige å bryte ned, med fire uavgjort på sju kamper."
   ],
   "signal": [
@@ -71,7 +71,7 @@
    {"stat": "Evertons keeper", "text": "Han redder 77 % av skuddene på mål, mot ligasnittet på 66 %. Holder han det nivået, kan Everton ta et poeng."},
    {"stat": "Everton ubeseiret borte, 0-3-0", "text": "Tre uavgjort på tre bortekamper. Utvalget er lite, men spillestilen gir uavgjort."}
   ],
-  "crowd": "Folket gir Arsenal 75 %, oddsen 65. Uavgjort får 15 % hos folket mot oddsens 22."
+  "crowd": "Folket gir Arsenal 75 %, oddsen 64. Uavgjort får 15 % hos folket mot oddsens 22."
  },
  "2416583": {
   "headline": "Fulham er favoritt borte, og sjansetallene gir oddsen rett",
@@ -187,7 +187,7 @@
    {"stat": "Southamptons keeper", "text": "Han redder 75 % mot ligasnittet på 65 %. Holder han nivået, kan Southampton ta poeng."},
    {"stat": "Cyle Larin", "text": "Sju av Southamptons 21 seriemål. Han trenger få sjanser."}
   ],
-  "crowd": "Folket og oddsen er enige om West Ham (57 %). Folket undervurderer borteseier litt, med 17 % mot oddsens 21."
+  "crowd": "Folket og oddsen er enige om West Ham (57 %). Folket undervurderer borteseier litt, med 18 % mot oddsens 21."
  },
  "2416591": {
   "headline": "Wolves er stor favoritt, og Watford har lite å komme med borte",
