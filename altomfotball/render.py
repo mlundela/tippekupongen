@@ -98,7 +98,6 @@ article.match { background: var(--slip); border: 1px solid var(--rule); border-r
 .reads { display: grid; gap: 14px }
 .read h3, .crowd h3 { margin: 0 0 8px; font: 700 11px/1 var(--ui); letter-spacing: .12em; text-transform: uppercase }
 .read.signal h3 { color: var(--pitch) } .read.noise h3 { color: var(--warn) } .crowd h3 { color: var(--pen) }
-.read h3 small { display: block; margin-top: 4px; font: 400 13px/1.3 var(--ui); letter-spacing: 0; text-transform: none; color: var(--muted) }
 .read ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px }
 .read li { display: grid; gap: 2px; padding-left: 12px; border-left: 2px solid var(--rule) }
 .read.signal li { border-left-color: var(--pitch) } .read.noise li { border-left-color: var(--warn) }
@@ -159,11 +158,11 @@ def _dist_row(label, dist, css="", crowd=None):
     return f'<div class="row-wrap {css}" style="display:contents"><span class="lbl">{label}</span>{"".join(cells)}</div>'
 
 
-def _reads(css, title, subtitle, items):
+def _reads(css, title, items):
     if not items:
         return ""
     lis = "".join(f'<li><span class="stat">{escape(i["stat"])}</span><span class="why">{escape(i["text"])}</span></li>' for i in items)
-    return f'<section class="read {css}"><h3>{title}<small>{subtitle}</small></h3><ul>{lis}</ul></section>'
+    return f'<section class="read {css}"><h3>{title}</h3><ul>{lis}</ul></section>'
 
 
 def _match(f, a, idx):
@@ -185,7 +184,7 @@ def _match(f, a, idx):
     if odds:
         dist = (f'<div class="dist" role="table" aria-label="Fordeling H, U, B i prosent">'
                 f'<span></span><span class="hd">H</span><span class="hd">U</span><span class="hd">B</span>'
-                f'{_dist_row("Folket", tips["peoples"])}{_dist_row("Ekspertene", tips["expert"])}'
+                f'{_dist_row("Folket", tips["peoples"])}'
                 f'{_dist_row("Oddsen", odds["implied"], "us", tips["peoples"])}</div>')
         o = odds["odds"]
         odds_line = (f'<span class="odds">Odds {o["home"]:.2f} · {o["draw"]:.2f} · {o["away"]:.2f}'.replace(".", ",")
@@ -198,8 +197,8 @@ def _match(f, a, idx):
   <p class="headline">{escape(a["headline"])}</p>
   <div class="take">{take}</div>
   <div class="reads">
-    {_reads("signal", "Det som teller", "Tallene som støtter oddsen", a.get("signal"))}
-    {_reads("noise", "Det som lurer", "Dette kan snu kampen", a.get("noise"))}
+    {_reads("signal", "Tallene som støtter oddsen", a.get("signal"))}
+    {_reads("noise", "Dette kan snu kampen", a.get("noise"))}
   </div>
   <section class="crowd">
     <h3>Folket mot oddsen</h3>
@@ -273,7 +272,7 @@ def render(coupon_dir, site_dir, fragment_path=None):
       <div><dt>Oddsen</dt> <dd>oddsen fra Norsk Tippings Oddsen, regnet om til sannsynlighet uten bookmakerens margin. Innrammede tall er tegn der oddsen ligger minst {VALUE_GAP} prosentpoeng over folkets fordeling.</dd></div>
       <div><dt>Tendens</dt> <dd>spik når oddsen gir favoritten minst {SPIKE_AT} %. Ellers halvgardering med tegn over {KEEP_AT} % og tegnene folket undervurderer mest i forhold til oddsen.</dd></div>
     </dl>
-    <span>Statistikk fra NIFS, folkets og ekspertenes fordeling og odds fra Norsk Tipping. Hentet {datetime.now().strftime("%d.%m.%Y %H.%M")}. Utestengelser er beregnet fra kort, ikke offisielle lister.</span>
+    <span>Statistikk fra NIFS, folkets fordeling og odds fra Norsk Tipping. Hentet {datetime.now().strftime("%d.%m.%Y %H.%M")}. Utestengelser er beregnet fra kort, ikke offisielle lister.</span>
     <span>18-årsgrense for pengespill. Spill ansvarlig.</span>
   </footer>
 </div>"""
