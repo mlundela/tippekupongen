@@ -229,6 +229,21 @@ def _dec(x, digits=1):
     return f"{x:.{digits}f}".replace(".", ",")
 
 
+KEY_START_SHARE = 0.5          # started at least half the team's league matches
+KEY_CONTRIBUTION_SHARE = 0.15  # or involved (goals + assists) in at least this share of the team's league goals
+KEY_MIN_CONTRIBUTIONS = 3
+
+
+def is_key_player(p, team):
+    """A regular starter, or a player whose goals and assists carry a real share of the team's scoring.
+    Squad players named in the text (long-term injured, bit-part) get no card."""
+    played = (team.get("overall") or {}).get("p") or 0
+    goals = (team.get("overall") or {}).get("gf") or 0
+    contributions = p["goals"] + p["assists"]
+    return bool(played and p["starts"] >= KEY_START_SHARE * played) or (
+        contributions >= KEY_MIN_CONTRIBUTIONS and goals and contributions >= KEY_CONTRIBUTION_SHARE * goals)
+
+
 def _mentioned(f, a):
     """Players from either team named in the match text, in order of first mention.
     A bare surname counts only when no other player on the two teams shares it."""
@@ -275,7 +290,7 @@ def _player_card(team, p):
 
 
 def _players(f, a):
-    named = _mentioned(f, a)
+    named = [(side, p) for side, p in _mentioned(f, a) if is_key_player(p, f[side])]
     if not named:
         return ""
     league = f["home"].get("league", {}).get("name", "serien")
