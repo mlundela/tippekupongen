@@ -3,7 +3,7 @@
   "headline": "Der folket og oddsen er uenige",
   "intro": [
    "Oddsen viser hva bookmakeren mener, og folkets fordeling viser hva tipperne tror. På denne kupongen er de mest uenige om Stoke (60 % hos folket, 39 i oddsen), Blackburn (49 mot 34), Arsenal (75 mot 64) og Chelsea (61 mot 52).",
-   "For hver kamp viser vi først tallene som støtter oddsen, og deretter det som kan snu kampen i en annen retning. Tendensen følger oddsen: spik når favoritten har minst 55 % sjanse, ellers halvgardering med tegnene folket undervurderer mest."
+   "For hver kamp viser vi først tallene som støtter oddsen, og deretter det som kan snu kampen i en annen retning. Tendensen følger oddsen: spik når favoritten har minst 55 % sjanse, ellers halvgardering med tegnene folket undervurderer mest. Systemet har minst tre bomber, tegn folket gir under 20 %, der oddsen ligger høyere enn folket."
   ]
  },
  "2416743": {
@@ -71,7 +71,7 @@
    {"stat": "Evertons keeper", "text": "Han redder 77 % av skuddene på mål, mot ligasnittet på 66 %. Holder han det nivået, kan Everton ta et poeng."},
    {"stat": "Everton ubeseiret borte, 0-3-0", "text": "Tre uavgjort på tre bortekamper. Utvalget er lite, men spillestilen gir uavgjort."}
   ],
-  "crowd": "Folket gir Arsenal 75 %, oddsen 64. Uavgjort får 15 % hos folket mot oddsens 22."
+  "crowd": "Folket gir Arsenal 75 %, oddsen 64. Uavgjort får 15 % hos folket mot oddsens 22. Det er kupongens største undervurdering av et bombetegn, og uavgjort er derfor med som bombe."
  },
  "2416583": {
   "headline": "Fulham er favoritt borte, og sjansetallene gir oddsen rett",

@@ -37,6 +37,43 @@ def tendens(implied, peoples):
         picks = (picks + rest)[:2]
     return "".join(s for k, s in SIGNS if k in picks)
 
+
+BOMB_BELOW = 20  # a sign the public gives under this % is a «bombe»
+MIN_BOMBS = 3
+
+
+def is_bomb(sign, peoples):
+    key = next(k for k, s in SIGNS if s == sign)
+    return peoples[key] < BOMB_BELOW
+
+
+def system(matches):
+    """{eventId: signs} for the whole coupon: tendens() per match, then at least MIN_BOMBS bombs at the
+    same row count. Each bomb goes on a spike, where the odds sit furthest above the public (implied /
+    public), and the half-guard whose weaker sign the odds rate lowest becomes a spike in return."""
+    data = {str(m["nt"]["eventId"]): (m["odds"]["implied"], m["nt"]["tips"]["fullTime"]["peoples"])
+            for m in matches if m.get("odds")}
+    picks = {i: tendens(*d) for i, d in data.items()}
+    key = {s: k for k, s in SIGNS}
+
+    def bombs(i):
+        return [s for s in picks[i] if is_bomb(s, data[i][1])]
+
+    while sum(len(bombs(i)) for i in picks) < MIN_BOMBS:
+        candidates = [(imp[key[s]] / max(peo[key[s]], 1), imp[key[s]], i, s)
+                      for i, (imp, peo) in data.items() if len(picks[i]) == 1
+                      for _, s in SIGNS if s not in picks[i] and is_bomb(s, peo)]
+        doubles = [(min(data[i][0][key[s]] for s in picks[i]), i) for i in picks
+                   if len(picks[i]) == 2 and not bombs(i)]
+        if not candidates or not doubles:
+            break
+        _, _, i, s = max(candidates)
+        picks[i] = "".join(x for _, x in SIGNS if x in picks[i] + s)
+        _, j = min(doubles)
+        weaker = min(picks[j], key=lambda x: data[j][0][key[x]])
+        picks[j] = picks[j].replace(weaker, "")
+    return picks
+
 CSS = """
 /* Layout: one column. A printed coupon slip up top; each match is a slip with the take first and the crowd comparison last. */
 :root {
@@ -79,11 +116,11 @@ h1 { margin: 0; font: 800 clamp(34px, 9vw, 48px)/.95 var(--display); font-stretc
 .slip-row:focus-visible { outline: 2px solid var(--pen); outline-offset: -2px }
 .slip-no { font: 700 15px/1 var(--display); color: var(--muted) }
 .slip-name { font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
-.box { justify-self: center; width: 26px; height: 26px; border: 1.5px solid var(--rule); border-radius: 4px;
+.box { justify-self: center; width: 30px; height: 26px; border: 1.5px solid var(--rule); border-radius: 4px; font-variant-numeric: tabular-nums;
   display: grid; place-items: center; font: 700 12px/1 var(--ui); color: var(--muted) }
-.box.on { border-color: var(--pen); background: var(--pen-soft); color: var(--pen) }
-.box.on::after { content: "✕"; font-size: 15px }
-.box.on span { display: none }
+.box.on { border-color: var(--pen); background: var(--pen-soft); color: var(--pen); border-width: 2px }
+.box.bomb { border-color: var(--warn); color: var(--warn); background: transparent; border-style: dashed }
+.mark.bomb { border-color: var(--warn); color: var(--warn); border-style: dashed }
 .legend { font-size: 13.5px; color: var(--muted); margin: 0 }
 .legend b { color: var(--ink) }
 
@@ -244,7 +281,7 @@ def _players(f, a):
     return f'<section class="players"><h3>Nøkkelspillere · {escape(league)}</h3><div class="p-grid">{cards}</div></section>'
 
 
-def _match(f, a, idx):
+def _match(f, a, idx, t):
     h, aw = f["home"]["name"], f["away"]["name"]
     tips = f["nt"]["tips"]["fullTime"]
     round_txt = f', {f["round"]}. runde' if f.get("round") else ""
@@ -268,9 +305,10 @@ def _match(f, a, idx):
         o = odds["odds"]
         odds_line = (f'<span class="odds">Odds {o["home"]:.2f} · {o["draw"]:.2f} · {o["away"]:.2f}'.replace(".", ",")
                      + f' (margin {str(odds["margin"]).replace(".", ",")} %)</span>')
-        t = tendens(odds["implied"], tips["peoples"])
-        marks = "".join(f'<span class="mark">{c}</span>' for c in t)
-        verdict = f'<div class="verdict"><span>Tendens</span><span class="marks">{marks}</span><span>{KIND[len(t)]}</span></div>'
+        marks = "".join(f'<span class="mark{" bomb" if is_bomb(c, tips["peoples"]) else ""}">{c}</span>' for c in t)
+        n_bombs = sum(is_bomb(c, tips["peoples"]) for c in t)
+        bomb_txt = f'<span>med bombe (folket under {BOMB_BELOW} %)</span>' if n_bombs else ""
+        verdict = f'<div class="verdict"><span>Tendens</span><span class="marks">{marks}</span><span>{KIND[len(t)]}</span>{bomb_txt}</div>'
     return f"""
 <article class="match" id="kamp-{idx}">{head}
   <p class="headline">{escape(a["headline"])}</p>
@@ -299,17 +337,21 @@ def render(coupon_dir, site_dir, fragment_path=None):
     first = min(m["kickoff"] for m in matches)
     per_match = {str(m["nt"]["eventId"]): analysis.get(str(m["nt"]["eventId"])) for m in matches}
 
-    picks = {str(m["nt"]["eventId"]): tendens(m["odds"]["implied"], m["nt"]["tips"]["fullTime"]["peoples"]) if m.get("odds") else ""
-             for m in matches}
+    picks = {str(m["nt"]["eventId"]): "" for m in matches} | system(matches)
     rows = []
     for m in matches:
         t = picks[str(m["nt"]["eventId"])]
-        boxes = "".join(f'<span class="box{" on" if s in t else ""}"><span>{s}</span></span>' for _, s in SIGNS)
+        peoples = m["nt"]["tips"]["fullTime"]["peoples"]
+        boxes = "".join(
+            f'<span class="box{" on" if s in t else ""}{" bomb" if s in t and is_bomb(s, peoples) else ""}"'
+            f' aria-label="{s}: folket {peoples[k]} %{", valgt" if s in t else ""}">{peoples[k]}</span>' for k, s in SIGNS)
         rows.append(f'<a class="slip-row" href="#kamp-{m["nt"]["line"]}"><span class="slip-no num">{m["nt"]["line"]}</span>'
                     f'<span class="slip-name">{escape(m["home"]["name"])} – {escape(m["away"]["name"])}</span>{boxes}</a>')
 
+    chosen = picks
     picks = list(picks.values())
-    system = '<p class="legend">Trykk på en kamp for vurderingen.</p>'
+    n_bombs = sum(is_bomb(s, m["nt"]["tips"]["fullTime"]["peoples"]) for m in matches for s in chosen[str(m["nt"]["eventId"])])
+    legend = '<p class="legend">Trykk på en kamp for vurderingen.</p>'
     if all(picks):
         n_rows = 1
         for p in picks:
@@ -317,7 +359,8 @@ def render(coupon_dir, site_dir, fragment_path=None):
         counts = {k: sum(len(p) == k for p in picks) for k in (1, 2, 3)}
         names = {1: ("spik", "spiker"), 2: ("halvgardering", "halvgarderinger"), 3: ("helgardering", "helgarderinger")}
         parts = [f"{n} {names[k][n != 1]}" for k, n in counts.items() if n]
-        system = (f'<p class="legend">Kryssene er tendensen fra oddsen: {", ".join(parts)}. Som system blir det '
+        legend = (f'<p class="legend">Tallene er folkets prosent. Markerte ruter er tendensen fra oddsen: {", ".join(parts)}, '
+                  f'med <b class="num">{n_bombs}</b> bomber (stiplet, tegn folket gir under {BOMB_BELOW} %). Som system blir det '
                   f'<b class="num">{n_rows}</b> rekker ({_nok(n_rows)} med 1 kr per rekke). Trykk på en kamp for vurderingen.</p>')
 
     cp = analysis.get("_coupon") or {}
@@ -343,14 +386,15 @@ def render(coupon_dir, site_dir, fragment_path=None):
     <div class="slip-head"><span>NR</span><span>KAMP</span><span>H</span><span>U</span><span>B</span></div>
     {"".join(rows)}
   </nav>
-  {system}
-  {"".join(_match(m, per_match[str(m["nt"]["eventId"])], m["nt"]["line"]) for m in matches)}
+  {legend}
+  {"".join(_match(m, per_match[str(m["nt"]["eventId"])], m["nt"]["line"], chosen[str(m["nt"]["eventId"])]) for m in matches)}
   <footer>
     <dl>
       <div><dt>xG</dt> <dd>forventede mål: hvor mange mål sjansene et lag skaper, er verdt i snitt.</dd></div>
       <div><dt>PDO</dt> <dd>andel skudd på mål som blir mål, pluss andel motstanderskudd på mål som reddes. 1,00 er normalt. Langt over eller under pleier å jevne seg ut.</dd></div>
       <div><dt>Oddsen</dt> <dd>oddsen fra Norsk Tippings Oddsen, regnet om til sannsynlighet uten bookmakerens margin. Innrammede tall er tegn der oddsen ligger minst {VALUE_GAP} prosentpoeng over folkets fordeling.</dd></div>
       <div><dt>Tendens</dt> <dd>spik når oddsen gir favoritten minst {SPIKE_AT} %. Ellers halvgardering med tegn over {KEEP_AT} % og tegnene folket undervurderer mest i forhold til oddsen.</dd></div>
+      <div><dt>Bombe</dt> <dd>et tegn folket gir under {BOMB_BELOW} %. Systemet har minst {MIN_BOMBS}. Mangler det bomber, legges de på spikene der oddsen ligger mest over folket, og halvgarderingen med det svakeste tegnet blir spik, slik at antallet rekker er det samme.</dd></div>
     </dl>
     <span>Statistikk fra NIFS, folkets fordeling og odds fra Norsk Tipping. Hentet {datetime.now().strftime("%d.%m.%Y %H.%M")}. Utestengelser er beregnet fra kort, ikke offisielle lister.</span>
     <span>18-årsgrense for pengespill. Spill ansvarlig.</span>
