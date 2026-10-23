@@ -40,8 +40,9 @@ def unavailable(kickoff, home, away):
     match_id = _link(kickoff, home, away)
     if not match_id:
         return None
-    lineup = _details(match_id).get("content", {}).get("lineup") or {}
-    out = {"fotmobMatchId": match_id}
+    details = _details(match_id)
+    lineup = details.get("content", {}).get("lineup") or {}
+    out = {"fotmobMatchId": match_id, "leagueId": (details.get("general") or {}).get("leagueId")}
     for side, key in (("home", "homeTeam"), ("away", "awayTeam")):
         out[side] = [{
             "name": p["name"], "firstName": p.get("firstName"), "lastName": p.get("lastName"),
@@ -51,8 +52,12 @@ def unavailable(kickoff, home, away):
     return out
 
 
+# Letters NFKD doesn't decompose to ASCII ("Guðjohnsen" must meet NIFS's "Gudjohnsen").
+_FOLD = str.maketrans({"ð": "d", "đ": "d", "þ": "th", "ø": "o", "æ": "ae", "œ": "oe", "ß": "ss", "ł": "l", "ı": "i"})
+
+
 def _tokens(name):
-    s = unicodedata.normalize("NFKD", name.lower()).encode("ascii", "ignore").decode()
+    s = unicodedata.normalize("NFKD", name.lower().translate(_FOLD)).encode("ascii", "ignore").decode()
     return [t for t in re.split(r"[^a-z]+", s) if t]
 
 
@@ -125,3 +130,31 @@ def match_report(kickoff, home, away):
                              "rating": (potm.get("rating") or {}).get("num")} if potm else None,
         "highlights": (facts.get("highlights") or {}).get("url"),
     }
+
+
+def league_ratings(league_id):
+    """FotMob's season ratings for every player above its minutes threshold in a league, best first:
+    {"league", "players": [{name, team, rating, minutes, rank}]}, or None if the league has no rating list."""
+    league = get_json(f"{BASE}leagues?id={league_id}", max_age=6 * 3600)
+    entry = next((x for x in (league.get("stats") or {}).get("players") or []
+                  if x.get("localizedTitleId") == "rating_title"), None)
+    if not entry:
+        return None
+    top = get_json(entry["fetchAllUrl"], max_age=6 * 3600)
+    rows = top["TopLists"][0]["StatList"]
+    return {"league": top.get("LeagueName"), "players": [
+        {"name": r["ParticipantName"], "team": r.get("TeamName"), "rating": r["StatValue"],
+         "minutes": r.get("MinutesPlayed"), "rank": r.get("Rank")} for r in rows]}
+
+
+def find_rating(ratings, nifs_name, team_name):
+    """The rating row for a NIFS player, or None. Same name rules as match_players, with the team name
+    breaking ties and guarding the surname + initial fallback."""
+    rows = ratings["players"]
+    exact = [r for r in rows if _exact(r, nifs_name)]
+    if len(exact) > 1:
+        exact = [max(exact, key=lambda r: _sim(team_name, r.get("team") or ""))]
+    if exact:
+        return exact[0]
+    loose = [r for r in rows if _loose(r, nifs_name) and _sim(team_name, r.get("team") or "") >= 0.4]
+    return loose[0] if len(loose) == 1 else None

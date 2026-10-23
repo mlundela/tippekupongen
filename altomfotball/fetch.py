@@ -1,5 +1,6 @@
 """JSON-over-HTTP with a disk cache and a global throttle. Rules for NIFS are in docs/nifs-api.md."""
 
+import gzip
 import hashlib
 import json
 import random
@@ -59,6 +60,8 @@ def get_json(url, max_age=1800, retries=6):
                 raise
         time.sleep(1.5 * (attempt + 1))
 
+    if body[:2] == b"\x1f\x8b":  # data.fotmob.com serves gzip without being asked
+        body = gzip.decompress(body)
     data = json.loads(body)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(body)

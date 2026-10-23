@@ -5,7 +5,7 @@
   "status": "OPENED",
   "saleStop": "2026-10-24T15:55:00+02:00",
   "turnover": {
-   "amount": "1620841.00",
+   "amount": "1624232.00",
    "currency": "NOK"
   }
  },
@@ -529,7 +529,14 @@
       "position": "Midfielder",
       "shirtNumber": 26,
       "goalShare": 0.03,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.05,
+       "rank": 81,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1573
+      }
      },
      {
       "id": 332486,
@@ -549,7 +556,14 @@
       "position": "Defender",
       "shirtNumber": 2,
       "goalShare": 0.09,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.67,
+       "rank": 188,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1706
+      }
      },
      {
       "id": 268582,
@@ -569,7 +583,14 @@
       "position": "Midfielder",
       "shirtNumber": 17,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.11,
+       "rank": 59,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1521
+      }
      },
      {
       "id": 751481,
@@ -589,7 +610,14 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.18,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.18,
+       "rank": 52,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 900
+      }
      },
      {
       "id": 114741,
@@ -609,7 +637,14 @@
       "position": "Attacker",
       "shirtNumber": 19,
       "goalShare": 0.15,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.64,
+       "rank": 195,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1328
+      }
      },
      {
       "id": 570985,
@@ -629,7 +664,8 @@
       "position": "Midfielder",
       "shirtNumber": 10,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 107723,
@@ -649,7 +685,14 @@
       "position": "Attacker",
       "shirtNumber": 11,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.11,
+       "rank": 61,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 521
+      }
      },
      {
       "id": 138502,
@@ -672,6 +715,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, ute resten av sesongen"
+      },
+      "seasonRating": {
+       "rating": 6.35,
+       "rank": 238,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 874
       }
      },
      {
@@ -692,7 +742,14 @@
       "position": "Midfielder",
       "shirtNumber": 7,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.56,
+       "rank": 213,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1066
+      }
      },
      {
       "id": 530487,
@@ -715,6 +772,13 @@
       "status": {
        "kind": "card_risk",
        "reason": "3 gule kort – ett til gir karantene"
+      },
+      "seasonRating": {
+       "rating": 6.52,
+       "rank": 217,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1013
       }
      },
      {
@@ -735,7 +799,8 @@
       "position": "Attacker",
       "shirtNumber": 28,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 352306,
@@ -755,7 +820,14 @@
       "position": "Defender",
       "shirtNumber": 3,
       "goalShare": 0.03,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.47,
+       "rank": 225,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1816
+      }
      },
      {
       "id": 145271,
@@ -775,7 +847,14 @@
       "position": "Defender",
       "shirtNumber": 14,
       "goalShare": 0.03,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.62,
+       "rank": 201,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1227
+      }
      },
      {
       "id": 140313,
@@ -795,7 +874,14 @@
       "position": "Defender",
       "shirtNumber": 22,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.36,
+       "rank": 236,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 797
+      }
      },
      {
       "id": 79539,
@@ -815,7 +901,14 @@
       "position": "Midfielder",
       "shirtNumber": 16,
       "goalShare": 0.03,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.51,
+       "rank": 218,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 697
+      }
      },
      {
       "id": 353959,
@@ -835,7 +928,8 @@
       "position": "Defender",
       "shirtNumber": 5,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 297422,
@@ -855,7 +949,8 @@
       "position": "Defender",
       "shirtNumber": 4,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 387551,
@@ -875,7 +970,8 @@
       "position": "Midfielder",
       "shirtNumber": 29,
       "goalShare": 0.03,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 530484,
@@ -895,7 +991,8 @@
       "position": "Attacker",
       "shirtNumber": 24,
       "goalShare": 0.03,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 34849,
@@ -915,7 +1012,14 @@
       "position": "Keeper",
       "shirtNumber": 12,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.65,
+       "rank": 192,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 2070
+      }
      },
      {
       "id": 76613,
@@ -935,7 +1039,14 @@
       "position": "Defender",
       "shirtNumber": 23,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.35,
+       "rank": 238,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1546
+      }
      },
      {
       "id": 514721,
@@ -955,7 +1066,8 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 416417,
@@ -975,7 +1087,14 @@
       "position": "Midfielder",
       "shirtNumber": 6,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.27,
+       "rank": 242,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 439
+      }
      },
      {
       "id": 305956,
@@ -995,7 +1114,8 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 686580,
@@ -1015,7 +1135,8 @@
       "position": "Attacker",
       "shirtNumber": 18,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 146436,
@@ -1035,7 +1156,8 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 524143,
@@ -1055,7 +1177,8 @@
       "position": "Defender",
       "shirtNumber": 27,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 244330,
@@ -1075,7 +1198,8 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 412123,
@@ -1095,7 +1219,8 @@
       "position": "Midfielder",
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -1664,7 +1789,14 @@
       "position": "Attacker",
       "shirtNumber": 18,
       "goalShare": 0.33,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.43,
+       "rank": 17,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1859
+      }
      },
      {
       "id": 255565,
@@ -1684,7 +1816,14 @@
       "position": "Attacker",
       "shirtNumber": 35,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.42,
+       "rank": 18,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1909
+      }
      },
      {
       "id": 83369,
@@ -1704,7 +1843,14 @@
       "position": "Midfielder",
       "shirtNumber": 10,
       "goalShare": 0.02,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.67,
+       "rank": 5,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1409
+      }
      },
      {
       "id": 645786,
@@ -1727,6 +1873,13 @@
       "status": {
        "kind": "card_risk",
        "reason": "3 gule kort – ett til gir karantene"
+      },
+      "seasonRating": {
+       "rating": 7.2,
+       "rank": 47,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1955
       }
      },
      {
@@ -1747,7 +1900,14 @@
       "position": "Attacker",
       "shirtNumber": 11,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.04,
+       "rank": 85,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 755
+      }
      },
      {
       "id": 189035,
@@ -1767,7 +1927,14 @@
       "position": "Defender",
       "shirtNumber": 19,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.01,
+       "rank": 95,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1076
+      }
      },
      {
       "id": 86801,
@@ -1787,7 +1954,14 @@
       "position": "Midfielder",
       "shirtNumber": 8,
       "goalShare": 0.07,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.05,
+       "rank": 83,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 855
+      }
      },
      {
       "id": 118754,
@@ -1810,6 +1984,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake midt i november 2026"
+      },
+      "seasonRating": {
+       "rating": 6.96,
+       "rank": 108,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 787
       }
      },
      {
@@ -1830,7 +2011,14 @@
       "position": "Defender",
       "shirtNumber": 16,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.89,
+       "rank": 131,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1129
+      }
      },
      {
       "id": 35538,
@@ -1853,6 +2041,13 @@
       "status": {
        "kind": "card_risk",
        "reason": "3 gule kort – ett til gir karantene"
+      },
+      "seasonRating": {
+       "rating": 7.19,
+       "rank": 49,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 831
       }
      },
      {
@@ -1873,7 +2068,8 @@
       "position": "Attacker",
       "shirtNumber": 9,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 305765,
@@ -1893,7 +2089,14 @@
       "position": "Defender",
       "shirtNumber": 3,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.73,
+       "rank": 172,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 841
+      }
      },
      {
       "id": 425673,
@@ -1913,7 +2116,14 @@
       "position": "Attacker",
       "shirtNumber": 29,
       "goalShare": 0.02,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.47,
+       "rank": 225,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 767
+      }
      },
      {
       "id": 411388,
@@ -1933,7 +2143,14 @@
       "position": "Defender",
       "shirtNumber": 15,
       "goalShare": 0.02,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.77,
+       "rank": 169,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 615
+      }
      },
      {
       "id": 335924,
@@ -1953,7 +2170,14 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.8,
+       "rank": 155,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 2070
+      }
      },
      {
       "id": 520106,
@@ -1973,7 +2197,14 @@
       "position": "Defender",
       "shirtNumber": 21,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.05,
+       "rank": 83,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1689
+      }
      },
      {
       "id": 187878,
@@ -1993,7 +2224,14 @@
       "position": "Defender",
       "shirtNumber": 4,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.95,
+       "rank": 110,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1337
+      }
      },
      {
       "id": 312821,
@@ -2013,7 +2251,14 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.61,
+       "rank": 207,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1170
+      }
      },
      {
       "id": 399010,
@@ -2033,7 +2278,8 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 340098,
@@ -2053,7 +2299,8 @@
       "position": "Defender",
       "shirtNumber": 5,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 328995,
@@ -2076,7 +2323,8 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, ute resten av sesongen"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 168345,
@@ -2096,7 +2344,8 @@
       "position": "Midfielder",
       "shirtNumber": 6,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 447738,
@@ -2116,7 +2365,8 @@
       "position": "Attacker",
       "shirtNumber": 14,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 524493,
@@ -2136,7 +2386,8 @@
       "position": "Defender",
       "shirtNumber": 23,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 510719,
@@ -2156,7 +2407,8 @@
       "position": "Attacker",
       "shirtNumber": 30,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -2865,7 +3117,14 @@
       "position": "Attacker",
       "shirtNumber": 9,
       "goalShare": 0.21,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.14,
+       "rank": 57,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 896
+      }
      },
      {
       "id": 249996,
@@ -2885,7 +3144,14 @@
       "position": "Attacker",
       "shirtNumber": 11,
       "goalShare": 0.1,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.6,
+       "rank": 10,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1727
+      }
      },
      {
       "id": 337039,
@@ -2905,7 +3171,14 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.52,
+       "rank": 13,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 939
+      }
      },
      {
       "id": 158465,
@@ -2925,7 +3198,14 @@
       "position": "Attacker",
       "shirtNumber": 10,
       "goalShare": 0.09,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.69,
+       "rank": 4,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1288
+      }
      },
      {
       "id": 252190,
@@ -2948,6 +3228,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake sent i oktober 2026"
+      },
+      "seasonRating": {
+       "rating": 7.39,
+       "rank": 21,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 753
       }
      },
      {
@@ -2968,7 +3255,14 @@
       "position": "Defender",
       "shirtNumber": 20,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.66,
+       "rank": 6,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1980
+      }
      },
      {
       "id": 118829,
@@ -2988,7 +3282,14 @@
       "position": "Midfielder",
       "shirtNumber": 19,
       "goalShare": 0.07,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.37,
+       "rank": 24,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1425
+      }
      },
      {
       "id": 385858,
@@ -3011,6 +3312,13 @@
       "status": {
        "kind": "card_risk",
        "reason": "3 gule kort – ett til gir karantene"
+      },
+      "seasonRating": {
+       "rating": 7.24,
+       "rank": 37,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1589
       }
      },
      {
@@ -3031,7 +3339,14 @@
       "position": "Defender",
       "shirtNumber": 15,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.1,
+       "rank": 63,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1229
+      }
      },
      {
       "id": 115003,
@@ -3051,7 +3366,14 @@
       "position": "Midfielder",
       "shirtNumber": 7,
       "goalShare": 0.03,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.85,
+       "rank": 2,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1790
+      }
      },
      {
       "id": 166593,
@@ -3071,7 +3393,14 @@
       "position": "Attacker",
       "shirtNumber": 17,
       "goalShare": 0.03,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.82,
+       "rank": 147,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 826
+      }
      },
      {
       "id": 133461,
@@ -3091,7 +3420,14 @@
       "position": "Defender",
       "shirtNumber": 4,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.36,
+       "rank": 27,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 2009
+      }
      },
      {
       "id": 68433,
@@ -3111,7 +3447,14 @@
       "position": "Defender",
       "shirtNumber": 5,
       "goalShare": 0.02,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.37,
+       "rank": 26,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1193
+      }
      },
      {
       "id": 246316,
@@ -3131,7 +3474,14 @@
       "position": "Attacker",
       "shirtNumber": 25,
       "goalShare": 0.02,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.89,
+       "rank": 134,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1057
+      }
      },
      {
       "id": 372712,
@@ -3151,7 +3501,14 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.45,
+       "rank": 228,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 537
+      }
      },
      {
       "id": 506524,
@@ -3171,7 +3528,8 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.02,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 333409,
@@ -3191,7 +3549,8 @@
       "position": "Attacker",
       "shirtNumber": 22,
       "goalShare": 0.02,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 755533,
@@ -3211,7 +3570,8 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.02,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 132601,
@@ -3231,7 +3591,14 @@
       "position": "Keeper",
       "shirtNumber": 12,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.17,
+       "rank": 53,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1890
+      }
      },
      {
       "id": 94765,
@@ -3251,7 +3618,8 @@
       "position": "Defender",
       "shirtNumber": 6,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 645404,
@@ -3271,7 +3639,8 @@
       "position": "Defender",
       "shirtNumber": 2,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 78988,
@@ -3291,7 +3660,8 @@
       "position": "Midfielder",
       "shirtNumber": 14,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 275744,
@@ -3311,7 +3681,8 @@
       "position": "Midfielder",
       "shirtNumber": 16,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 127232,
@@ -3331,7 +3702,8 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 267859,
@@ -3354,7 +3726,8 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake sent i oktober 2026"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 188934,
@@ -3377,7 +3750,8 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake sent i oktober 2026"
-      }
+      },
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -3998,7 +4372,14 @@
       "position": "Attacker",
       "shirtNumber": 77,
       "goalShare": 0.26,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.1,
+       "rank": 66,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1462
+      }
      },
      {
       "id": 237303,
@@ -4018,7 +4399,14 @@
       "position": "Attacker",
       "shirtNumber": 17,
       "goalShare": 0.13,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.07,
+       "rank": 71,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1622
+      }
      },
      {
       "id": 237082,
@@ -4041,6 +4429,13 @@
       "status": {
        "kind": "card_risk",
        "reason": "3 gule kort – ett til gir karantene"
+      },
+      "seasonRating": {
+       "rating": 7.31,
+       "rank": 32,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1937
       }
      },
      {
@@ -4061,7 +4456,14 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.03,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.44,
+       "rank": 15,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1639
+      }
      },
      {
       "id": 136174,
@@ -4081,7 +4483,14 @@
       "position": "Defender",
       "shirtNumber": 2,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.03,
+       "rank": 90,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1765
+      }
      },
      {
       "id": 270428,
@@ -4101,7 +4510,14 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.08,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.1,
+       "rank": 63,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 869
+      }
      },
      {
       "id": 107723,
@@ -4121,7 +4537,14 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.11,
+       "rank": 61,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 521
+      }
      },
      {
       "id": 591336,
@@ -4141,7 +4564,8 @@
       "position": "Attacker",
       "shirtNumber": 9,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 259770,
@@ -4161,7 +4585,14 @@
       "position": "Defender",
       "shirtNumber": 4,
       "goalShare": 0.03,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.83,
+       "rank": 146,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1951
+      }
      },
      {
       "id": 352821,
@@ -4181,7 +4612,14 @@
       "position": "Midfielder",
       "shirtNumber": 28,
       "goalShare": 0.03,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.9,
+       "rank": 127,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1379
+      }
      },
      {
       "id": 79479,
@@ -4201,7 +4639,14 @@
       "position": "Midfielder",
       "shirtNumber": 24,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.66,
+       "rank": 191,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 895
+      }
      },
      {
       "id": 187964,
@@ -4221,7 +4666,14 @@
       "position": "Defender",
       "shirtNumber": 55,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.05,
+       "rank": 81,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 930
+      }
      },
      {
       "id": 188474,
@@ -4241,7 +4693,8 @@
       "position": "Attacker",
       "shirtNumber": 90,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 89126,
@@ -4264,6 +4717,13 @@
       "status": {
        "kind": "card_risk",
        "reason": "3 gule kort – ett til gir karantene"
+      },
+      "seasonRating": {
+       "rating": 6.62,
+       "rank": 202,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1320
       }
      },
      {
@@ -4284,7 +4744,14 @@
       "position": "Midfielder",
       "shirtNumber": 29,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.8,
+       "rank": 152,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 658
+      }
      },
      {
       "id": 417153,
@@ -4304,7 +4771,8 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.03,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 82276,
@@ -4324,7 +4792,8 @@
       "position": "Midfielder",
       "shirtNumber": 11,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 50727,
@@ -4344,7 +4813,8 @@
       "position": "Attacker",
       "shirtNumber": 7,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 170506,
@@ -4364,7 +4834,14 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.53,
+       "rank": 215,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 2070
+      }
      },
      {
       "id": 309084,
@@ -4387,6 +4864,13 @@
       "status": {
        "kind": "suspended",
        "reason": "utestengt"
+      },
+      "seasonRating": {
+       "rating": 6.58,
+       "rank": 211,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1459
       }
      },
      {
@@ -4407,7 +4891,8 @@
       "position": "Defender",
       "shirtNumber": 5,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 325021,
@@ -4427,7 +4912,8 @@
       "position": "Midfielder",
       "shirtNumber": 26,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 306675,
@@ -4447,7 +4933,8 @@
       "position": "Midfielder",
       "shirtNumber": 15,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 27385,
@@ -4467,7 +4954,8 @@
       "position": "Defender",
       "shirtNumber": 6,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 66617,
@@ -4490,7 +4978,8 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, ute 1–2 uker"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 188384,
@@ -4510,7 +4999,14 @@
       "position": "Midfielder",
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.06,
+       "rank": 78,
+       "of": 247,
+       "league": "Eliteserien",
+       "minutes": 1845
+      }
      }
     ],
     "absenceSource": "fotmob",
@@ -5165,7 +5661,14 @@
       "position": "Attacker",
       "shirtNumber": 9,
       "goalShare": 0.29,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.74,
+       "rank": 6,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 521
+      }
      },
      {
       "id": 492504,
@@ -5185,7 +5688,14 @@
       "position": "Midfielder",
       "shirtNumber": 10,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.62,
+       "rank": 14,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 621
+      }
      },
      {
       "id": 286044,
@@ -5205,7 +5715,14 @@
       "position": "Midfielder",
       "shirtNumber": 17,
       "goalShare": 0.24,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.9,
+       "rank": 3,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 613
+      }
      },
      {
       "id": 191251,
@@ -5225,7 +5742,14 @@
       "position": "Attacker",
       "shirtNumber": 7,
       "goalShare": 0.18,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.48,
+       "rank": 23,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 508
+      }
      },
      {
       "id": 32436,
@@ -5245,7 +5769,8 @@
       "position": "Midfielder",
       "shirtNumber": 14,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 639457,
@@ -5265,7 +5790,14 @@
       "position": "Defender",
       "shirtNumber": 21,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.85,
+       "rank": 151,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 349
+      }
      },
      {
       "id": 407072,
@@ -5285,7 +5817,14 @@
       "position": "Defender",
       "shirtNumber": 5,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.93,
+       "rank": 127,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 544
+      }
      },
      {
       "id": 434632,
@@ -5308,6 +5847,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, ute omtrent en uke"
+      },
+      "seasonRating": {
+       "rating": 6.6,
+       "rank": 217,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 298
       }
      },
      {
@@ -5328,7 +5874,14 @@
       "position": "Midfielder",
       "shirtNumber": 45,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.04,
+       "rank": 102,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 281
+      }
      },
      {
       "id": 492517,
@@ -5348,7 +5901,14 @@
       "position": "Defender",
       "shirtNumber": 6,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.78,
+       "rank": 176,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 522
+      }
      },
      {
       "id": 82613,
@@ -5371,6 +5931,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
+      },
+      "seasonRating": {
+       "rating": 7.34,
+       "rank": 46,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 525
       }
      },
      {
@@ -5391,7 +5958,14 @@
       "position": "Defender",
       "shirtNumber": 34,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.71,
+       "rank": 189,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 401
+      }
      },
      {
       "id": 296010,
@@ -5411,7 +5985,14 @@
       "position": "Defender",
       "shirtNumber": 3,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.03,
+       "rank": 105,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 315
+      }
      },
      {
       "id": 179185,
@@ -5434,6 +6015,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake midt i januar 2027"
+      },
+      "seasonRating": {
+       "rating": 6.84,
+       "rank": 152,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 292
       }
      },
      {
@@ -5457,6 +6045,13 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
+      },
+      "seasonRating": {
+       "rating": 6.71,
+       "rank": 189,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 276
       }
      },
      {
@@ -5477,7 +6072,8 @@
       "position": "Midfielder",
       "shirtNumber": 25,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 543801,
@@ -5497,7 +6093,8 @@
       "position": "Defender",
       "shirtNumber": 4,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 28679,
@@ -5517,7 +6114,8 @@
       "position": "Attacker",
       "shirtNumber": 18,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 174854,
@@ -5537,7 +6135,8 @@
       "position": "Keeper",
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 700215,
@@ -5557,7 +6156,8 @@
       "position": "Attacker",
       "shirtNumber": 41,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 688534,
@@ -5577,7 +6177,8 @@
       "position": "Midfielder",
       "shirtNumber": 23,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 674013,
@@ -5597,7 +6198,8 @@
       "position": "Defender",
       "shirtNumber": 2,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 503395,
@@ -5617,7 +6219,14 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.25,
+       "rank": 63,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 393
+      }
      },
      {
       "id": 577764,
@@ -5637,7 +6246,8 @@
       "position": "Keeper",
       "shirtNumber": 39,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 760957,
@@ -5657,7 +6267,8 @@
       "position": "Midfielder",
       "shirtNumber": 32,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -6170,7 +6781,14 @@
       "position": "Defender",
       "shirtNumber": 3,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.95,
+       "rank": 121,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 436
+      }
      },
      {
       "id": 126120,
@@ -6190,7 +6808,14 @@
       "position": "Attacker",
       "shirtNumber": 19,
       "goalShare": 0.17,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.53,
+       "rank": 226,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 352
+      }
      },
      {
       "id": 291217,
@@ -6210,7 +6835,14 @@
       "position": "Attacker",
       "shirtNumber": 20,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.12,
+       "rank": 85,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 276
+      }
      },
      {
       "id": 433065,
@@ -6230,7 +6862,14 @@
       "position": "Defender",
       "shirtNumber": 6,
       "goalShare": 0.17,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.36,
+       "rank": 43,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 630
+      }
      },
      {
       "id": 277638,
@@ -6250,7 +6889,14 @@
       "position": "Midfielder",
       "shirtNumber": 16,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.19,
+       "rank": 77,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 609
+      }
      },
      {
       "id": 187762,
@@ -6270,7 +6916,14 @@
       "position": "Attacker",
       "shirtNumber": 22,
       "goalShare": 0.17,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.71,
+       "rank": 189,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 452
+      }
      },
      {
       "id": 407499,
@@ -6290,7 +6943,14 @@
       "position": "Midfielder",
       "shirtNumber": 8,
       "goalShare": 0.17,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.62,
+       "rank": 213,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 229
+      }
      },
      {
       "id": 111953,
@@ -6310,7 +6970,14 @@
       "position": "Midfielder",
       "shirtNumber": 10,
       "goalShare": 0.17,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.83,
+       "rank": 158,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 144
+      }
      },
      {
       "id": 86169,
@@ -6330,7 +6997,8 @@
       "position": "Defender",
       "shirtNumber": 33,
       "goalShare": 0.17,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 582646,
@@ -6350,7 +7018,14 @@
       "position": "Keeper",
       "shirtNumber": 31,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.51,
+       "rank": 228,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 630
+      }
      },
      {
       "id": 578212,
@@ -6370,7 +7045,14 @@
       "position": "Midfielder",
       "shirtNumber": 14,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.99,
+       "rank": 112,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 490
+      }
      },
      {
       "id": 492809,
@@ -6390,7 +7072,14 @@
       "position": "Defender",
       "shirtNumber": 37,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.91,
+       "rank": 130,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 466
+      }
      },
      {
       "id": 131211,
@@ -6413,6 +7102,13 @@
       "status": {
        "kind": "suspended",
        "reason": "utestengt"
+      },
+      "seasonRating": {
+       "rating": 6.44,
+       "rank": 240,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 384
       }
      },
      {
@@ -6436,6 +7132,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
+      },
+      "seasonRating": {
+       "rating": 7.2,
+       "rank": 74,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 331
       }
      },
      {
@@ -6456,7 +7159,14 @@
       "position": "Midfielder",
       "shirtNumber": 18,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.64,
+       "rank": 210,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 270
+      }
      },
      {
       "id": 549546,
@@ -6476,7 +7186,14 @@
       "position": "Attacker",
       "shirtNumber": 11,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.35,
+       "rank": 257,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 262
+      }
      },
      {
       "id": 398020,
@@ -6499,7 +7216,8 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 174013,
@@ -6519,7 +7237,8 @@
       "position": "Defender",
       "shirtNumber": 5,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 467193,
@@ -6542,7 +7261,8 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 629309,
@@ -6565,7 +7285,8 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, ute omtrent en uke"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 637479,
@@ -6585,7 +7306,8 @@
       "position": "Midfielder",
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 150403,
@@ -6605,7 +7327,8 @@
       "position": "Defender",
       "shirtNumber": 4,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 141001,
@@ -6625,7 +7348,8 @@
       "position": "Attacker",
       "shirtNumber": 9,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 433316,
@@ -6648,7 +7372,8 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 348892,
@@ -6668,7 +7393,8 @@
       "position": "Midfielder",
       "shirtNumber": 21,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -6894,16 +7620,16 @@
    },
    "odds": {
     "odds": {
-     "home": 1.8,
-     "draw": 3.95,
+     "home": 1.77,
+     "draw": 4.0,
      "away": 3.9
     },
     "implied": {
-     "home": 52,
-     "draw": 24,
+     "home": 53,
+     "draw": 23,
      "away": 24
     },
-    "margin": 6.5,
+    "margin": 7.1,
     "oddsenEventId": "8859742.1",
     "oddsenName": "Chelsea - Tottenham Hotspur"
    }
@@ -7359,7 +8085,14 @@
       "position": "Midfielder",
       "shirtNumber": 41,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.73,
+       "rank": 7,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 594
+      }
      },
      {
       "id": 390861,
@@ -7382,6 +8115,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i desember 2026"
+      },
+      "seasonRating": {
+       "rating": 7.72,
+       "rank": 8,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 598
       }
      },
      {
@@ -7402,7 +8142,14 @@
       "position": "Defender",
       "shirtNumber": 33,
       "goalShare": 0.09,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.1,
+       "rank": 87,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 590
+      }
      },
      {
       "id": 166407,
@@ -7422,7 +8169,14 @@
       "position": "Attacker",
       "shirtNumber": 29,
       "goalShare": 0.18,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.02,
+       "rank": 106,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 567
+      }
      },
      {
       "id": 114425,
@@ -7442,7 +8196,14 @@
       "position": "Midfielder",
       "shirtNumber": 8,
       "goalShare": 0.18,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.5,
+       "rank": 20,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 561
+      }
      },
      {
       "id": 172730,
@@ -7462,7 +8223,14 @@
       "position": "Defender",
       "shirtNumber": 4,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.4,
+       "rank": 36,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 444
+      }
      },
      {
       "id": 259601,
@@ -7482,7 +8250,14 @@
       "position": "Midfielder",
       "shirtNumber": 39,
       "goalShare": 0.18,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.06,
+       "rank": 98,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 217
+      }
      },
      {
       "id": 506118,
@@ -7505,6 +8280,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
+      },
+      "seasonRating": {
+       "rating": 7.13,
+       "rank": 84,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 365
       }
      },
      {
@@ -7525,7 +8307,8 @@
       "position": "Attacker",
       "shirtNumber": 20,
       "goalShare": 0.09,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 122606,
@@ -7545,7 +8328,14 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.44,
+       "rank": 31,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 630
+      }
      },
      {
       "id": 176454,
@@ -7565,7 +8355,14 @@
       "position": "Defender",
       "shirtNumber": 6,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.23,
+       "rank": 68,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 630
+      }
      },
      {
       "id": 156235,
@@ -7585,7 +8382,14 @@
       "position": "Defender",
       "shirtNumber": 15,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.01,
+       "rank": 107,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 461
+      }
      },
      {
       "id": 637045,
@@ -7605,7 +8409,14 @@
       "position": "Midfielder",
       "shirtNumber": 49,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.78,
+       "rank": 176,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 336
+      }
      },
      {
       "id": 570421,
@@ -7625,7 +8436,8 @@
       "position": "Defender",
       "shirtNumber": 3,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 400143,
@@ -7645,7 +8457,14 @@
       "position": "Defender",
       "shirtNumber": 12,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.34,
+       "rank": 258,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 156
+      }
      },
      {
       "id": 181941,
@@ -7665,7 +8484,14 @@
       "position": "Midfielder",
       "shirtNumber": 10,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.29,
+       "rank": 264,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 130
+      }
      },
      {
       "id": 123898,
@@ -7685,7 +8511,14 @@
       "position": "Midfielder",
       "shirtNumber": 23,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.41,
+       "rank": 246,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 106
+      }
      },
      {
       "id": 448231,
@@ -7705,7 +8538,8 @@
       "position": "Midfielder",
       "shirtNumber": 36,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 145379,
@@ -7725,7 +8559,14 @@
       "position": "Attacker",
       "shirtNumber": 14,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.15,
+       "rank": 280,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 80
+      }
      },
      {
       "id": 503372,
@@ -7748,7 +8589,8 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 709817,
@@ -7768,7 +8610,8 @@
       "position": "Attacker",
       "shirtNumber": 56,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -8285,7 +9128,14 @@
       "position": "Midfielder",
       "shirtNumber": 8,
       "goalShare": 0.25,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.57,
+       "rank": 16,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 628
+      }
      },
      {
       "id": 632536,
@@ -8305,7 +9155,14 @@
       "position": "Attacker",
       "shirtNumber": 11,
       "goalShare": 0.38,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.09,
+       "rank": 90,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 595
+      }
      },
      {
       "id": 76447,
@@ -8325,7 +9182,14 @@
       "position": "Defender",
       "shirtNumber": 6,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.69,
+       "rank": 9,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 630
+      }
      },
      {
       "id": 127654,
@@ -8345,7 +9209,14 @@
       "position": "Defender",
       "shirtNumber": 2,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.86,
+       "rank": 149,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 310
+      }
      },
      {
       "id": 696679,
@@ -8365,7 +9236,14 @@
       "position": "Midfielder",
       "shirtNumber": 45,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.93,
+       "rank": 127,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 609
+      }
      },
      {
       "id": 642571,
@@ -8385,7 +9263,14 @@
       "position": "Attacker",
       "shirtNumber": 19,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.75,
+       "rank": 183,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 371
+      }
      },
      {
       "id": 430515,
@@ -8405,7 +9290,14 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.34,
+       "rank": 46,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 533
+      }
      },
      {
       "id": 434235,
@@ -8425,7 +9317,14 @@
       "position": "Midfielder",
       "shirtNumber": 30,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.5,
+       "rank": 229,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 150
+      }
      },
      {
       "id": 89339,
@@ -8445,7 +9344,14 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.08,
+       "rank": 93,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 630
+      }
      },
      {
       "id": 448003,
@@ -8465,7 +9371,14 @@
       "position": "Defender",
       "shirtNumber": 4,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.09,
+       "rank": 90,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 630
+      }
      },
      {
       "id": 279828,
@@ -8485,7 +9398,14 @@
       "position": "Defender",
       "shirtNumber": 16,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.46,
+       "rank": 28,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 540
+      }
      },
      {
       "id": 390863,
@@ -8505,7 +9425,14 @@
       "position": "Midfielder",
       "shirtNumber": 37,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.07,
+       "rank": 96,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 510
+      }
      },
      {
       "id": 527282,
@@ -8525,7 +9452,14 @@
       "position": "Midfielder",
       "shirtNumber": 34,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.89,
+       "rank": 138,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 341
+      }
      },
      {
       "id": 484225,
@@ -8545,7 +9479,14 @@
       "position": "Attacker",
       "shirtNumber": 22,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.62,
+       "rank": 213,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 312
+      }
      },
      {
       "id": 92461,
@@ -8565,7 +9506,14 @@
       "position": "Midfielder",
       "shirtNumber": 10,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.88,
+       "rank": 143,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 307
+      }
      },
      {
       "id": 86937,
@@ -8585,7 +9533,8 @@
       "position": "Defender",
       "shirtNumber": 5,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 485289,
@@ -8605,7 +9554,8 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 493063,
@@ -8625,7 +9575,8 @@
       "position": "Defender",
       "shirtNumber": 15,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 564441,
@@ -8645,7 +9596,8 @@
       "position": "Midfielder",
       "shirtNumber": 20,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 500557,
@@ -8665,7 +9617,8 @@
       "position": "Midfielder",
       "shirtNumber": 24,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 86873,
@@ -8685,7 +9638,8 @@
       "position": "Midfielder",
       "shirtNumber": 23,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 526036,
@@ -8705,7 +9659,14 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.33,
+       "rank": 260,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 140
+      }
      }
     ],
     "absenceSource": "fotmob",
@@ -9325,7 +10286,14 @@
       "position": "Defender",
       "shirtNumber": 3,
       "goalShare": 0.17,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.65,
+       "rank": 209,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 625
+      }
      },
      {
       "id": 448006,
@@ -9345,7 +10313,14 @@
       "position": "Midfielder",
       "shirtNumber": 5,
       "goalShare": 0.33,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.98,
+       "rank": 115,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 471
+      }
      },
      {
       "id": 172746,
@@ -9365,7 +10340,14 @@
       "position": "Attacker",
       "shirtNumber": 23,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.8,
+       "rank": 170,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 396
+      }
      },
      {
       "id": 521205,
@@ -9385,7 +10367,14 @@
       "position": "Keeper",
       "shirtNumber": 19,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.07,
+       "rank": 283,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 630
+      }
      },
      {
       "id": 686304,
@@ -9405,7 +10394,8 @@
       "position": "Attacker",
       "shirtNumber": 49,
       "goalShare": 0.17,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 434210,
@@ -9425,7 +10415,14 @@
       "position": "Attacker",
       "shirtNumber": 9,
       "goalShare": 0.17,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.46,
+       "rank": 235,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 117
+      }
      },
      {
       "id": 704673,
@@ -9445,7 +10442,8 @@
       "position": "Defender",
       "shirtNumber": 12,
       "goalShare": 0.17,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 506530,
@@ -9465,7 +10463,14 @@
       "position": "Defender",
       "shirtNumber": 4,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.0,
+       "rank": 110,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 618
+      }
      },
      {
       "id": 110040,
@@ -9485,7 +10490,14 @@
       "position": "Midfielder",
       "shirtNumber": 6,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.56,
+       "rank": 223,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 617
+      }
      },
      {
       "id": 483660,
@@ -9505,7 +10517,14 @@
       "position": "Defender",
       "shirtNumber": 27,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.43,
+       "rank": 243,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 540
+      }
      },
      {
       "id": 156427,
@@ -9525,7 +10544,14 @@
       "position": "Defender",
       "shirtNumber": 2,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.37,
+       "rank": 255,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 462
+      }
      },
      {
       "id": 705092,
@@ -9545,7 +10571,14 @@
       "position": "Midfielder",
       "shirtNumber": 8,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.4,
+       "rank": 248,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 404
+      }
      },
      {
       "id": 538844,
@@ -9568,6 +10601,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
+      },
+      "seasonRating": {
+       "rating": 6.16,
+       "rank": 278,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 360
       }
      },
      {
@@ -9588,7 +10628,14 @@
       "position": "Midfielder",
       "shirtNumber": 16,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.46,
+       "rank": 235,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 358
+      }
      },
      {
       "id": 177280,
@@ -9608,7 +10655,14 @@
       "position": "Midfielder",
       "shirtNumber": 10,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.27,
+       "rank": 270,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 307
+      }
      },
      {
       "id": 137975,
@@ -9628,7 +10682,14 @@
       "position": "Attacker",
       "shirtNumber": 14,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.08,
+       "rank": 282,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 264
+      }
      },
      {
       "id": 545785,
@@ -9648,7 +10709,14 @@
       "position": "Attacker",
       "shirtNumber": 17,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.39,
+       "rank": 250,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 213
+      }
      },
      {
       "id": 438404,
@@ -9668,7 +10736,8 @@
       "position": "Midfielder",
       "shirtNumber": 7,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 249376,
@@ -9688,7 +10757,8 @@
       "position": "Midfielder",
       "shirtNumber": 29,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 172482,
@@ -9708,7 +10778,8 @@
       "position": "Midfielder",
       "shirtNumber": 38,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 490304,
@@ -9728,7 +10799,8 @@
       "position": "Defender",
       "shirtNumber": 20,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 275835,
@@ -9748,7 +10820,8 @@
       "position": "Defender",
       "shirtNumber": 22,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -10265,7 +11338,14 @@
       "position": "Midfielder",
       "shirtNumber": 24,
       "goalShare": 0.29,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.22,
+       "rank": 69,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 581
+      }
      },
      {
       "id": 639458,
@@ -10285,7 +11365,14 @@
       "position": "Attacker",
       "shirtNumber": 7,
       "goalShare": 0.14,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.67,
+       "rank": 197,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 599
+      }
      },
      {
       "id": 111646,
@@ -10305,7 +11392,14 @@
       "position": "Attacker",
       "shirtNumber": 17,
       "goalShare": 0.14,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.27,
+       "rank": 55,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 588
+      }
      },
      {
       "id": 118294,
@@ -10325,7 +11419,14 @@
       "position": "Midfielder",
       "shirtNumber": 16,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.7,
+       "rank": 192,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 532
+      }
      },
      {
       "id": 113866,
@@ -10345,7 +11446,14 @@
       "position": "Defender",
       "shirtNumber": 21,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.89,
+       "rank": 138,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 500
+      }
      },
      {
       "id": 635811,
@@ -10365,7 +11473,14 @@
       "position": "Midfielder",
       "shirtNumber": 8,
       "goalShare": 0.14,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.9,
+       "rank": 134,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 234
+      }
      },
      {
       "id": 172047,
@@ -10388,6 +11503,13 @@
       "status": {
        "kind": "suspended",
        "reason": "utestengt"
+      },
+      "seasonRating": {
+       "rating": 6.37,
+       "rank": 255,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 152
       }
      },
      {
@@ -10408,7 +11530,14 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.56,
+       "rank": 223,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 630
+      }
      },
      {
       "id": 281969,
@@ -10428,7 +11557,14 @@
       "position": "Defender",
       "shirtNumber": 3,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.87,
+       "rank": 147,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 630
+      }
      },
      {
       "id": 144729,
@@ -10448,7 +11584,14 @@
       "position": "Defender",
       "shirtNumber": 33,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.94,
+       "rank": 123,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 521
+      }
      },
      {
       "id": 311987,
@@ -10468,7 +11611,14 @@
       "position": "Attacker",
       "shirtNumber": 14,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.83,
+       "rank": 159,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 502
+      }
      },
      {
       "id": 545286,
@@ -10488,7 +11638,14 @@
       "position": "Midfielder",
       "shirtNumber": 19,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.91,
+       "rank": 130,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 465
+      }
      },
      {
       "id": 483582,
@@ -10508,7 +11665,14 @@
       "position": "Defender",
       "shirtNumber": 22,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.99,
+       "rank": 112,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 360
+      }
      },
      {
       "id": 112930,
@@ -10528,7 +11692,8 @@
       "position": "Defender",
       "shirtNumber": 5,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 109329,
@@ -10548,7 +11713,8 @@
       "position": "Defender",
       "shirtNumber": 2,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 183276,
@@ -10568,7 +11734,8 @@
       "position": "Defender",
       "shirtNumber": 4,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 577517,
@@ -10588,7 +11755,14 @@
       "position": "Midfielder",
       "shirtNumber": 11,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.25,
+       "rank": 272,
+       "of": 288,
+       "league": "Premier League",
+       "minutes": 75
+      }
      },
      {
       "id": 500546,
@@ -10608,7 +11782,8 @@
       "position": "Attacker",
       "shirtNumber": 9,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 290114,
@@ -10628,7 +11803,8 @@
       "position": "Midfielder",
       "shirtNumber": 32,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 581935,
@@ -10651,7 +11827,8 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 683496,
@@ -10671,7 +11848,8 @@
       "position": "Midfielder",
       "shirtNumber": 20,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 51547,
@@ -10691,7 +11869,8 @@
       "position": "Midfielder",
       "shirtNumber": 10,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -11292,7 +12471,14 @@
       "position": "Attacker",
       "shirtNumber": 9,
       "goalShare": 0.35,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.07,
+       "rank": 96,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 613
+      }
      },
      {
       "id": 183652,
@@ -11312,7 +12498,14 @@
       "position": "Attacker",
       "shirtNumber": 21,
       "goalShare": 0.24,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.13,
+       "rank": 71,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 767
+      }
      },
      {
       "id": 468941,
@@ -11335,6 +12528,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
+      },
+      "seasonRating": {
+       "rating": 6.96,
+       "rank": 141,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 833
       }
      },
      {
@@ -11355,7 +12555,14 @@
       "position": "Defender",
       "shirtNumber": 15,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.21,
+       "rank": 39,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 537337,
@@ -11375,7 +12582,14 @@
       "position": "Midfielder",
       "shirtNumber": 31,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.31,
+       "rank": 30,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 934
+      }
      },
      {
       "id": 174881,
@@ -11395,7 +12609,14 @@
       "position": "Midfielder",
       "shirtNumber": 10,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.17,
+       "rank": 58,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 852
+      }
      },
      {
       "id": 185184,
@@ -11415,7 +12636,14 @@
       "position": "Defender",
       "shirtNumber": 3,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.14,
+       "rank": 69,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 614
+      }
      },
      {
       "id": 55246,
@@ -11438,6 +12666,13 @@
       "status": {
        "kind": "card_risk",
        "reason": "4 gule kort – ett til gir karantene"
+      },
+      "seasonRating": {
+       "rating": 7.03,
+       "rank": 111,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 804
       }
      },
      {
@@ -11458,7 +12693,14 @@
       "position": "Defender",
       "shirtNumber": 6,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.77,
+       "rank": 213,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 768
+      }
      },
      {
       "id": 524093,
@@ -11478,7 +12720,14 @@
       "position": "Attacker",
       "shirtNumber": 11,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.5,
+       "rank": 314,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 342
+      }
      },
      {
       "id": 521243,
@@ -11498,7 +12747,14 @@
       "position": "Defender",
       "shirtNumber": 2,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.79,
+       "rank": 210,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 944
+      }
      },
      {
       "id": 274502,
@@ -11518,7 +12774,14 @@
       "position": "Keeper",
       "shirtNumber": 22,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.87,
+       "rank": 181,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 720
+      }
      },
      {
       "id": 501852,
@@ -11538,7 +12801,14 @@
       "position": "Defender",
       "shirtNumber": 17,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.53,
+       "rank": 303,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 413
+      }
      },
      {
       "id": 129881,
@@ -11561,6 +12831,13 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
+      },
+      "seasonRating": {
+       "rating": 6.54,
+       "rank": 298,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 378
       }
      },
      {
@@ -11581,7 +12858,8 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 62477,
@@ -11601,7 +12879,8 @@
       "position": "Midfielder",
       "shirtNumber": 28,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 741236,
@@ -11621,7 +12900,8 @@
       "position": "Midfielder",
       "shirtNumber": 24,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 497306,
@@ -11641,7 +12921,8 @@
       "position": "Defender",
       "shirtNumber": 30,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 309556,
@@ -11661,7 +12942,8 @@
       "position": "Attacker",
       "shirtNumber": 29,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 744063,
@@ -11681,7 +12963,8 @@
       "position": "Defender",
       "shirtNumber": 27,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 436983,
@@ -11701,7 +12984,8 @@
       "position": "Attacker",
       "shirtNumber": 7,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 434541,
@@ -11724,7 +13008,8 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 754894,
@@ -11744,7 +13029,8 @@
       "position": "Unknown",
       "shirtNumber": 45,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 784105,
@@ -11764,7 +13050,8 @@
       "position": "Unknown",
       "shirtNumber": 39,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 750616,
@@ -11784,7 +13071,8 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 746680,
@@ -11804,7 +13092,8 @@
       "position": "Unknown",
       "shirtNumber": 53,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -12323,7 +13612,14 @@
       "position": "Attacker",
       "shirtNumber": 19,
       "goalShare": 0.33,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.28,
+       "rank": 35,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 710
+      }
      },
      {
       "id": 501528,
@@ -12343,7 +13639,14 @@
       "position": "Defender",
       "shirtNumber": 30,
       "goalShare": 0.07,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.7,
+       "rank": 239,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 491
+      }
      },
      {
       "id": 144842,
@@ -12363,7 +13666,14 @@
       "position": "Midfielder",
       "shirtNumber": 8,
       "goalShare": 0.07,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.07,
+       "rank": 94,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 923
+      }
      },
      {
       "id": 579046,
@@ -12383,7 +13693,14 @@
       "position": "Defender",
       "shirtNumber": 3,
       "goalShare": 0.13,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.04,
+       "rank": 107,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 703
+      }
      },
      {
       "id": 168903,
@@ -12403,7 +13720,14 @@
       "position": "Midfielder",
       "shirtNumber": 20,
       "goalShare": 0.07,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.93,
+       "rank": 157,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 493
+      }
      },
      {
       "id": 157195,
@@ -12423,7 +13747,8 @@
       "position": "Defender",
       "shirtNumber": 6,
       "goalShare": 0.07,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 526839,
@@ -12443,7 +13768,14 @@
       "position": "Defender",
       "shirtNumber": 2,
       "goalShare": 0.07,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.39,
+       "rank": 17,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 900
+      }
      },
      {
       "id": 295360,
@@ -12463,7 +13795,14 @@
       "position": "Midfielder",
       "shirtNumber": 27,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.84,
+       "rank": 196,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 594
+      }
      },
      {
       "id": 493311,
@@ -12483,7 +13822,14 @@
       "position": "Defender",
       "shirtNumber": 12,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.69,
+       "rank": 243,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 472
+      }
      },
      {
       "id": 175226,
@@ -12503,7 +13849,14 @@
       "position": "Attacker",
       "shirtNumber": 28,
       "goalShare": 0.07,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.22,
+       "rank": 356,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 395
+      }
      },
      {
       "id": 108963,
@@ -12526,6 +13879,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
+      },
+      "seasonRating": {
+       "rating": 6.53,
+       "rank": 303,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 260
       }
      },
      {
@@ -12546,7 +13906,14 @@
       "position": "Keeper",
       "shirtNumber": 22,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.52,
+       "rank": 308,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 154409,
@@ -12566,7 +13933,14 @@
       "position": "Defender",
       "shirtNumber": 5,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.84,
+       "rank": 193,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 923
+      }
      },
      {
       "id": 157454,
@@ -12586,7 +13960,14 @@
       "position": "Defender",
       "shirtNumber": 26,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.55,
+       "rank": 294,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 683
+      }
      },
      {
       "id": 168433,
@@ -12606,7 +13987,14 @@
       "position": "Midfielder",
       "shirtNumber": 17,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.0,
+       "rank": 125,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 834
+      }
      },
      {
       "id": 47407,
@@ -12626,7 +14014,14 @@
       "position": "Midfielder",
       "shirtNumber": 37,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.63,
+       "rank": 268,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 486
+      }
      },
      {
       "id": 496796,
@@ -12649,7 +14044,8 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 168561,
@@ -12672,7 +14068,8 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 143566,
@@ -12692,7 +14089,8 @@
       "position": "Midfielder",
       "shirtNumber": 15,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 499688,
@@ -12715,7 +14113,8 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 287448,
@@ -12735,7 +14134,8 @@
       "position": "Midfielder",
       "shirtNumber": 47,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 153000,
@@ -12758,7 +14158,8 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 641679,
@@ -12778,7 +14179,8 @@
       "position": "Attacker",
       "shirtNumber": 11,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 253380,
@@ -12798,7 +14200,8 @@
       "position": "Attacker",
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -13483,7 +14886,14 @@
       "position": "Attacker",
       "shirtNumber": 8,
       "goalShare": 0.33,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.19,
+       "rank": 45,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 927
+      }
      },
      {
       "id": 488633,
@@ -13503,7 +14913,14 @@
       "position": "Midfielder",
       "shirtNumber": 11,
       "goalShare": 0.11,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.38,
+       "rank": 19,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 878
+      }
      },
      {
       "id": 689608,
@@ -13523,7 +14940,14 @@
       "position": "Attacker",
       "shirtNumber": 45,
       "goalShare": 0.11,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.94,
+       "rank": 149,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 560
+      }
      },
      {
       "id": 519494,
@@ -13543,7 +14967,14 @@
       "position": "Attacker",
       "shirtNumber": 9,
       "goalShare": 0.11,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.85,
+       "rank": 187,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 700
+      }
      },
      {
       "id": 126571,
@@ -13563,7 +14994,14 @@
       "position": "Defender",
       "shirtNumber": 38,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.09,
+       "rank": 84,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 900
+      }
      },
      {
       "id": 529567,
@@ -13586,6 +15024,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
+      },
+      "seasonRating": {
+       "rating": 6.66,
+       "rank": 261,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 533
       }
      },
      {
@@ -13606,7 +15051,8 @@
       "position": "Attacker",
       "shirtNumber": 47,
       "goalShare": 0.11,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 148407,
@@ -13626,7 +15072,14 @@
       "position": "Attacker",
       "shirtNumber": 16,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.82,
+       "rank": 200,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 601
+      }
      },
      {
       "id": 636539,
@@ -13646,7 +15099,14 @@
       "position": "Midfielder",
       "shirtNumber": 27,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.66,
+       "rank": 261,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 533
+      }
      },
      {
       "id": 166640,
@@ -13666,7 +15126,14 @@
       "position": "Midfielder",
       "shirtNumber": 14,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.59,
+       "rank": 278,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 238
+      }
      },
      {
       "id": 743625,
@@ -13686,7 +15153,8 @@
       "position": "Defender",
       "shirtNumber": 44,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 174848,
@@ -13706,7 +15174,14 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.06,
+       "rank": 99,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 498350,
@@ -13729,6 +15204,13 @@
       "status": {
        "kind": "card_risk",
        "reason": "4 gule kort – ett til gir karantene"
+      },
+      "seasonRating": {
+       "rating": 7.3,
+       "rank": 32,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 978
       }
      },
      {
@@ -13749,7 +15231,14 @@
       "position": "Defender",
       "shirtNumber": 3,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.21,
+       "rank": 40,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 969
+      }
      },
      {
       "id": 174795,
@@ -13772,6 +15261,13 @@
       "status": {
        "kind": "suspended",
        "reason": "utestengt"
+      },
+      "seasonRating": {
+       "rating": 6.9,
+       "rank": 166,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 885
       }
      },
      {
@@ -13792,7 +15288,14 @@
       "position": "Midfielder",
       "shirtNumber": 5,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.31,
+       "rank": 30,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 584
+      }
      },
      {
       "id": 594129,
@@ -13812,7 +15315,14 @@
       "position": "Defender",
       "shirtNumber": 23,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.57,
+       "rank": 285,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 276
+      }
      },
      {
       "id": 722636,
@@ -13835,7 +15345,8 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 529470,
@@ -13855,7 +15366,8 @@
       "position": "Attacker",
       "shirtNumber": 39,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 493107,
@@ -13875,7 +15387,8 @@
       "position": "Defender",
       "shirtNumber": 2,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -14412,7 +15925,14 @@
       "position": "Attacker",
       "shirtNumber": 17,
       "goalShare": 0.2,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.96,
+       "rank": 2,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 509
+      }
      },
      {
       "id": 575784,
@@ -14432,7 +15952,14 @@
       "position": "Attacker",
       "shirtNumber": 9,
       "goalShare": 0.2,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.91,
+       "rank": 164,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 814
+      }
      },
      {
       "id": 116448,
@@ -14452,7 +15979,14 @@
       "position": "Attacker",
       "shirtNumber": 16,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.15,
+       "rank": 64,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 392
+      }
      },
      {
       "id": 111836,
@@ -14472,7 +16006,14 @@
       "position": "Attacker",
       "shirtNumber": 10,
       "goalShare": 0.15,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.74,
+       "rank": 221,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 182
+      }
      },
      {
       "id": 170817,
@@ -14492,7 +16033,14 @@
       "position": "Defender",
       "shirtNumber": 5,
       "goalShare": 0.1,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.54,
+       "rank": 10,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 154997,
@@ -14512,7 +16060,14 @@
       "position": "Attacker",
       "shirtNumber": 24,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.09,
+       "rank": 78,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 967
+      }
      },
      {
       "id": 282044,
@@ -14532,7 +16087,14 @@
       "position": "Defender",
       "shirtNumber": 20,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.16,
+       "rank": 62,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 928
+      }
      },
      {
       "id": 497321,
@@ -14552,7 +16114,14 @@
       "position": "Attacker",
       "shirtNumber": 28,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.17,
+       "rank": 55,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 921
+      }
      },
      {
       "id": 529983,
@@ -14572,7 +16141,14 @@
       "position": "Attacker",
       "shirtNumber": 7,
       "goalShare": 0.1,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.87,
+       "rank": 178,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 734
+      }
      },
      {
       "id": 644210,
@@ -14592,7 +16168,14 @@
       "position": "Midfielder",
       "shirtNumber": 14,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.15,
+       "rank": 66,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 697
+      }
      },
      {
       "id": 254559,
@@ -14615,6 +16198,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
+      },
+      "seasonRating": {
+       "rating": 6.77,
+       "rank": 213,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 378
       }
      },
      {
@@ -14635,7 +16225,8 @@
       "position": "Attacker",
       "shirtNumber": 32,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 283568,
@@ -14655,7 +16246,8 @@
       "position": "Midfielder",
       "shirtNumber": 18,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 643569,
@@ -14675,7 +16267,14 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.17,
+       "rank": 55,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 282052,
@@ -14695,7 +16294,14 @@
       "position": "Defender",
       "shirtNumber": 4,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.34,
+       "rank": 26,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 130640,
@@ -14718,6 +16324,13 @@
       "status": {
        "kind": "card_risk",
        "reason": "4 gule kort – ett til gir karantene"
+      },
+      "seasonRating": {
+       "rating": 7.18,
+       "rank": 51,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 916
       }
      },
      {
@@ -14738,7 +16351,8 @@
       "position": "Defender",
       "shirtNumber": 2,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 97043,
@@ -14758,7 +16372,8 @@
       "position": "Attacker",
       "shirtNumber": 33,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 531207,
@@ -14778,7 +16393,8 @@
       "position": "Defender",
       "shirtNumber": 25,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 434223,
@@ -14798,7 +16414,8 @@
       "position": "Midfielder",
       "shirtNumber": 19,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 145593,
@@ -14818,7 +16435,8 @@
       "position": "Defender",
       "shirtNumber": 23,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -15472,7 +17090,14 @@
       "position": "Attacker",
       "shirtNumber": 7,
       "goalShare": 0.22,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.06,
+       "rank": 100,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 553
+      }
      },
      {
       "id": 529143,
@@ -15495,6 +17120,13 @@
       "status": {
        "kind": "suspended",
        "reason": "utestengt"
+      },
+      "seasonRating": {
+       "rating": 6.53,
+       "rank": 303,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 737
       }
      },
      {
@@ -15515,7 +17147,14 @@
       "position": "Attacker",
       "shirtNumber": 18,
       "goalShare": 0.11,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.9,
+       "rank": 166,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 705
+      }
      },
      {
       "id": 626820,
@@ -15535,7 +17174,14 @@
       "position": "Defender",
       "shirtNumber": 4,
       "goalShare": 0.11,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.96,
+       "rank": 141,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 426
+      }
      },
      {
       "id": 80544,
@@ -15555,7 +17201,14 @@
       "position": "Midfielder",
       "shirtNumber": 3,
       "goalShare": 0.11,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.97,
+       "rank": 138,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 830
+      }
      },
      {
       "id": 77045,
@@ -15575,7 +17228,14 @@
       "position": "Defender",
       "shirtNumber": 15,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.73,
+       "rank": 224,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 577
+      }
      },
      {
       "id": 565293,
@@ -15595,7 +17255,14 @@
       "position": "Attacker",
       "shirtNumber": 17,
       "goalShare": 0.11,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.48,
+       "rank": 319,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 537
+      }
      },
      {
       "id": 128553,
@@ -15615,7 +17282,8 @@
       "position": "Defender",
       "shirtNumber": 20,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 71559,
@@ -15638,7 +17306,8 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 624962,
@@ -15658,7 +17327,8 @@
       "position": "Attacker",
       "shirtNumber": 11,
       "goalShare": 0.11,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 422145,
@@ -15678,7 +17348,14 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.7,
+       "rank": 238,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 546952,
@@ -15701,6 +17378,13 @@
       "status": {
        "kind": "suspended",
        "reason": "utestengt"
+      },
+      "seasonRating": {
+       "rating": 6.52,
+       "rank": 308,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 984
       }
      },
      {
@@ -15721,7 +17405,14 @@
       "position": "Midfielder",
       "shirtNumber": 14,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.67,
+       "rank": 254,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 765
+      }
      },
      {
       "id": 520672,
@@ -15741,7 +17432,14 @@
       "position": "Defender",
       "shirtNumber": 6,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.67,
+       "rank": 254,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 646
+      }
      },
      {
       "id": 530616,
@@ -15761,7 +17459,14 @@
       "position": "Midfielder",
       "shirtNumber": 24,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.71,
+       "rank": 232,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 617
+      }
      },
      {
       "id": 490379,
@@ -15781,7 +17486,14 @@
       "position": "Midfielder",
       "shirtNumber": 16,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.69,
+       "rank": 243,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 573
+      }
      },
      {
       "id": 283533,
@@ -15801,7 +17513,14 @@
       "position": "Midfielder",
       "shirtNumber": 8,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.51,
+       "rank": 312,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 362
+      }
      },
      {
       "id": 493135,
@@ -15821,7 +17540,8 @@
       "position": "Defender",
       "shirtNumber": 33,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 686298,
@@ -15841,7 +17561,8 @@
       "position": "Midfielder",
       "shirtNumber": 26,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 148217,
@@ -15861,7 +17582,14 @@
       "position": "Attacker",
       "shirtNumber": 27,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.4,
+       "rank": 333,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 198
+      }
      },
      {
       "id": 282013,
@@ -15884,7 +17612,8 @@
       "status": {
        "kind": "suspended",
        "reason": "utestengt"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 502487,
@@ -15904,7 +17633,8 @@
       "position": "Attacker",
       "shirtNumber": 19,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 655611,
@@ -15927,7 +17657,8 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 482172,
@@ -15947,7 +17678,8 @@
       "position": "Defender",
       "shirtNumber": 23,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -16471,7 +18203,14 @@
       "position": "Attacker",
       "shirtNumber": 7,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.28,
+       "rank": 34,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 611
+      }
      },
      {
       "id": 481291,
@@ -16494,6 +18233,13 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, tilbake i trening"
+      },
+      "seasonRating": {
+       "rating": 6.83,
+       "rank": 198,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 497
       }
      },
      {
@@ -16514,7 +18260,14 @@
       "position": "Attacker",
       "shirtNumber": 19,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.02,
+       "rank": 120,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 549
+      }
      },
      {
       "id": 561544,
@@ -16534,7 +18287,14 @@
       "position": "Defender",
       "shirtNumber": 23,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.97,
+       "rank": 139,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 442
+      }
      },
      {
       "id": 433996,
@@ -16554,7 +18314,14 @@
       "position": "Midfielder",
       "shirtNumber": 5,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.99,
+       "rank": 128,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 399
+      }
      },
      {
       "id": 115320,
@@ -16574,7 +18341,14 @@
       "position": "Midfielder",
       "shirtNumber": 29,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.73,
+       "rank": 224,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 797
+      }
      },
      {
       "id": 170884,
@@ -16594,7 +18368,8 @@
       "position": "Defender",
       "shirtNumber": 44,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 279356,
@@ -16614,7 +18389,8 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 701524,
@@ -16634,7 +18410,14 @@
       "position": "Defender",
       "shirtNumber": 3,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.76,
+       "rank": 218,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 924
+      }
      },
      {
       "id": 580462,
@@ -16654,7 +18437,14 @@
       "position": "Midfielder",
       "shirtNumber": 8,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.65,
+       "rank": 264,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 465
+      }
      },
      {
       "id": 497162,
@@ -16674,7 +18464,14 @@
       "position": "Midfielder",
       "shirtNumber": 21,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.76,
+       "rank": 215,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 457
+      }
      },
      {
       "id": 136232,
@@ -16694,7 +18491,14 @@
       "position": "Attacker",
       "shirtNumber": 10,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.72,
+       "rank": 229,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 330
+      }
      },
      {
       "id": 85645,
@@ -16714,7 +18518,8 @@
       "position": "Attacker",
       "shirtNumber": 9,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 34100,
@@ -16734,7 +18539,14 @@
       "position": "Defender",
       "shirtNumber": 2,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.62,
+       "rank": 274,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 810
+      }
      },
      {
       "id": 574540,
@@ -16754,7 +18566,14 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.03,
+       "rank": 363,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 630
+      }
      },
      {
       "id": 145994,
@@ -16774,7 +18593,14 @@
       "position": "Defender",
       "shirtNumber": 14,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.37,
+       "rank": 339,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 495
+      }
      },
      {
       "id": 476147,
@@ -16794,7 +18620,14 @@
       "position": "Defender",
       "shirtNumber": 22,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.31,
+       "rank": 346,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 488
+      }
      },
      {
       "id": 158307,
@@ -16817,6 +18650,13 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, tilbake i trening"
+      },
+      "seasonRating": {
+       "rating": 6.57,
+       "rank": 285,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 494
       }
      },
      {
@@ -16837,7 +18677,8 @@
       "position": "Keeper",
       "shirtNumber": 37,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 751020,
@@ -16857,7 +18698,8 @@
       "position": "Attacker",
       "shirtNumber": 12,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 185982,
@@ -16877,7 +18719,8 @@
       "position": "Defender",
       "shirtNumber": 18,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 497291,
@@ -16900,7 +18743,8 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i januar 2027"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 484532,
@@ -16920,7 +18764,14 @@
       "position": "Attacker",
       "shirtNumber": 27,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.09,
+       "rank": 361,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 191
+      }
      },
      {
       "id": 532929,
@@ -16940,7 +18791,8 @@
       "position": "Attacker",
       "shirtNumber": 17,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 576940,
@@ -16963,7 +18815,8 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, tilbake i trening"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 429209,
@@ -16983,7 +18836,8 @@
       "position": "Attacker",
       "shirtNumber": 31,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -17621,6 +19475,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake sent i november 2026"
+      },
+      "seasonRating": {
+       "rating": 6.94,
+       "rank": 152,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 595
       }
      },
      {
@@ -17644,6 +19505,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake sent i november 2026"
+      },
+      "seasonRating": {
+       "rating": 7.2,
+       "rank": 44,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 572
       }
      },
      {
@@ -17664,7 +19532,14 @@
       "position": "Attacker",
       "shirtNumber": 11,
       "goalShare": 0.2,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.09,
+       "rank": 78,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 557
+      }
      },
      {
       "id": 148970,
@@ -17687,7 +19562,8 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 516142,
@@ -17707,7 +19583,14 @@
       "position": "Midfielder",
       "shirtNumber": 20,
       "goalShare": 0.07,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.17,
+       "rank": 52,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 722
+      }
      },
      {
       "id": 498944,
@@ -17727,7 +19610,14 @@
       "position": "Defender",
       "shirtNumber": 5,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.15,
+       "rank": 65,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 170498,
@@ -17747,7 +19637,14 @@
       "position": "Defender",
       "shirtNumber": 3,
       "goalShare": 0.07,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.08,
+       "rank": 91,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 858
+      }
      },
      {
       "id": 490502,
@@ -17767,7 +19664,14 @@
       "position": "Midfielder",
       "shirtNumber": 17,
       "goalShare": 0.07,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.7,
+       "rank": 240,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 582
+      }
      },
      {
       "id": 562976,
@@ -17790,6 +19694,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, ute resten av sesongen"
+      },
+      "seasonRating": {
+       "rating": 6.73,
+       "rank": 227,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 567
       }
      },
      {
@@ -17810,7 +19721,8 @@
       "position": "Midfielder",
       "shirtNumber": 14,
       "goalShare": 0.07,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 525079,
@@ -17830,7 +19742,8 @@
       "position": "Attacker",
       "shirtNumber": 15,
       "goalShare": 0.07,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 279369,
@@ -17850,7 +19763,8 @@
       "position": "Defender",
       "shirtNumber": 12,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 407498,
@@ -17873,6 +19787,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake sent i november 2026"
+      },
+      "seasonRating": {
+       "rating": 6.8,
+       "rank": 208,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 225
       }
      },
      {
@@ -17893,7 +19814,14 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.02,
+       "rank": 117,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 125028,
@@ -17916,6 +19844,13 @@
       "status": {
        "kind": "card_risk",
        "reason": "4 gule kort – ett til gir karantene"
+      },
+      "seasonRating": {
+       "rating": 7.02,
+       "rank": 120,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 658
       }
      },
      {
@@ -17939,6 +19874,13 @@
       "status": {
        "kind": "card_risk",
        "reason": "4 gule kort – ett til gir karantene"
+      },
+      "seasonRating": {
+       "rating": 6.58,
+       "rank": 282,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 648
       }
      },
      {
@@ -17959,7 +19901,14 @@
       "position": "Defender",
       "shirtNumber": 2,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.73,
+       "rank": 222,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 599
+      }
      },
      {
       "id": 498271,
@@ -17979,7 +19928,14 @@
       "position": "Defender",
       "shirtNumber": 19,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.42,
+       "rank": 330,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 298
+      }
      },
      {
       "id": 702129,
@@ -17999,7 +19955,14 @@
       "position": "Attacker",
       "shirtNumber": 22,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.14,
+       "rank": 359,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 235
+      }
      },
      {
       "id": 534701,
@@ -18019,7 +19982,14 @@
       "position": "Midfielder",
       "shirtNumber": 40,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.38,
+       "rank": 334,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 191
+      }
      },
      {
       "id": 686943,
@@ -18039,7 +20009,8 @@
       "position": "Attacker",
       "shirtNumber": 26,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 1306473,
@@ -18059,7 +20030,8 @@
       "position": "Attacker",
       "shirtNumber": 33,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 684401,
@@ -18079,7 +20051,8 @@
       "position": "Attacker",
       "shirtNumber": 25,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -18594,7 +20567,14 @@
       "position": "Attacker",
       "shirtNumber": 33,
       "goalShare": 0.25,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.89,
+       "rank": 171,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 578
+      }
      },
      {
       "id": 495028,
@@ -18614,7 +20594,14 @@
       "position": "Attacker",
       "shirtNumber": 10,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.08,
+       "rank": 87,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 333
+      }
      },
      {
       "id": 630627,
@@ -18634,7 +20621,14 @@
       "position": "Attacker",
       "shirtNumber": 49,
       "goalShare": 0.19,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.34,
+       "rank": 27,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 767
+      }
      },
      {
       "id": 750734,
@@ -18654,7 +20648,14 @@
       "position": "Midfielder",
       "shirtNumber": 30,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.95,
+       "rank": 148,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 604
+      }
      },
      {
       "id": 534359,
@@ -18674,7 +20675,14 @@
       "position": "Attacker",
       "shirtNumber": 9,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.66,
+       "rank": 263,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 401
+      }
      },
      {
       "id": 539955,
@@ -18694,7 +20702,8 @@
       "position": "Midfielder",
       "shirtNumber": 35,
       "goalShare": 0.12,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 157881,
@@ -18714,7 +20723,14 @@
       "position": "Defender",
       "shirtNumber": 14,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.2,
+       "rank": 42,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 588503,
@@ -18734,7 +20750,14 @@
       "position": "Attacker",
       "shirtNumber": 7,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.91,
+       "rank": 162,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 537
+      }
      },
      {
       "id": 181135,
@@ -18754,7 +20777,14 @@
       "position": "Midfielder",
       "shirtNumber": 46,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.98,
+       "rank": 132,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 428
+      }
      },
      {
       "id": 690050,
@@ -18774,7 +20804,14 @@
       "position": "Defender",
       "shirtNumber": 26,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.35,
+       "rank": 24,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 783
+      }
      },
      {
       "id": 468090,
@@ -18794,7 +20831,14 @@
       "position": "Midfielder",
       "shirtNumber": 8,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.57,
+       "rank": 285,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 528
+      }
      },
      {
       "id": 112761,
@@ -18814,7 +20858,14 @@
       "position": "Keeper",
       "shirtNumber": 22,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.19,
+       "rank": 48,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 467060,
@@ -18834,7 +20885,14 @@
       "position": "Defender",
       "shirtNumber": 23,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.25,
+       "rank": 37,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 895
+      }
      },
      {
       "id": 527123,
@@ -18854,7 +20912,14 @@
       "position": "Midfielder",
       "shirtNumber": 6,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.83,
+       "rank": 197,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 809
+      }
      },
      {
       "id": 406224,
@@ -18874,7 +20939,14 @@
       "position": "Defender",
       "shirtNumber": 5,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.05,
+       "rank": 103,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 734
+      }
      },
      {
       "id": 80035,
@@ -18894,7 +20966,14 @@
       "position": "Midfielder",
       "shirtNumber": 4,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.82,
+       "rank": 205,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 586
+      }
      },
      {
       "id": 282064,
@@ -18917,6 +20996,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
+      },
+      "seasonRating": {
+       "rating": 7.04,
+       "rank": 108,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 373
       }
      },
      {
@@ -18937,7 +21023,8 @@
       "position": "Midfielder",
       "shirtNumber": 17,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 525959,
@@ -18957,7 +21044,8 @@
       "position": "Defender",
       "shirtNumber": 3,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 172734,
@@ -18977,7 +21065,8 @@
       "position": "Attacker",
       "shirtNumber": 31,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 544220,
@@ -18997,7 +21086,8 @@
       "position": "Midfielder",
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -19197,8 +21287,8 @@
        "away": 31
       },
       "peoples": {
-       "home": 46,
-       "draw": 35,
+       "home": 45,
+       "draw": 36,
        "away": 19
       }
      }
@@ -19638,6 +21728,13 @@
       "status": {
        "kind": "card_risk",
        "reason": "4 gule kort – ett til gir karantene"
+      },
+      "seasonRating": {
+       "rating": 7.36,
+       "rank": 23,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
       }
      },
      {
@@ -19661,6 +21758,13 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
+      },
+      "seasonRating": {
+       "rating": 7.09,
+       "rank": 78,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 839
       }
      },
      {
@@ -19681,7 +21785,14 @@
       "position": "Midfielder",
       "shirtNumber": 7,
       "goalShare": 0.11,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.09,
+       "rank": 78,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 436
+      }
      },
      {
       "id": 112870,
@@ -19704,6 +21815,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
+      },
+      "seasonRating": {
+       "rating": 6.86,
+       "rank": 184,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 330
       }
      },
      {
@@ -19724,7 +21842,14 @@
       "position": "Midfielder",
       "shirtNumber": 13,
       "goalShare": 0.11,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.94,
+       "rank": 152,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 453
+      }
      },
      {
       "id": 166446,
@@ -19744,7 +21869,14 @@
       "position": "Attacker",
       "shirtNumber": 15,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.29,
+       "rank": 349,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 451
+      }
      },
      {
       "id": 535027,
@@ -19764,7 +21896,14 @@
       "position": "Attacker",
       "shirtNumber": 11,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.84,
+       "rank": 193,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 387
+      }
      },
      {
       "id": 299129,
@@ -19784,7 +21923,14 @@
       "position": "Attacker",
       "shirtNumber": 9,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.41,
+       "rank": 331,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 253
+      }
      },
      {
       "id": 177238,
@@ -19804,7 +21950,14 @@
       "position": "Defender",
       "shirtNumber": 16,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.92,
+       "rank": 158,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 945
+      }
      },
      {
       "id": 171319,
@@ -19824,7 +21977,14 @@
       "position": "Defender",
       "shirtNumber": 2,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.98,
+       "rank": 132,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 900
+      }
      },
      {
       "id": 638546,
@@ -19844,7 +22004,14 @@
       "position": "Defender",
       "shirtNumber": 5,
       "goalShare": 0.06,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.16,
+       "rank": 60,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 810
+      }
      },
      {
       "id": 527770,
@@ -19864,7 +22031,8 @@
       "position": "Defender",
       "shirtNumber": 22,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 505857,
@@ -19884,7 +22052,8 @@
       "position": "Midfielder",
       "shirtNumber": 19,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 120358,
@@ -19904,7 +22073,14 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.13,
+       "rank": 72,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 685247,
@@ -19924,7 +22100,14 @@
       "position": "Midfielder",
       "shirtNumber": 27,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.82,
+       "rank": 200,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 834
+      }
      },
      {
       "id": 544072,
@@ -19944,7 +22127,14 @@
       "position": "Defender",
       "shirtNumber": 18,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.62,
+       "rank": 272,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 383
+      }
      },
      {
       "id": 483853,
@@ -19964,7 +22154,8 @@
       "position": "Defender",
       "shirtNumber": 40,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 629225,
@@ -19984,7 +22175,14 @@
       "position": "Midfielder",
       "shirtNumber": 10,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.68,
+       "rank": 248,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 360
+      }
      },
      {
       "id": 180024,
@@ -20004,7 +22202,8 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 705242,
@@ -20024,7 +22223,14 @@
       "position": "Defender",
       "shirtNumber": 21,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.73,
+       "rank": 227,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 232
+      }
      },
      {
       "id": 519582,
@@ -20044,7 +22250,8 @@
       "position": "Attacker",
       "shirtNumber": 42,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 146413,
@@ -20067,7 +22274,8 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 67665,
@@ -20087,7 +22295,8 @@
       "position": "Defender",
       "shirtNumber": 23,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 128552,
@@ -20107,7 +22316,8 @@
       "position": "Midfielder",
       "shirtNumber": 4,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 703121,
@@ -20127,7 +22337,8 @@
       "position": "Midfielder",
       "shirtNumber": 58,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -20604,7 +22815,14 @@
       "position": "Defender",
       "shirtNumber": 21,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.59,
+       "rank": 8,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 847
+      }
      },
      {
       "id": 165173,
@@ -20624,7 +22842,14 @@
       "position": "Midfielder",
       "shirtNumber": 10,
       "goalShare": 0.25,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.12,
+       "rank": 74,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 657
+      }
      },
      {
       "id": 537213,
@@ -20644,7 +22869,14 @@
       "position": "Attacker",
       "shirtNumber": 23,
       "goalShare": 0.25,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.56,
+       "rank": 289,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 577
+      }
      },
      {
       "id": 497348,
@@ -20667,6 +22899,13 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
+      },
+      "seasonRating": {
+       "rating": 6.85,
+       "rank": 187,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 553
       }
      },
      {
@@ -20687,7 +22926,14 @@
       "position": "Midfielder",
       "shirtNumber": 12,
       "goalShare": 0.08,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.86,
+       "rank": 185,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 962
+      }
      },
      {
       "id": 639463,
@@ -20707,7 +22953,14 @@
       "position": "Defender",
       "shirtNumber": 2,
       "goalShare": 0.08,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.09,
+       "rank": 83,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 688
+      }
      },
      {
       "id": 577687,
@@ -20727,7 +22980,14 @@
       "position": "Midfielder",
       "shirtNumber": 7,
       "goalShare": 0.08,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.76,
+       "rank": 215,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 703
+      }
      },
      {
       "id": 131394,
@@ -20747,7 +23007,14 @@
       "position": "Defender",
       "shirtNumber": 16,
       "goalShare": 0.08,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.06,
+       "rank": 100,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 616
+      }
      },
      {
       "id": 94043,
@@ -20767,7 +23034,14 @@
       "position": "Midfielder",
       "shirtNumber": 17,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.52,
+       "rank": 308,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 488
+      }
      },
      {
       "id": 519956,
@@ -20787,7 +23061,14 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.25,
+       "rank": 352,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 484521,
@@ -20807,7 +23088,14 @@
       "position": "Defender",
       "shirtNumber": 19,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.82,
+       "rank": 200,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 660
+      }
      },
      {
       "id": 177229,
@@ -20827,7 +23115,14 @@
       "position": "Midfielder",
       "shirtNumber": 8,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.9,
+       "rank": 166,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 482
+      }
      },
      {
       "id": 291644,
@@ -20847,7 +23142,14 @@
       "position": "Defender",
       "shirtNumber": 5,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.89,
+       "rank": 171,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 465
+      }
      },
      {
       "id": 290565,
@@ -20867,7 +23169,14 @@
       "position": "Defender",
       "shirtNumber": 3,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.49,
+       "rank": 316,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 442
+      }
      },
      {
       "id": 465078,
@@ -20887,7 +23196,14 @@
       "position": "Midfielder",
       "shirtNumber": 20,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.3,
+       "rank": 347,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 377
+      }
      },
      {
       "id": 528586,
@@ -20907,7 +23223,14 @@
       "position": "Midfielder",
       "shirtNumber": 27,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.59,
+       "rank": 278,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 377
+      }
      },
      {
       "id": 434258,
@@ -20927,7 +23250,8 @@
       "position": "Midfielder",
       "shirtNumber": 4,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 465553,
@@ -20947,7 +23271,8 @@
       "position": "Defender",
       "shirtNumber": 15,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 530528,
@@ -20970,7 +23295,8 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 279036,
@@ -20990,7 +23316,8 @@
       "position": "Attacker",
       "shirtNumber": 45,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 453193,
@@ -21010,7 +23337,8 @@
       "position": "Midfielder",
       "shirtNumber": 6,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 433459,
@@ -21030,7 +23358,8 @@
       "position": "Midfielder",
       "shirtNumber": 14,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 499123,
@@ -21050,7 +23379,8 @@
       "position": "Attacker",
       "shirtNumber": 11,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 174925,
@@ -21070,7 +23400,8 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -21708,7 +24039,14 @@
       "position": "Attacker",
       "shirtNumber": 20,
       "goalShare": 0.2,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.94,
+       "rank": 3,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 980
+      }
      },
      {
       "id": 157417,
@@ -21728,7 +24066,14 @@
       "position": "Defender",
       "shirtNumber": 15,
       "goalShare": 0.17,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.6,
+       "rank": 7,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 848
+      }
      },
      {
       "id": 183357,
@@ -21748,7 +24093,14 @@
       "position": "Midfielder",
       "shirtNumber": 10,
       "goalShare": 0.07,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.46,
+       "rank": 15,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 847
+      }
      },
      {
       "id": 803101,
@@ -21768,7 +24120,14 @@
       "position": "Midfielder",
       "shirtNumber": 17,
       "goalShare": 0.1,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.88,
+       "rank": 177,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 537
+      }
      },
      {
       "id": 175708,
@@ -21788,7 +24147,14 @@
       "position": "Attacker",
       "shirtNumber": 9,
       "goalShare": 0.1,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.01,
+       "rank": 122,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 515
+      }
      },
      {
       "id": 308371,
@@ -21808,7 +24174,14 @@
       "position": "Attacker",
       "shirtNumber": 35,
       "goalShare": 0.07,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.96,
+       "rank": 141,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 215
+      }
      },
      {
       "id": 512486,
@@ -21828,7 +24201,14 @@
       "position": "Midfielder",
       "shirtNumber": 7,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.54,
+       "rank": 10,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 867
+      }
      },
      {
       "id": 183665,
@@ -21851,6 +24231,13 @@
       "status": {
        "kind": "card_risk",
        "reason": "4 gule kort – ett til gir karantene"
+      },
+      "seasonRating": {
+       "rating": 6.9,
+       "rank": 166,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 698
       }
      },
      {
@@ -21871,7 +24258,14 @@
       "position": "Midfielder",
       "shirtNumber": 14,
       "goalShare": 0.1,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.14,
+       "rank": 70,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 620
+      }
      },
      {
       "id": 160604,
@@ -21891,7 +24285,14 @@
       "position": "Defender",
       "shirtNumber": 2,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.76,
+       "rank": 218,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 553
+      }
      },
      {
       "id": 529569,
@@ -21911,7 +24312,14 @@
       "position": "Attacker",
       "shirtNumber": 19,
       "goalShare": 0.03,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.92,
+       "rank": 159,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 421
+      }
      },
      {
       "id": 116204,
@@ -21931,7 +24339,8 @@
       "position": "Midfielder",
       "shirtNumber": 28,
       "goalShare": 0.07,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 276662,
@@ -21951,7 +24360,14 @@
       "position": "Defender",
       "shirtNumber": 3,
       "goalShare": 0.03,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.37,
+       "rank": 21,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 89628,
@@ -21971,7 +24387,14 @@
       "position": "Defender",
       "shirtNumber": 34,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.02,
+       "rank": 119,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 454
+      }
      },
      {
       "id": 468183,
@@ -21991,7 +24414,8 @@
       "position": "Defender",
       "shirtNumber": 5,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 430881,
@@ -22011,7 +24435,14 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.88,
+       "rank": 174,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 576805,
@@ -22031,7 +24462,14 @@
       "position": "Defender",
       "shirtNumber": 30,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.09,
+       "rank": 78,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 435
+      }
      },
      {
       "id": 579788,
@@ -22051,7 +24489,14 @@
       "position": "Midfielder",
       "shirtNumber": 61,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.51,
+       "rank": 312,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 242
+      }
      },
      {
       "id": 745787,
@@ -22071,7 +24516,8 @@
       "position": "Defender",
       "shirtNumber": 58,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 84083,
@@ -22091,7 +24537,14 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.26,
+       "rank": 36,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 748
+      }
      },
      {
       "id": 593319,
@@ -22114,7 +24567,8 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 579730,
@@ -22134,7 +24588,8 @@
       "position": "Defender",
       "shirtNumber": 18,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 688170,
@@ -22154,7 +24609,8 @@
       "position": "Attacker",
       "shirtNumber": 66,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 647578,
@@ -22174,7 +24630,8 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -22662,7 +25119,14 @@
       "position": "Midfielder",
       "shirtNumber": 10,
       "goalShare": 0.14,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.55,
+       "rank": 9,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 918
+      }
      },
      {
       "id": 120216,
@@ -22685,6 +25149,13 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
+      },
+      "seasonRating": {
+       "rating": 7.17,
+       "rank": 55,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 731
       }
      },
      {
@@ -22705,7 +25176,14 @@
       "position": "Midfielder",
       "shirtNumber": 7,
       "goalShare": 0.1,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.37,
+       "rank": 21,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 729
+      }
      },
      {
       "id": 580967,
@@ -22725,7 +25203,14 @@
       "position": "Midfielder",
       "shirtNumber": 27,
       "goalShare": 0.1,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.01,
+       "rank": 122,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 720
+      }
      },
      {
       "id": 119282,
@@ -22745,7 +25230,14 @@
       "position": "Defender",
       "shirtNumber": 14,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.09,
+       "rank": 85,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 944
+      }
      },
      {
       "id": 104224,
@@ -22768,6 +25260,13 @@
       "status": {
        "kind": "card_risk",
        "reason": "4 gule kort – ett til gir karantene"
+      },
+      "seasonRating": {
+       "rating": 7.18,
+       "rank": 49,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 793
       }
      },
      {
@@ -22791,6 +25290,13 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
+      },
+      "seasonRating": {
+       "rating": 7.17,
+       "rank": 59,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 742
       }
      },
      {
@@ -22811,7 +25317,14 @@
       "position": "Midfielder",
       "shirtNumber": 30,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.26,
+       "rank": 36,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 748
+      }
      },
      {
       "id": 526095,
@@ -22831,7 +25344,14 @@
       "position": "Attacker",
       "shirtNumber": 28,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.28,
+       "rank": 350,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 130
+      }
      },
      {
       "id": 292893,
@@ -22851,7 +25371,14 @@
       "position": "Defender",
       "shirtNumber": 13,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.33,
+       "rank": 28,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 807
+      }
      },
      {
       "id": 575367,
@@ -22871,7 +25398,14 @@
       "position": "Midfielder",
       "shirtNumber": 26,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.63,
+       "rank": 268,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 385
+      }
      },
      {
       "id": 498275,
@@ -22891,7 +25425,14 @@
       "position": "Attacker",
       "shirtNumber": 18,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.45,
+       "rank": 324,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 325
+      }
      },
      {
       "id": 501006,
@@ -22911,7 +25452,8 @@
       "position": "Midfielder",
       "shirtNumber": 23,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 498223,
@@ -22931,7 +25473,8 @@
       "position": "Defender",
       "shirtNumber": 34,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 406616,
@@ -22951,7 +25494,14 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.23,
+       "rank": 38,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 408572,
@@ -22971,7 +25521,14 @@
       "position": "Defender",
       "shirtNumber": 15,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.07,
+       "rank": 96,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 546
+      }
      },
      {
       "id": 73461,
@@ -22991,7 +25548,14 @@
       "position": "Defender",
       "shirtNumber": 5,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.85,
+       "rank": 192,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 543
+      }
      },
      {
       "id": 493099,
@@ -23011,7 +25575,8 @@
       "position": "Attacker",
       "shirtNumber": 11,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 430579,
@@ -23031,7 +25596,8 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 579341,
@@ -23051,7 +25617,8 @@
       "position": "Midfielder",
       "shirtNumber": 20,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 569082,
@@ -23071,7 +25638,8 @@
       "position": "Defender",
       "shirtNumber": 6,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 182569,
@@ -23091,7 +25659,14 @@
       "position": "Attacker",
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.71,
+       "rank": 232,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 599
+      }
      },
      {
       "id": 677757,
@@ -23111,7 +25686,8 @@
       "position": "Midfielder",
       "shirtNumber": 29,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -23721,7 +26297,14 @@
       "position": "Midfielder",
       "shirtNumber": 28,
       "goalShare": 0.26,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.64,
+       "rank": 5,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 873
+      }
      },
      {
       "id": 87457,
@@ -23744,6 +26327,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i januar 2027"
+      },
+      "seasonRating": {
+       "rating": 7.45,
+       "rank": 16,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 350
       }
      },
      {
@@ -23767,6 +26357,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
+      },
+      "seasonRating": {
+       "rating": 7.19,
+       "rank": 47,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 541
       }
      },
      {
@@ -23787,7 +26384,14 @@
       "position": "Midfielder",
       "shirtNumber": 7,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.19,
+       "rank": 46,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 935
+      }
      },
      {
       "id": 174282,
@@ -23807,7 +26411,14 @@
       "position": "Midfielder",
       "shirtNumber": 5,
       "goalShare": 0.11,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.87,
+       "rank": 178,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 714
+      }
      },
      {
       "id": 177114,
@@ -23827,7 +26438,8 @@
       "position": "Defender",
       "shirtNumber": 37,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 575596,
@@ -23847,7 +26459,14 @@
       "position": "Midfielder",
       "shirtNumber": 8,
       "goalShare": 0.11,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.57,
+       "rank": 285,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 264
+      }
      },
      {
       "id": 390864,
@@ -23867,7 +26486,14 @@
       "position": "Midfielder",
       "shirtNumber": 20,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.43,
+       "rank": 327,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 238
+      }
      },
      {
       "id": 703372,
@@ -23887,7 +26513,14 @@
       "position": "Attacker",
       "shirtNumber": 36,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.97,
+       "rank": 136,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 718
+      }
      },
      {
       "id": 114659,
@@ -23910,6 +26543,13 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
+      },
+      "seasonRating": {
+       "rating": 6.38,
+       "rank": 334,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 605
       }
      },
      {
@@ -23930,7 +26570,8 @@
       "position": "Midfielder",
       "shirtNumber": 27,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 646747,
@@ -23950,7 +26591,8 @@
       "position": "Midfielder",
       "shirtNumber": 14,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 496391,
@@ -23970,7 +26612,8 @@
       "position": "Midfielder",
       "shirtNumber": 23,
       "goalShare": 0.05,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 101397,
@@ -23990,7 +26633,14 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.54,
+       "rank": 298,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 900
+      }
      },
      {
       "id": 543921,
@@ -24010,7 +26660,14 @@
       "position": "Defender",
       "shirtNumber": 34,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.2,
+       "rank": 42,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 880
+      }
      },
      {
       "id": 497736,
@@ -24030,7 +26687,14 @@
       "position": "Defender",
       "shirtNumber": 3,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.82,
+       "rank": 204,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 798
+      }
      },
      {
       "id": 436912,
@@ -24050,7 +26714,8 @@
       "position": "Defender",
       "shirtNumber": 24,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 527432,
@@ -24070,7 +26735,14 @@
       "position": "Defender",
       "shirtNumber": 38,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.67,
+       "rank": 254,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 632
+      }
      },
      {
       "id": 62624,
@@ -24093,7 +26765,8 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 511302,
@@ -24113,7 +26786,8 @@
       "position": "Attacker",
       "shirtNumber": 19,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 525351,
@@ -24133,7 +26807,8 @@
       "position": "Defender",
       "shirtNumber": 15,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 162455,
@@ -24153,7 +26828,8 @@
       "position": "Defender",
       "shirtNumber": 33,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 61554,
@@ -24173,7 +26849,8 @@
       "position": null,
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 260212,
@@ -24193,7 +26870,8 @@
       "position": "Defender",
       "shirtNumber": 6,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 468269,
@@ -24216,7 +26894,8 @@
       "status": {
        "kind": "injured",
        "reason": "skadet, tilbake tidlig i november 2026"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 703801,
@@ -24236,7 +26915,8 @@
       "position": "Defender",
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",
@@ -24765,6 +27445,13 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, usikker"
+      },
+      "seasonRating": {
+       "rating": 7.0,
+       "rank": 126,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 757
       }
      },
      {
@@ -24788,6 +27475,13 @@
       "status": {
        "kind": "card_risk",
        "reason": "4 gule kort – ett til gir karantene"
+      },
+      "seasonRating": {
+       "rating": 6.64,
+       "rank": 265,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 489
       }
      },
      {
@@ -24808,7 +27502,14 @@
       "position": "Midfielder",
       "shirtNumber": 39,
       "goalShare": 0.1,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.73,
+       "rank": 226,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 732
+      }
      },
      {
       "id": 628112,
@@ -24828,7 +27529,14 @@
       "position": "Attacker",
       "shirtNumber": 9,
       "goalShare": 0.2,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.55,
+       "rank": 294,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 450
+      }
      },
      {
       "id": 484029,
@@ -24848,7 +27556,14 @@
       "position": "Midfielder",
       "shirtNumber": 5,
       "goalShare": 0.1,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.99,
+       "rank": 128,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 434274,
@@ -24868,7 +27583,14 @@
       "position": "Defender",
       "shirtNumber": 33,
       "goalShare": 0.1,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.7,
+       "rank": 240,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 577
+      }
      },
      {
       "id": 699935,
@@ -24888,7 +27610,14 @@
       "position": "Attacker",
       "shirtNumber": 20,
       "goalShare": 0.1,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.46,
+       "rank": 320,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 606
+      }
      },
      {
       "id": 485874,
@@ -24908,7 +27637,14 @@
       "position": "Defender",
       "shirtNumber": 23,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.35,
+       "rank": 341,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 544
+      }
      },
      {
       "id": 630718,
@@ -24928,7 +27664,14 @@
       "position": "Midfielder",
       "shirtNumber": 11,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.24,
+       "rank": 353,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 242
+      }
      },
      {
       "id": 175816,
@@ -24948,7 +27691,14 @@
       "position": "Keeper",
       "shirtNumber": 1,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 7.21,
+       "rank": 40,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 430977,
@@ -24968,7 +27718,14 @@
       "position": "Defender",
       "shirtNumber": 6,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.59,
+       "rank": 278,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 990
+      }
      },
      {
       "id": 531291,
@@ -24988,7 +27745,14 @@
       "position": "Defender",
       "shirtNumber": 4,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.46,
+       "rank": 320,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 900
+      }
      },
      {
       "id": 699945,
@@ -25008,7 +27772,14 @@
       "position": "Midfielder",
       "shirtNumber": 7,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.85,
+       "rank": 190,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 595
+      }
      },
      {
       "id": 545550,
@@ -25028,7 +27799,8 @@
       "position": "Defender",
       "shirtNumber": 3,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 527724,
@@ -25051,7 +27823,8 @@
       "status": {
        "kind": "doubtful",
        "reason": "skadet, tilbake i trening"
-      }
+      },
+      "seasonRating": null
      },
      {
       "id": 280159,
@@ -25071,7 +27844,14 @@
       "position": "Midfielder",
       "shirtNumber": 22,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": {
+       "rating": 6.43,
+       "rank": 327,
+       "of": 366,
+       "league": "Championship",
+       "minutes": 339
+      }
      },
      {
       "id": 759044,
@@ -25091,7 +27871,8 @@
       "position": "Defender",
       "shirtNumber": 29,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 168422,
@@ -25111,7 +27892,8 @@
       "position": "Attacker",
       "shirtNumber": 45,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 277061,
@@ -25131,7 +27913,8 @@
       "position": "Attacker",
       "shirtNumber": 10,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 706208,
@@ -25151,7 +27934,8 @@
       "position": "Defender",
       "shirtNumber": 56,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 168413,
@@ -25171,7 +27955,8 @@
       "position": "Defender",
       "shirtNumber": 16,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 185122,
@@ -25191,7 +27976,8 @@
       "position": "Midfielder",
       "shirtNumber": 15,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      },
      {
       "id": 643476,
@@ -25211,7 +27997,8 @@
       "position": "Attacker",
       "shirtNumber": null,
       "goalShare": 0.0,
-      "status": null
+      "status": null,
+      "seasonRating": null
      }
     ],
     "absenceSource": "fotmob",

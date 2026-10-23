@@ -168,6 +168,10 @@ article.match { background: var(--slip); border: 1px solid var(--rule); border-r
 .player { border: 1px solid var(--rule); border-radius: 6px; padding: 12px; display: grid; gap: 10px; background: var(--paper); min-width: 0 }
 .p-head { display: grid; gap: 2px }
 .p-name { font: 700 16px/1.2 var(--display); font-stretch: 90% }
+.p-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px }
+.p-stars { font-size: 15px; letter-spacing: 1px; color: var(--pen); white-space: nowrap }
+.p-stars .off { color: var(--rule) }
+.p-rating { font-size: 12px; color: var(--muted) }
 .p-meta { font-size: 12.5px; color: var(--muted) }
 .p-status { justify-self: start; margin-top: 4px; font: 600 11px/1 var(--ui); letter-spacing: .04em; padding: 4px 6px; border-radius: 3px; border: 1px solid currentColor }
 .p-status.s-suspended, .p-status.s-injured, .p-status.s-missing { color: var(--warn) }
@@ -232,6 +236,14 @@ def _dec(x, digits=1):
 KEY_START_SHARE = 0.5          # started at least half the team's league matches
 KEY_CONTRIBUTION_SHARE = 0.15  # or involved (goals + assists) in at least this share of the team's league goals
 KEY_MIN_CONTRIBUTIONS = 3
+STAR_CUTS = ((0.15, 3), (0.50, 2))  # FotMob season-rating rank in the league: top 15 % ★★★, top 50 % ★★, else ★
+
+
+def stars(season_rating):
+    if not season_rating:
+        return None
+    share = season_rating["rank"] / season_rating["of"]
+    return next((n for cut, n in STAR_CUTS if share <= cut), 1)
 
 
 def is_key_player(p, team):
@@ -284,8 +296,13 @@ def _player_card(team, p):
     badge = f'<span class="p-status s-{st["kind"]}">{STATUS[st["kind"]]}</span>' if st else ""
     why = f'<p class="p-why">{escape(st["reason"][:1].upper() + st["reason"][1:])}.</p>' if st else ""
     league = escape(team["league"]["name"]) if team.get("league") else "serien"
-    return (f'<div class="player"><div class="p-head"><span class="p-name">{escape(p["name"])}</span>'
-            f'<span class="p-meta">{escape(" · ".join(meta))}</span>{badge}</div>'
+    sr, n = p.get("seasonRating"), stars(p.get("seasonRating"))
+    star_html = (f'<span class="p-stars" role="img" aria-label="{n} av 3 stjerner">{"★" * n}<span class="off">{"★" * (3 - n)}</span></span>'
+                 if n else "")
+    rating = (f'<span class="p-rating">FotMob-snitt {_dec(sr["rating"], 2)} · nr. {sr["rank"]} av {sr["of"]} i {escape(sr["league"])}</span>'
+              if sr else '<span class="p-rating">For få minutter til FotMob-rating i ligaen</span>')
+    return (f'<div class="player"><div class="p-head"><div class="p-top"><span class="p-name">{escape(p["name"])}</span>{star_html}</div>'
+            f'<span class="p-meta">{escape(" · ".join(meta))}</span>{rating}{badge}</div>'
             f'<dl class="p-stats" aria-label="Tall fra {league}">{tiles}</dl>{why}</div>')
 
 
@@ -411,6 +428,7 @@ def render(coupon_dir, site_dir, fragment_path=None):
       <div><dt>PDO</dt> <dd>andel skudd på mål som blir mål, pluss andel motstanderskudd på mål som reddes. 1,00 er normalt. Langt over eller under pleier å jevne seg ut.</dd></div>
       <div><dt>Oddsen</dt> <dd>oddsen fra Norsk Tippings Oddsen, regnet om til sannsynlighet uten bookmakerens margin. Innrammede tall er tegn der oddsen ligger minst {VALUE_GAP} prosentpoeng over folkets fordeling.</dd></div>
       <div><dt>Tendens</dt> <dd>spik når oddsen gir favoritten minst {SPIKE_AT} %. Ellers halvgardering med tegn over {KEEP_AT} % og tegnene folket undervurderer mest i forhold til oddsen.</dd></div>
+      <div><dt>Stjerner</dt> <dd>nøkkelspillerens plass blant alle spillere i ligaen på FotMobs snittkarakter for sesongen: ★★★ topp 15 %, ★★ topp halvdel, ★ resten.</dd></div>
       <div><dt>Bombe</dt> <dd>et tegn folket gir under {BOMB_BELOW} %. Systemet har minst {MIN_BOMBS}. Mangler det bomber, legges de på spikene der oddsen ligger mest over folket, og halvgarderingen med det svakeste tegnet blir spik, slik at antallet rekker er det samme.</dd></div>
     </dl>
     <span>Statistikk fra NIFS, folkets fordeling og odds fra Norsk Tipping. Hentet {datetime.now().strftime("%d.%m.%Y %H.%M")}. Skader og utestengelser fra FotMob. Karantenefare er beregnet fra gule kort i NIFS etter seriens regler.</span>

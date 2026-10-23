@@ -422,10 +422,29 @@ def match_facts(nt_match, nifs_match):
         "competition": stage["fullName"],
         "round": nifs_match.get("round"),
         "stadium": (nifs_match.get("stadium") or {}).get("name"),
-        "home": _with_last_match(_with_availability(team_facts(home_id, kickoff, stage), fm, "home")),
-        "away": _with_last_match(_with_availability(team_facts(away_id, kickoff, stage), fm, "away")),
+        "home": _with_ratings(_with_last_match(_with_availability(team_facts(home_id, kickoff, stage), fm, "home")), fm),
+        "away": _with_ratings(_with_last_match(_with_availability(team_facts(away_id, kickoff, stage), fm, "away")), fm),
         "h2h": head_to_head(home_id, away_id, kickoff),
     }
+
+
+def _with_ratings(team, fm):
+    """FotMob season rating and league rank on each player, the basis for the key-player stars."""
+    if not fm or not fm.get("leagueId"):
+        return team
+    try:
+        ratings = fotmob.league_ratings(fm["leagueId"])
+    except Exception as e:  # FotMob is unofficial; cards render without stars
+        print(f"FotMob ratings failed for league {fm['leagueId']}: {e}")
+        ratings = None
+    if not ratings:
+        return team
+    of = len(ratings["players"])
+    for p in team.get("players") or []:
+        row = fotmob.find_rating(ratings, p["name"], team["name"])
+        p["seasonRating"] = {"rating": row["rating"], "rank": row["rank"], "of": of, "league": ratings["league"],
+                             "minutes": row["minutes"]} if row else None
+    return team
 
 
 def _with_last_match(team):

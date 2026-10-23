@@ -2,7 +2,7 @@
  "_coupon": {
   "headline": "Der folket og oddsen er uenige",
   "intro": [
-   "Oddsen viser hva bookmakeren mener, og folkets fordeling viser hva tipperne tror. På denne kupongen er de mest uenige om Stoke (60 % hos folket, 39 i oddsen), Blackburn (49 mot 34), Arsenal (75 mot 64) og Chelsea (61 mot 52).",
+   "Oddsen viser hva bookmakeren mener, og folkets fordeling viser hva tipperne tror. På denne kupongen er de mest uenige om Stoke (60 % hos folket, 39 i oddsen), Blackburn (49 mot 34), Arsenal (75 mot 64) og Chelsea (61 mot 53).",
    "For hver kamp viser vi først tallene som støtter oddsen, og deretter det som kan snu kampen i en annen retning. Tendensen følger oddsen: spik når favoritten har minst 55 % sjanse, ellers halvgardering med tegnene folket undervurderer mest. Systemet har minst tre bomber, tegn folket gir under 20 %, der oddsen ligger høyere enn folket."
   ]
  },
@@ -85,7 +85,7 @@
  "2416786": {
   "headline": "Folket tror mer på Chelsea enn oddsen gjør, og tallene gir oddsen rett",
   "take": [
-   "Oddsen gir Chelsea 52 % sjanse, mens folket gir 61. Chelsea er ubeseiret hjemme (2-1-0), har ligaens tredje beste angrep og kontrollerte 2–0-seieren borte mot Everton sist, der motstanderen bare fikk 0,43 i xG. Tottenham har én seier på sju, og den kom mot Coventry sist, på jevne sjanser (0,86 mot 0,77 i xG).",
+   "Oddsen gir Chelsea 53 % sjanse, mens folket gir 61. Chelsea er ubeseiret hjemme (2-1-0), har ligaens tredje beste angrep og kontrollerte 2–0-seieren borte mot Everton sist, der motstanderen bare fikk 0,43 i xG. Tottenham har én seier på sju, og den kom mot Coventry sist, på jevne sjanser (0,86 mot 0,77 i xG).",
    "Forskjellen mellom folket og oddsen ligger i det tabellen ikke viser. Chelsea har scoret 17 mål på sjanser verdt 9,6 xG, mens Tottenham har seks mål på 8,3 xG. Begge lag har en xG-differanse på −2,2, og er jevnere enn 13 mot 6 poeng tilsier."
   ],
   "signal": [
@@ -116,7 +116,7 @@
     "text": "Reece James er skadet til januar, og fem andre er skadet eller usikre."
    }
   ],
-  "crowd": "Folket gir Chelsea 61 %, oddsen 52. Borteseier får 17 % hos folket mot oddsens 24, et av de største avvikene på kupongen."
+  "crowd": "Folket gir Chelsea 61 %, oddsen 53. Borteseier får 17 % hos folket mot oddsens 24, et av de største avvikene på kupongen."
  },
  "2416582": {
   "headline": "Arsenal er rett favoritt, men folket er for sikre",
