@@ -90,6 +90,8 @@ Other ids: resolve through `countries/1/tournaments/`, `tournaments/{id}/stages/
 
 **Live match**: poll `matches/{id}/` no faster than the 30 min cache allows unless you cache-bust; `lastUpdated` changes whenever anything in the match changes. `timeStartFirstHalf` / `timeStartSecondHalf` let you compute the running clock.
 
+**Linking Norsk Tipping coupons**: NIFS has no Norsk Tipping or Betradar ids; see [`norsk-tipping-api.md`](norsk-tipping-api.md).
+
 **Player season stats / top scorers**: there is no stage-level player-stats route. Per-person numbers are in `persons/{id}/`.`stageStatistics[]` (`matches`, `goals`, `minutes`, `yellowCards`, `redCards`, ...). For a stage-wide top-scorer list, aggregate goal events (`matchEventTypeId` 2, 10) across `matches/{id}/` for every played match in the stage.
 
 ## Codes
