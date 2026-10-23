@@ -95,7 +95,7 @@ Other ids: resolve through `countries/1/tournaments/`, `tournaments/{id}/stages/
 
 **Squads**: `teams/{id}/persons/` items have `uid` prefix `pit_`, but `id` is the person id.
 
-**Data coverage varies by stage**: `stages/{id}/`.`data` flags what is recorded. Eliteserien has player `rating`, xG and head coaches; Premier League has xG but no ratings; Championship has shots, possession and corners but no xG, ratings or coaches. No stage has injuries or suspensions.
+**Data coverage varies by stage**: `stages/{id}/`.`data` flags what is recorded. Eliteserien has player `rating`, xG and head coaches; Premier League has xG but no ratings; Championship has shots, possession and corners but no xG, ratings or coaches. No stage has injuries or suspensions; use FotMob ([`fotmob-api.md`](fotmob-api.md)).
 
 **Match report**: `matches/{id}/`. Group `matchEvents` by `sorting`: events sharing a `sorting` belong together (goal + assist, substituted + substitute on, penalty + penalty goal). Order by `periodSorting`, then `sorting`. Use `timeRounded` (+ `overtimeRounded` for stoppage time) as the display minute. Show lineups only when `isLineupConfirmed` is true.
 

@@ -17,7 +17,8 @@ MONTHS = ["januar", "februar", "mars", "april", "mai", "juni", "juli", "august",
 SIGNS = (("home", "H"), ("draw", "U"), ("away", "B"))
 KIND = ["", "spik", "halvgardering", "helgardering"]
 POSITIONS = {"Keeper": "Keeper", "Defender": "Forsvar", "Midfielder": "Midtbane", "Attacker": "Angrep"}
-STATUS = {"suspended": "Trolig utestengt", "missing": "Ute av troppen", "returning": "Tilbake", "card_risk": "Karantenefare"}
+STATUS = {"suspended": "Utestengt", "injured": "Skadet", "doubtful": "Usikker", "missing": "Ute av troppen",
+          "returning": "Tilbake", "card_risk": "Karantenefare"}
 VALUE_GAP = 5  # percentage points the odds sit above the public before a sign counts as undervalued
 SPIKE_AT = 55  # odds-implied % for a single sign
 KEEP_AT = 45   # odds-implied % a sign needs to stay in a two-sign hedge regardless of the public
@@ -169,7 +170,8 @@ article.match { background: var(--slip); border: 1px solid var(--rule); border-r
 .p-name { font: 700 16px/1.2 var(--display); font-stretch: 90% }
 .p-meta { font-size: 12.5px; color: var(--muted) }
 .p-status { justify-self: start; margin-top: 4px; font: 600 11px/1 var(--ui); letter-spacing: .04em; padding: 4px 6px; border-radius: 3px; border: 1px solid currentColor }
-.p-status.s-suspended, .p-status.s-missing { color: var(--warn) }
+.p-status.s-suspended, .p-status.s-injured, .p-status.s-missing { color: var(--warn) }
+.p-status.s-doubtful { color: var(--ink) }
 .p-status.s-returning { color: var(--pitch) }
 .p-status.s-card_risk { color: var(--muted) }
 .p-why { font-size: 12.5px; color: var(--muted); margin: 0 }
@@ -396,7 +398,7 @@ def render(coupon_dir, site_dir, fragment_path=None):
       <div><dt>Tendens</dt> <dd>spik når oddsen gir favoritten minst {SPIKE_AT} %. Ellers halvgardering med tegn over {KEEP_AT} % og tegnene folket undervurderer mest i forhold til oddsen.</dd></div>
       <div><dt>Bombe</dt> <dd>et tegn folket gir under {BOMB_BELOW} %. Systemet har minst {MIN_BOMBS}. Mangler det bomber, legges de på spikene der oddsen ligger mest over folket, og halvgarderingen med det svakeste tegnet blir spik, slik at antallet rekker er det samme.</dd></div>
     </dl>
-    <span>Statistikk fra NIFS, folkets fordeling og odds fra Norsk Tipping. Hentet {datetime.now().strftime("%d.%m.%Y %H.%M")}. Utestengelser er beregnet fra kort, ikke offisielle lister.</span>
+    <span>Statistikk fra NIFS, folkets fordeling og odds fra Norsk Tipping. Hentet {datetime.now().strftime("%d.%m.%Y %H.%M")}. Skader og utestengelser fra FotMob. Karantenefare er beregnet fra gule kort i NIFS etter seriens regler.</span>
     <span>18-årsgrense for pengespill. Spill ansvarlig.</span>
   </footer>
 </div>"""

@@ -8,16 +8,18 @@ Event rules (verified against Eliteserien 2026 results):
 from collections import defaultdict
 from datetime import datetime, timedelta
 
-from . import nifs
+from . import fotmob, nifs
 
 GOAL, OWN_GOAL, PENALTY_GOAL, ASSIST = 2, 8, 10, 5
 YELLOW, RED, SECOND_YELLOW = 4, 3, 12
 BUCKETS = ("0-15", "16-30", "31-45", "46-60", "61-75", "76-90")
 
-# Yellow-card counts that trigger a one-match league ban, per NIFS tournament id.
-# Eliteserien: 3rd yellow, then every 2nd (NFF). England: 5th, 10th, 15th (thresholds apply this early in the season).
+# Yellow-card counts that trigger a one-match league ban, per NIFS tournament id. Only a fallback:
+# FotMob's lists (fotmob.py) are used whenever the match is found there.
+# Eliteserien ("0. divisjon menn"): every 4th yellow, NFF Reaksjonsreglement § 4-7 (1) as amended 19.01.2026.
+# England: 5th, 10th, 15th (thresholds apply this early in the season; not verified against FA rules).
 BAN_THRESHOLDS = {
-    5: lambda n: n >= 3 and n % 2 == 1,
+    5: lambda n: n > 0 and n % 4 == 0,
     7: lambda n: n in (5, 10, 15),
     28: lambda n: n in (5, 10, 15),
 }
@@ -407,6 +409,11 @@ def match_facts(nt_match, nifs_match):
     kickoff = datetime.fromisoformat(nifs_match["timestamp"])
     stage = nifs.get(f"stages/{nifs_match['stageId']}/", max_age=6 * 3600)
     home_id, away_id = nifs_match["homeTeam"]["id"], nifs_match["awayTeam"]["id"]
+    try:
+        fm = fotmob.unavailable(kickoff, nifs_match["homeTeam"]["name"], nifs_match["awayTeam"]["name"])
+    except Exception as e:  # FotMob is unofficial; fall back to inferred absences
+        print(f"FotMob failed for {nifs_match['name']}: {e}")
+        fm = None
     return {
         "nt": {"eventId": nt_match["gameEngineEventId"], "line": nt_match["gameEngineSortingNumber"],
                "name": nt_match["name"], "arrangement": nt_match["arrangement"]["name"], "tips": nt_match["tips"]},
@@ -415,7 +422,75 @@ def match_facts(nt_match, nifs_match):
         "competition": stage["fullName"],
         "round": nifs_match.get("round"),
         "stadium": (nifs_match.get("stadium") or {}).get("name"),
-        "home": team_facts(home_id, kickoff, stage),
-        "away": team_facts(away_id, kickoff, stage),
+        "home": _with_last_match(_with_availability(team_facts(home_id, kickoff, stage), fm, "home")),
+        "away": _with_last_match(_with_availability(team_facts(away_id, kickoff, stage), fm, "away")),
         "h2h": head_to_head(home_id, away_id, kickoff),
     }
+
+
+def _with_last_match(team):
+    """FotMob facts for the team's most recent match in any competition, for the recap above the analysis."""
+    if not team.get("form"):
+        return team
+    last = nifs.match(team["form"][-1]["matchId"], finished=True)
+    try:
+        report = fotmob.match_report(datetime.fromisoformat(last["timestamp"]),
+                                     last["homeTeam"]["name"], last["awayTeam"]["name"])
+    except Exception as e:  # FotMob is unofficial; the page renders without a recap
+        print(f"FotMob report failed for {last['name']}: {e}")
+        report = None
+    if report:
+        report["date"] = last["timestamp"][:10]
+        report["teamSide"] = "home" if last["homeTeam"]["id"] == team["id"] else "away"
+    team["lastMatch"] = report
+    return team
+
+
+MONTHS_NB = {"January": "januar", "February": "februar", "March": "mars", "April": "april", "May": "mai",
+             "June": "juni", "July": "juli", "August": "august", "September": "september",
+             "October": "oktober", "November": "november", "December": "desember"}
+RETURN_NB = {"Doubtful": "usikker", "Out for season": "ute resten av sesongen", "Back in training": "tilbake i trening",
+             "Unknown": "ukjent comeback", "About a week": "ute omtrent en uke", "About 1-2 weeks": "ute 1–2 uker",
+             "About 2-3 weeks": "ute 2–3 uker", "About a month": "ute omtrent en måned"}
+DOUBTFUL = {"Doubtful", "Back in training"}
+
+
+def _return_nb(text):
+    if not text:
+        return "ukjent comeback"
+    if text in RETURN_NB:
+        return RETURN_NB[text]
+    parts = text.split()
+    if len(parts) == 3 and parts[0] in ("Early", "Mid", "Late") and parts[1] in MONTHS_NB:
+        when = {"Early": "tidlig i", "Mid": "midt i", "Late": "sent i"}[parts[0]]
+        return f"tilbake {when} {MONTHS_NB[parts[1]]} {parts[2]}"
+    return text
+
+
+def _with_availability(team, fm, side):
+    """Overlay FotMob's injuries and suspensions on the inferred absences. When FotMob has the match it is
+    the source for who is out: inferred suspensions, 'missing' and 'returning' are dropped, card risk stays."""
+    if not fm:
+        team["absenceSource"] = "beregnet"
+        return team
+    team["absenceSource"] = "fotmob"
+    players = team.get("players") or []
+    listed = []
+    matched = fotmob.match_players(fm[side], players)
+    for i, u in enumerate(fm[side]):
+        kind = "suspended" if u["type"] == "suspension" else "doubtful" if u["expectedReturn"] in DOUBTFUL else "injured"
+        reason = ("utestengt" if kind == "suspended" else "skadet") + ", " + _return_nb(u["expectedReturn"])
+        if kind == "suspended":
+            reason = "utestengt"
+        match = matched.get(i)
+        listed.append({"name": match["name"] if match else u["name"], "nifsId": match["id"] if match else None,
+                       "kind": kind, "reason": reason})
+    by_id = {x["nifsId"]: x for x in listed if x["nifsId"]}
+    for p in players:
+        if p["id"] in by_id:
+            p["status"] = {"kind": by_id[p["id"]]["kind"], "reason": by_id[p["id"]]["reason"]}
+        elif p.get("status") and p["status"]["kind"] != "card_risk":
+            p["status"] = None
+    team["unavailable"] = listed
+    team["absences"] = [a for a in team.get("absences") or [] if a["kind"] == "card_risk"]
+    return team
