@@ -1,8 +1,8 @@
 [
-  {"ntArrangementId": 1, "ntName": "ENG Premier League", "nifsTournamentId": 7},
-  {"ntArrangementId": 2, "ntName": "ENG Championship", "nifsTournamentId": 28},
-  {"ntArrangementId": 5, "ntName": "NOR Eliteserien", "nifsTournamentId": 5},
-  {"ntArrangementId": 17, "ntName": "ENG Ligacup", "nifsTournamentId": 55},
-  {"ntArrangementId": 36, "ntName": "SPA LaLiga", "nifsTournamentId": 45},
-  {"ntArrangementId": 123, "ntName": "NOR NM, menn", "nifsTournamentId": 14}
+  {"ntArrangementId": 1, "ntName": "ENG Premier League", "nifsTournamentId": 7, "oddsenCountryNode": "66748.1"},
+  {"ntArrangementId": 2, "ntName": "ENG Championship", "nifsTournamentId": 28, "oddsenCountryNode": "66748.1"},
+  {"ntArrangementId": 5, "ntName": "NOR Eliteserien", "nifsTournamentId": 5, "oddsenCountryNode": "66760.1"},
+  {"ntArrangementId": 17, "ntName": "ENG Ligacup", "nifsTournamentId": 55, "oddsenCountryNode": "66748.1"},
+  {"ntArrangementId": 36, "ntName": "SPA LaLiga", "nifsTournamentId": 45, "oddsenCountryNode": "66743.1"},
+  {"ntArrangementId": 123, "ntName": "NOR NM, menn", "nifsTournamentId": 14, "oddsenCountryNode": "66760.1"}
 ]

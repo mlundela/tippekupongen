@@ -1,134 +1,209 @@
 {
- "2416743": {
-  "tendens": "UB",
-  "headline": "Rosenborg kommer med form, HamKam med fallende kurve.",
-  "summary": "HamKam har tapt fire av de fem siste seriekampene og har ligaens tredje dårligste forsvar med 48 innslupne mål. Rosenborg er ubeseiret i fem strake seriekamper, men laget er langt svakere på bortebane (4-1-6) enn hjemme (7-3-2). Trondheimslaget har dessuten mistet ledelsen i seks kamper i år. Usikkerheten rundt Amin Chiakha er det store spørsmålet. Toppscoreren har 14 seriemål, fem av dem de siste fem kampene, men var ikke i troppen sist.",
-  "facts": [
-   "HamKam slipper inn mye rett etter pause: 14 av 48 baklengsmål har kommet mellom minutt 46 og 60.",
-   "Mads Bomholt fikk sitt tredje gule kort mot Sarpsborg og står trolig over. Ole Selnæs er tilbake etter rødt kort.",
-   "Rosenborg vant 4–0 på Lerkendal i september, men HamKam har slått RBK 3–0 og 4–0 på Briskeby de siste tre sesongene.",
-   "Mohamed Ofkir har scoret fire mål på de fem siste seriekampene for HamKam."
+ "_coupon": {
+  "headline": "Der folket og oddsen er uenige",
+  "intro": [
+   "Oddsen viser hva bookmakeren mener, og folkets fordeling viser hva tipperne tror. På denne kupongen er de mest uenige om Stoke (60 % hos folket, 39 i oddsen), Blackburn (49 mot 34), Arsenal (75 mot 65) og Chelsea (61 mot 52).",
+   "For hver kamp viser vi først tallene som støtter oddsen, og deretter det som kan snu kampen i en annen retning. Tendensen følger oddsen: spik når favoritten har minst 55 % sjanse, ellers halvgardering med tegnene folket undervurderer mest."
   ]
+ },
+ "2416743": {
+  "headline": "Rosenborg er klar favoritt, men har to svakheter som kan koste",
+  "take": [
+   "Oddsen gir Rosenborg 58 % sjanse, og folket er enig. Rosenborg er ubeseiret i fem strake seriekamper og har seriens fjerde beste angrep og forsvar. HamKam har tapt fire av de fem siste og sluppet inn 48 mål.",
+   "Under overflaten er bildet mindre klart. Rosenborg har scoret 5,7 mål mer enn sjansene tilsier, mye takket være Amin Chiakha, som ikke var i troppen sist. HamKam har på sin side sluppet inn elleve mål mer enn motstandernes sjanser tilsier, og slikt jevner seg som regel ut."
+  ],
+  "signal": [
+   {"stat": "Rosenborg: ubeseiret i fem", "text": "Fire seire og én uavgjort på de fem siste seriekampene."},
+   {"stat": "xG 1,62 mot 1,24 per kamp", "text": "Rosenborg skaper mer enn HamKam, og det er grunnlaget for favorittstatusen."},
+   {"stat": "HamKam: fire tap på fem", "text": "Laget har seriens tredje svakeste forsvar og slipper til 1,6 xG per kamp."}
+  ],
+  "noise": [
+   {"stat": "Rosenborg borte: 4-1-6", "text": "Laget har vunnet færre enn halvparten av bortekampene og har mistet ledelsen seks ganger i år."},
+   {"stat": "Chiakha ute av troppen sist", "text": "Han har 14 av lagets 43 seriemål. Uten ham forsvinner mye av effektiviteten som har gitt Rosenborg 5,7 mål over xG."},
+   {"stat": "HamKams baklengsmål", "text": "48 mål på 36,6 xG mot. Når det jevner seg ut, blir HamKam vanskeligere å slå."}
+  ],
+  "crowd": "Oddsen og folket er nesten enige om Rosenborg (58 og 60 %). Folket undervurderer uavgjort litt: 19 % mot oddsens 23."
  },
  "2416541": {
-  "tendens": "H",
-  "headline": "Glimt er nesten urørlige hjemme og kan ikke miste poeng i gullkampen.",
-  "summary": "Bodø/Glimt og Viking står likt med 56 poeng, og Glimt topper bare på målforskjell. På Aspmyra står Glimt med ti seire og ett tap, og målforskjellen er 34–7. Laget har både seriens beste forsvar og nest beste angrep, og skaper i snitt 2,39 xG mot 0,82 for motstanderne. Vålerenga er svake på bortebane (2-3-6) og har ikke scoret i sju av 23 seriekamper. Den største risikoen er tunge bein etter tapet 3–4 borte mot Napoli tirsdag.",
-  "facts": [
-   "Andreas Helmersen har 12 seriemål, fire av dem på de fem siste kampene, selv om han bare har startet åtte kamper.",
-   "Glimt har holdt nullen i elleve seriekamper.",
-   "Glimt har vunnet fem av de seks siste møtene, og vant 7–2 hjemme i fjor sommer.",
-   "Lucas Haren har ti seriemål for Vålerenga. Kolbeinn Finnsson og Magnus Westergaard var ikke i troppen sist."
-  ]
+  "headline": "Ingen kamp på kupongen er tydeligere, og tallene støtter oddsen",
+  "take": [
+   "Oddsen på 1,14 gir Glimt 82 % sjanse, og folket ligger litt under med 78. Glimt har ti seire og ett tap hjemme, seriens beste forsvar og et sjanseregnskap på 54,9 mot 19,0 xG. Resultatene stemmer nesten helt med sjansene, så det er lite flaks å trekke fra.",
+   "Vålerenga er bedre enn 11. plass tilsier, med et sjanseregnskap i balanse (39,7 mot 39,1), men langt unna Glimt. Glimt og Viking står likt på 56 poeng, så Glimt har ikke råd til å miste poeng."
+  ],
+  "signal": [
+   {"stat": "Hjemme 10-0-1, 34–7", "text": "Elleve hjemmekamper, og sjansetallene for sesongen støtter resultatene."},
+   {"stat": "7,5 skudd mot per kamp", "text": "Vålerenga skyter 15,7 ganger per kamp, mer enn dobbelt så ofte som Glimt pleier å la motstanderne skyte."}
+  ],
+  "noise": [
+   {"stat": "3–4 mot Napoli tirsdag", "text": "Fire dager hvile etter en tung Champions League-kamp. Rotasjon kan gi Vålerenga en åpning."},
+   {"stat": "Vålerengas baklengsmål", "text": "Sju mål mer enn motstandernes sjanser tilsier. Laget er bedre enn tabellen viser, men trenger en spesiell dag for å ta poeng her."}
+  ],
+  "crowd": "Folket gir Glimt 78 %, oddsen 82. Folket er litt mer forsiktig enn oddsen, og gir borteseier 10 % mot oddsens 7."
  },
  "2416786": {
-  "tendens": "HU",
-  "headline": "Chelsea har knekt Tottenham seks ganger på rad, men eget forsvar lekker.",
-  "summary": "Chelsea har vunnet alle de seks siste møtene med Tottenham. Laget er ubeseiret hjemme i serien (2-1-0), men har bare holdt nullen én gang og slipper til mer enn det skaper: 1,69 xG mot i snitt, mot 1,37 for. Tottenham har kun én seier på sju seriekamper og har scoret seks mål. På bortebane har de laget ett mål på tre kamper. Den første seieren kom 3–1 mot Coventry sist, så noe bedring kan være på gang.",
-  "facts": [
-   "Chelsea scorer tidlig: sju av 17 seriemål har kommet i de første 15 minuttene.",
-   "Tottenham har scoret fire av sine seks seriemål etter 75. minutt.",
-   "João Pedro (3 mål, 1 målgivende) og Morgan Rogers (3 mål) står for mye av Chelseas produksjon de fem siste kampene.",
-   "Rodrigo Bentancur er tilbake etter karantene for Tottenham. Sávio var ikke i troppen sist."
-  ]
+  "headline": "Folket tror mer på Chelsea enn oddsen gjør, og tallene gir oddsen rett",
+  "take": [
+   "Oddsen gir Chelsea 52 % sjanse, mens folket gir 61. Chelsea er ubeseiret hjemme (2-1-0), har ligaens tredje beste angrep og har vunnet de to siste seriekampene. Tottenham har bare én seier på sju og har scoret seks mål.",
+   "Forskjellen mellom folket og oddsen ligger i det tabellen ikke viser. Chelsea har scoret 17 mål på sjanser verdt 9,6 xG, mens Tottenham har seks mål på 8,3 xG. Begge lag har en xG-differanse på −2,2, og er jevnere enn 13 mot 6 poeng tilsier."
+  ],
+  "signal": [
+   {"stat": "Chelsea hjemme 2-1-0, 11–6", "text": "Laget scorer mye hjemme, og sju av 17 seriemål har kommet i de første 15 minuttene."},
+   {"stat": "Tottenham: seks mål på sju kamper", "text": "Bare ett av dem har kommet på tre bortekamper. Uten mål blir det vanskelig å ta poeng."}
+  ],
+  "noise": [
+   {"stat": "Chelsea: 7,4 mål over xG", "text": "Langt mest på kupongen. Så høy effektivitet varer sjelden, og Chelsea har sluppet til mer enn laget har skapt (11,8 mot 9,6 xG)."},
+   {"stat": "Tottenham: PDO 0,84", "text": "Scoringsandel og redningsandel langt under normalen. Når det snur, blir Tottenham farligere, og fire av lagets seks mål har kommet etter 75. minutt."}
+  ],
+  "crowd": "Folket gir Chelsea 61 %, oddsen 52. Borteseier får 17 % hos folket mot oddsens 24, et av de største avvikene på kupongen."
  },
  "2416582": {
-  "tendens": "H",
-  "headline": "Ligaens beste forsvar møter et Everton som spiller uavgjort.",
-  "summary": "Arsenal har bare sluppet inn fem mål på sju seriekamper, og motstanderne skaper i snitt kun 0,74 xG. Hjemme står laget med tre seire av tre. Everton er vanskelige å slå, med fire uavgjort på sju kamper og ingen tap på tre bortekamper. Til gjengjeld har de bare scoret åtte mål. Arsenal spilte 2–2 borte mot Bayern München onsdag, så rotasjon kan bli et tema.",
-  "facts": [
-   "Arsenal har scoret åtte av elleve seriemål etter pause.",
-   "Declan Rice har fire målgivende pasninger på de fem siste seriekampene.",
-   "Everton har ikke slått Arsenal i de seks siste møtene (0-2-4).",
-   "Christos Tzolis har vært ute av Arsenal-troppen de to siste kampene."
-  ]
+  "headline": "Arsenal er rett favoritt, men folket er for sikre",
+  "take": [
+   "Oddsen gir Arsenal 65 %, folket 75. Tallene støtter favorittstatusen: Arsenal har bare sluppet til sjanser for 5,2 xG på sju kamper, og har vunnet alle tre hjemmekampene.",
+   "Avviket mellom folket og oddsen handler trolig om timeplanen. Arsenal spilte 2–2 mot Bayern i München onsdag og har tre dager hvile. Everton er vanskelige å bryte ned, med fire uavgjort på sju kamper."
+  ],
+  "signal": [
+   {"stat": "0,74 xG mot per kamp", "text": "Ingen lag på kupongen gir bort mindre xG per kamp."},
+   {"stat": "Everton: åtte mål på sju kamper", "text": "Laget skaper lite, og 9,3 xG på sju kamper er for lite til å true Arsenal ofte."}
+  ],
+  "noise": [
+   {"stat": "Tre dager hvile", "text": "Rotasjon etter Bayern-kampen kan svekke Arsenal mer enn tabellen tar høyde for."},
+   {"stat": "Evertons keeper", "text": "Han redder 77 % av skuddene på mål, mot ligasnittet på 66 %. Holder han det nivået, kan Everton ta et poeng."},
+   {"stat": "Everton ubeseiret borte, 0-3-0", "text": "Tre uavgjort på tre bortekamper. Utvalget er lite, men spillestilen gir uavgjort."}
+  ],
+  "crowd": "Folket gir Arsenal 75 %, oddsen 65. Uavgjort får 15 % hos folket mot oddsens 22."
  },
  "2416583": {
-  "tendens": "UB",
-  "headline": "Bunnkamp mellom to lag som sliter med å score.",
-  "summary": "Coventry og Fulham ligger på 17. og 18. plass med seks og fem poeng. Coventry har bare scoret seks mål, ikke scoret i fire av sju kamper og har i snitt 38 prosent ballinnehav. Motstanderne har i gjennomsnitt 17 skudd per kamp. Fulham har bedre underliggende tall (1,59 xG for mot 1,34 mot), men har mistet ledelsen tre ganger og bare scoret ett mål på tre bortekamper.",
-  "facts": [
-   "Begge lag har sluppet inn fire mål i kvarteret 76–90.",
-   "Ryan Sessegnon fikk rødt kort mot Hull og er trolig utestengt for Fulham.",
-   "Aurèle Amenda har vært ute av Coventry-troppen de to siste kampene.",
-   "Lagene har ikke møttes siden Championship 2021/22, der Coventry vant begge kampene."
-  ]
+  "headline": "Fulham er favoritt borte, og sjansetallene gir oddsen rett",
+  "take": [
+   "Oddsen gir Fulham 42 %, og folket er nesten enig. Fulham har et positivt sjanseregnskap (11,2 mot 9,4 xG), mens Coventry har et negativt (7,9 mot 11,0). Fulham skaper nok til å ligge på midten av tabellen.",
+   "Begge lag er i bunnstriden, og ingen av dem har scoret mye. Fulham har sju mål på 11,2 xG, den største underprestasjonen på kupongen. Coventry har ballen 38 % av tiden og slipper til 17,4 skudd per kamp."
+  ],
+  "signal": [
+   {"stat": "Fulham: +1,8 i xG-differanse", "text": "Laget skaper mer enn det slipper til. Målene har latt vente på seg, men sjansene er der."},
+   {"stat": "Coventry: 17,4 skudd mot per kamp", "text": "Laget ligger lavt og lar motstanderen skyte. Det holder sjelden over tid."}
+  ],
+  "noise": [
+   {"stat": "Fulham: ett mål på tre bortekamper", "text": "Avslutningene har sviktet hele høsten, og det kan fortsette en kamp til."},
+   {"stat": "Begge slipper inn sent", "text": "Fire baklengsmål hver i sluttkvarteret. En sen scoring kan avgjøre en jevn kamp begge veier."}
+  ],
+  "crowd": "Oddsen og folket er nesten like, så her er det ingen tydelig feilprising. Tendensen følger oddsens to mest sannsynlige utfall."
  },
  "2416584": {
-  "tendens": "HU",
-  "headline": "Blackburn er sterke hjemme, men slipper ledelser.",
-  "summary": "Blackburn har tre seire på fem hjemmekamper. Laget har likevel mistet ledelsen i fem av elleve seriekamper, og tapte 2–3 borte mot West Brom sist. Wrexham har spilt uavgjort i fem av elleve kamper og har bare én seier på bortebane. Waliserne kommer fra 4–1 over Preston, men har også tapt 0–6 for West Ham denne høsten.",
-  "facts": [
-   "Andri Gudjohnsen og Oladapo Afolayan har fire mål hver på de fem siste kampene for Blackburn.",
-   "Kieffer Moore har fem seriemål for Wrexham, tre av dem de siste fem kampene.",
-   "Wrexham har sluppet inn fem mål i sluttkvarteret.",
-   "Sam Morsy har fire gule kort og ryker på karantene ved neste."
-  ]
+  "headline": "Oddsen har Wrexham som knepen favoritt, folket tror på Blackburn",
+  "take": [
+   "Oddsen gir Wrexham 36 % og Blackburn 34, mens folket gir Blackburn 49. Det er kupongens nest største avvik mellom folket og oddsen. Tallene støtter oddsen: Blackburn blir utskutt (8,5 mot 10,1 skudd per kamp) og har mistet ledelsen fem ganger.",
+   "Blackburns keeper redder bare 57 % av skuddene på mål, mot ligasnittet på 65 %. Hos Wrexham stemmer tallene med resultatene, med jevne skudd og fem uavgjort på elleve kamper."
+  ],
+  "signal": [
+   {"stat": "Blackburn utskutt, 8,5 mot 10,1", "text": "Hjemmelaget har sjelden kontroll i kampene sine."},
+   {"stat": "57 % redninger", "text": "Over elleve kamper peker det mot et reelt problem bakover, og det viser seg i kamper der Blackburn leder."}
+  ],
+  "noise": [
+   {"stat": "Blackburn hjemme 3-0-2", "text": "Laget har vunnet tre av fem hjemme og scorer på 40 % av skuddene på mål."},
+   {"stat": "Gudjohnsen og Afolayan", "text": "Fire mål hver på de fem siste kampene. Er formen ekte, kan de avgjøre."}
+  ],
+  "crowd": "Folket gir Blackburn 49 %, oddsen 34. Borteseier får 24 % hos folket mot oddsens 36."
  },
  "2416585": {
-  "tendens": "UB",
-  "headline": "Ubeseiret hjemme mot et Birmingham som har funnet formen.",
-  "summary": "Cardiff ligger på 19. plass, men har ikke tapt hjemme (2-3-0) og har scoret tolv mål på hjemmebane. Laget har derimot ikke holdt nullen i en eneste seriekamp, og borte står de med 0-2-4. Birmingham er ubeseiret i fem seriekamper, har vunnet tre på rad og har ligaens tredje beste forsvar. Etter pause har laget bare sluppet inn tre mål hele sesongen.",
-  "facts": [
-   "Jack Moylan er i storform for Cardiff med fem mål og tre målgivende på de fem siste kampene.",
-   "Gabriel Osho fikk rødt kort mot Middlesbrough og er trolig utestengt. Perry Ng var ikke i troppen sist, og Yousef Salech har vært ute to kamper.",
-   "Liam Millar har fire mål og to målgivende på de fem siste kampene for Birmingham.",
-   "Cardiff har vunnet fire av de seks siste møtene, men det siste var i 2024."
-  ]
+  "headline": "Birmingham er favoritt, men Cardiff er bedre enn plasseringen",
+  "take": [
+   "Oddsen gir Birmingham 40 %, folket 35. Birmingham er ubeseiret i fem, har vunnet tre på rad og har ligaens tredje beste forsvar. Midtstopper Gabriel Osho er dessuten trolig utestengt for Cardiff etter rødt kort.",
+   "Cardiff ligger på 19. plass, men vinner skuddkampen (11,8 mot 11,1) og har ballen 62 % av tiden. Hjemme er laget ubeseiret (2-3-0)."
+  ],
+  "signal": [
+   {"stat": "Birmingham: tre baklengsmål etter pause", "text": "Hele sesongen. Laget har bare mistet ledelsen én gang."},
+   {"stat": "Osho ute", "text": "Han har startet ti av elleve kamper, og Cardiff har ikke holdt nullen én gang selv med ham."}
+  ],
+  "noise": [
+   {"stat": "Cardiff ubeseiret hjemme, 2-3-0", "text": "Med jevne skuddtall er hjemmeformen mer enn flaks."},
+   {"stat": "Birmingham: PDO 1,10", "text": "Avslutninger og redninger har gått bedre enn normalt, og det pleier å jevne seg ut."},
+   {"stat": "Jack Moylan", "text": "Fem mål og tre målgivende på de fem siste kampene for Cardiff."}
+  ],
+  "crowd": "Oddsen tror mer på Birmingham enn folket gjør (40 mot 35 %). Folket gir Cardiff 39 %, oddsen 35."
  },
  "2416586": {
-  "tendens": "UB",
-  "headline": "Lincoln har ikke vunnet hjemme og mister to sentrale spillere.",
-  "summary": "Lincoln har ikke vunnet på hjemmebane denne sesongen (0-2-3) og har bare scoret tre mål der. Laget har et av seriens svakeste angrep med ni mål, og 14 av 19 baklengsmål har kommet etter pause. Burnley ligger på 22. plass og har mistet ledelsen hele seks ganger, men har scoret i alle elleve seriekampene.",
-  "facts": [
-   "Freddie Draper (5. gule kort) og Deji Elerewe (rødt kort) er trolig utestengt for Lincoln.",
-   "Ben House var ikke i Lincoln-troppen sist.",
-   "Burnleys Lucas Pires har tre målgivende på de fem siste kampene, og Jacob Bruun Larsen har to mål og én målgivende.",
-   "Aaron Ramsey har vært ute av Burnley-troppen de to siste kampene."
-  ]
+  "headline": "Jevnt i oddsen, men Lincoln mangler to sentrale spillere",
+  "take": [
+   "Oddsen gir Burnley 38 % og Lincoln 35, og folket heller enda mer mot Burnley. Skuddtallene støtter Burnley: Lincoln har 2,9 skudd på mål per kamp og slipper til 5,5, den dårligste balansen på kupongen. Freddie Draper og Deji Elerewe er trolig utestengt.",
+   "Burnley ligger på 22. plass med åtte poeng og har bare vunnet én av elleve. Laget har mistet ledelsen seks ganger, og det er grunnen til at oddsen ikke gjør dem til en tydeligere favoritt."
+  ],
+  "signal": [
+   {"stat": "Lincoln: −2,6 skudd på mål per kamp", "text": "Den dårligste balansen på kupongen."},
+   {"stat": "Burnley har scoret i alle kamper", "text": "Elleve av elleve. Lincoln har sluppet inn 14 av 19 mål etter pause."}
+  ],
+  "noise": [
+   {"stat": "Seks tapte ledelser", "text": "Burnley har ikke klart å lukke kamper, og kan gjøre det igjen."},
+   {"stat": "Fire kamper uten baklengsmål", "text": "Lincoln har holdt nullen fire ganger, selv med dårlige skuddtall."}
+  ],
+  "crowd": "Folket og oddsen ligger nær hverandre. Hjemmeseier får 35 % i oddsen mot folkets 31, og er tegnet folket undervurderer mest."
  },
  "2416588": {
-  "tendens": "UB",
-  "headline": "Serielederen har seriens beste forsvar og er sterk på bortebane.",
-  "summary": "Swansea topper Championship med 23 poeng og har bare sluppet inn åtte mål på elleve kamper. Borte står laget med fire seire og ett tap. QPR har også et solid forsvar (12 innslupne), men har spilt uavgjort fire ganger på de seks siste og tapte 0–3 mot Birmingham sist. Swansea har vunnet de to siste møtene på Loftus Road, begge 2–1.",
-  "facts": [
-   "Swansea har snudd tre kamper til seier, og har bare sluppet inn to mål etter pause.",
-   "Moussa Yeo har tre mål på de fem siste kampene for Swansea.",
-   "Rumarn Burrell (to mål) har vært ute av QPR-troppen de to siste kampene, og Amadou Salif Mbengue manglet sist.",
-   "Jake Clarke-Salter og Glen Kamara står begge på fire gule kort."
-  ]
+  "headline": "Oddsen ser en jevn kamp, og tallene sier det samme",
+  "take": [
+   "Oddsen gir QPR 38 % og Swansea 34. Begge lag har samme forsprang på skudd på mål (+1,3 per kamp), og QPR har hjemmebane. Swansea er nummer to på tabellen, men det bygger på effektivitet (PDO 1,09).",
+   "Swanseas kamper har lite trafikk, med 7,7 skudd for og 7,2 mot per kamp. QPR har spilt uavgjort fire ganger på de seks siste. Det gjør uavgjort til et reelt utfall."
+  ],
+  "signal": [
+   {"stat": "+1,3 skudd på mål for begge", "text": "Lik underliggende styrke. Hjemmebane gir QPR det lille forspranget oddsen viser."},
+   {"stat": "Få skudd i Swanseas kamper", "text": "Kamper med lite trafikk ender oftere uavgjort."}
+  ],
+  "noise": [
+   {"stat": "Swanseas forsvar", "text": "Åtte baklengsmål på elleve kamper, og keeperen redder 72 %. Holder det nivået, er Swansea vanskelige å slå."},
+   {"stat": "Swansea vant de to siste på Loftus Road", "text": "Begge 2–1. To kamper er ikke et mønster, men laget har vist at det kan vinne her."},
+   {"stat": "Burrell ute", "text": "QPRs Rumarn Burrell, med to seriemål, har vært ute av troppen de to siste kampene."}
+  ],
+  "crowd": "Folket gir QPR 42 %, oddsen 38. Uavgjort er tegnet folket undervurderer mest, med 25 % mot oddsens 28."
  },
  "2416589": {
-  "tendens": "HU",
-  "headline": "Stoke scorer hver kamp, men slipper inn sent.",
-  "summary": "Stoke har scoret i alle elleve seriekampene og ligger på 6. plass. Laget har derimot sluppet inn tolv av 16 mål etter pause, seks av dem i sluttkvarteret. Bristol City har ikke vunnet på tre kamper og har bare to seire på seks hjemmekamper. På bortebane står de bedre, med 2-2-1. Stoke er ubeseiret i de tre siste hjemmekampene mot Bristol City, med målforskjell 11–3.",
-  "facts": [
-   "Ethan Galbraith har tre mål og tre målgivende, men står på fire gule kort.",
-   "Rob Dickie og Lorent Tolaj har vært ute av Bristol City-troppen de to siste kampene.",
-   "Bristol City har seriens sjette svakeste angrep med tolv mål.",
-   "Rio Cardines har seks målgivende pasninger for Bristol City, men ingen de fem siste kampene."
-  ]
+  "headline": "Kupongens største avvik: folket tror langt mer på Stoke enn oddsen",
+  "take": [
+   "Folket gir Stoke 60 % sjanse, oddsen bare 39. Tallene gir oddsen rett. Bristol City vinner skuddkampen klart (4,3 mot 2,6 skudd på mål per kamp), mens Stoke blir utskutt (3,8 mot 4,7).",
+   "Bristol ligger på 15. plass fordi keeperen bare har reddet 48 % av skuddene på mål, mot ligasnittet på 65 %. Med en snittkeeper hadde laget sluppet inn rundt ti mål, ikke 15. Stoke scorer på 43 % av skuddene på mål, og det varer sjelden."
+  ],
+  "signal": [
+   {"stat": "Bristol: +1,7 skudd på mål per kamp", "text": "Laget skaper mer og slipper til mindre enn Stoke. Det forklarer hvorfor oddsen ser en jevn kamp."},
+   {"stat": "Stoke: −0,9 skudd på mål per kamp", "text": "Sjetteplassen bygger på effektivitet, ikke på at laget skaper mest."},
+   {"stat": "Stoke hjemme 3-0-2", "text": "Hjemmebane gir Stoke det lille forspranget oddsen viser."}
+  ],
+  "noise": [
+   {"stat": "48 % redninger", "text": "Fortsetter Bristols keeperproblem, kan Stoke vinne uansett skuddtall."},
+   {"stat": "Tolaj og Dickie ute", "text": "Bristol har vært uten to faste spillere de to siste kampene."},
+   {"stat": "Stoke har scoret i alle elleve", "text": "Effektive avslutninger kan avgjøre igjen."}
+  ],
+  "crowd": "Folket gir Stoke 60 %, oddsen 39. Borteseier får bare 18 % hos folket mot oddsens 32. Det er det største avviket på kupongen."
  },
  "2416590": {
-  "tendens": "H",
-  "headline": "Ligaens beste angrep har gått ni kamper uten tap.",
-  "summary": "West Ham har scoret 30 mål på elleve kamper, flest i Championship, og er ubeseiret i ni strake seriekamper. Laget avgjør etter pause: 20 mål scoret og fire sluppet inn i andre omgang. Southampton har ligaens nest beste forsvar og har vunnet fem av seks hjemmekamper. Borte står de derimot med én seier på fem. West Ham vant 4–1 i Southampton i ligacupen i august.",
-  "facts": [
-   "Jarrod Bowen har tre mål og tre målgivende på de fem siste kampene, og har 6+5 for sesongen.",
-   "Midtstopper Konstantinos Mavropanos har fem seriemål, tre av dem de siste fem kampene.",
-   "Cyle Larin har sju av Southamptons 21 seriemål.",
-   "Southampton er uten Flynn Downes fra forrige kamp, og Ryan Manning har fire gule kort."
-  ]
+  "headline": "West Ham er rett favoritt, og tallene støtter det",
+  "take": [
+   "Oddsen og folket gir West Ham 57 %. West Ham har ligaens beste angrep med 30 mål, er ubeseiret i ni seriekamper og har 6,1 skudd på mål per kamp mot 3,1. Bare Glimt har større forsprang på kupongen.",
+   "Southampton har ligaens nest beste forsvar, men det hviler på en keeper som redder 75 %. PDO på 1,19 er den høyeste på kupongen. Laget står på 17 poeng etter et trekk på fire."
+  ],
+  "signal": [
+   {"stat": "+3,0 skudd på mål per kamp", "text": "Slik dominans holder seg bedre enn effektivitet."},
+   {"stat": "20 mål etter pause", "text": "West Ham kjører motstanderne i senk i andre omgang, og har bare sluppet inn fire mål etter pause."}
+  ],
+  "noise": [
+   {"stat": "Southamptons keeper", "text": "Han redder 75 % mot ligasnittet på 65 %. Holder han nivået, kan Southampton ta poeng."},
+   {"stat": "Cyle Larin", "text": "Sju av Southamptons 21 seriemål. Han trenger få sjanser."}
+  ],
+  "crowd": "Folket og oddsen er enige om West Ham (57 %). Folket undervurderer borteseier litt, med 17 % mot oddsens 21."
  },
  "2416591": {
-  "tendens": "H",
-  "headline": "Watford har nesten ikke tatt poeng på bortebane.",
-  "summary": "Watford har ett poeng og to scorede mål på fem bortekamper (0-1-4). Laget har sluppet inn 15 av 19 mål før pause. Wolverhampton ligger på 7. plass med 18 poeng og er ubeseiret i to kamper. Laget har snudd to kamper til seier, men har også mistet ledelsen tre ganger. Wolves vant begge Premier League-møtene i 2021/22.",
-  "facts": [
-   "Fer López har fem mål og tre målgivende for Wolverhampton.",
-   "Rodrigo Gomes og Adam Armstrong har vært ute av Wolves-troppen de to siste kampene.",
-   "Amin Nabizada har tre av Watfords ti seriemål, men står på fire gule kort.",
-   "Watford vant 2–0 over Charlton sist og brøt en rekke på fire strake tap."
-  ]
+  "headline": "Wolves er stor favoritt, og Watford har lite å komme med borte",
+  "take": [
+   "Oddsen og folket gir Wolves 69 %. Wolves skyter 11,4 ganger per kamp og gir bort 7,9. Watford har ett poeng og to mål på fem bortekamper, og scorer på bare 21 % av skuddene på mål.",
+   "Wolves har sine svakheter. Keeperen redder bare 62 %, og laget har mistet ledelsen tre ganger. Rodrigo Gomes og Adam Armstrong har vært ute av troppen de to siste kampene, og laget spilte tirsdag."
+  ],
+  "signal": [
+   {"stat": "Skudd: 11,4 mot 7,9", "text": "Wolves styrer kampene sine."},
+   {"stat": "Watford borte: 0-1-4, 2–10", "text": "Fem kamper, og retningen stemmer med skuddtallene."}
+  ],
+  "noise": [
+   {"stat": "Wolves: 62 % redninger", "text": "Wolves slipper inn lettere enn skuddtallene tilsier."},
+   {"stat": "Fire dager hvile", "text": "Wolves spilte tirsdag, mens Watford har hatt en hel uke."},
+   {"stat": "Gomes og Armstrong ute", "text": "To spillere med mål denne sesongen har vært ute av troppen de to siste kampene."}
+  ],
+  "crowd": "Folket og oddsen er helt enige (69 %). Her finnes ingen feilprising å spille på."
  }
 }

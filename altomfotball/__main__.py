@@ -9,7 +9,7 @@ import sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-from . import analysis, join, nt
+from . import analysis, join, nt, oddsen
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -23,6 +23,12 @@ def facts(day):
     linked = join.link(coupon["matches"])
     with ThreadPoolExecutor(max_workers=3) as pool:
         sheets = list(pool.map(lambda m: analysis.match_facts(m, linked[m["gameEngineEventId"]]), coupon["matches"]))
+    odds = oddsen.odds_for(coupon["matches"])
+    for sheet in sheets:
+        sheet["odds"] = odds.get(sheet["nt"]["eventId"])
+    missing = [s["nt"]["name"] for s in sheets if not s["odds"]]
+    if missing:
+        print("No Oddsen odds for:", ", ".join(missing), file=sys.stderr)
     out = coupon_dir(coupon)
     out.mkdir(parents=True, exist_ok=True)
     meta = {k: coupon[k] for k in ("dayType", "dayName", "status", "saleStop", "turnover")}

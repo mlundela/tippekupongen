@@ -271,6 +271,10 @@ def team_facts(team_id, kickoff, match_stage):
     facts["ledNotWon"] = led_not_won
     facts["cameFromBehind"] = came_from_behind
     facts["averages"] = {k: round(sum(v) / len(v), 2) for k, v in stats.items() if v}
+    facts["underlying"] = _underlying(stats, facts["overall"])
+    if row:
+        facts["table"]["withdrawnPoints"] = row.get("withdrawnPoints") or 0
+    facts["restDays"] = (kickoff.date() - datetime.fromisoformat(facts["form"][-1]["date"]).date()).days if facts["form"] else None
     facts["coach"] = next((c["name"] for c in (details[-1][("home" if results[-1]["home"] else "away") + "Team"].get("headCoaches") or [])), None) if details else None
 
     last5 = {m["timestamp"][:10] for m in played[-5:]}
@@ -290,6 +294,28 @@ def team_facts(team_id, kickoff, match_stage):
     facts["bestRated"] = [_public(p) for p in sorted(rated, key=lambda p: p["avgRatingLast5"], reverse=True)[:3]]
     facts["absences"] = _absences(players, played, league, kickoff, match_stage, team_id)
     return facts
+
+
+def _underlying(stats, overall):
+    """Quality vs luck. xG and shot totals only when every league match has them.
+    PDO = goals per shot on target + share of opponents' shots on target saved; ~1.00 is neutral,
+    far from it usually regresses."""
+    n = overall["p"]
+    out = {"matches": n}
+    if n and len(stats["xg"]) == n and len(stats["xgAgainst"]) == n:
+        out["xg"], out["xgAgainst"] = round(sum(stats["xg"]), 1), round(sum(stats["xgAgainst"]), 1)
+        out["goalsMinusXg"] = round(overall["gf"] - out["xg"], 1)
+        out["concededMinusXga"] = round(overall["ga"] - out["xgAgainst"], 1)
+    if n and len(stats["shotsOnGoal"]) == n and len(stats["shotsOnGoalAgainst"]) == n:
+        sot, sota = sum(stats["shotsOnGoal"]), sum(stats["shotsOnGoalAgainst"])
+        out["shotsPerMatch"] = round(sum(stats["totalShots"]) / n, 1) if len(stats["totalShots"]) == n else None
+        out["shotsAgainstPerMatch"] = round(sum(stats["totalShotsAgainst"]) / n, 1) if len(stats["totalShotsAgainst"]) == n else None
+        out["sotPerMatch"], out["sotAgainstPerMatch"] = round(sot / n, 1), round(sota / n, 1)
+        if sot and sota:
+            out["conversion"] = round(overall["gf"] / sot, 2)
+            out["savePct"] = round(1 - overall["ga"] / sota, 2)
+            out["pdo"] = round(out["conversion"] + out["savePct"], 2)
+    return out
 
 
 def _public(p):

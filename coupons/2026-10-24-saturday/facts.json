@@ -5,7 +5,7 @@
   "status": "OPENED",
   "saleStop": "2026-10-24T15:55:00+02:00",
   "turnover": {
-   "amount": "1364493.00",
+   "amount": "1569185.00",
    "currency": "NOK"
   }
  },
@@ -24,9 +24,9 @@
        "away": 52
       },
       "peoples": {
-       "home": 22,
+       "home": 21,
        "draw": 19,
-       "away": 59
+       "away": 60
       }
      },
      "halfTime": {
@@ -36,8 +36,8 @@
        "away": 42
       },
       "peoples": {
-       "home": 28,
-       "draw": 31,
+       "home": 27,
+       "draw": 32,
        "away": 41
       }
      }
@@ -130,7 +130,8 @@
      "gd": -15,
      "attackRank": 9,
      "defenceRank": 14,
-     "leaderPoints": 56
+     "leaderPoints": 56,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 700911,
@@ -275,6 +276,21 @@
      "totalShotsAgainst": 14.83,
      "shotsOnGoalAgainst": 5.83
     },
+    "underlying": {
+     "matches": 23,
+     "xg": 28.5,
+     "xgAgainst": 36.6,
+     "goalsMinusXg": 4.5,
+     "concededMinusXga": 11.4,
+     "shotsPerMatch": 9.3,
+     "shotsAgainstPerMatch": 14.8,
+     "sotPerMatch": 4.0,
+     "sotAgainstPerMatch": 5.8,
+     "conversion": 0.36,
+     "savePct": 0.64,
+     "pdo": 1.0
+    },
+    "restDays": 7,
     "coach": "Thomas Myhre",
     "topContributors": [
      {
@@ -595,7 +611,8 @@
      "gd": 12,
      "attackRank": 4,
      "defenceRank": 4,
-     "leaderPoints": 56
+     "leaderPoints": 56,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 700911,
@@ -740,6 +757,21 @@
      "totalShotsAgainst": 12.04,
      "shotsOnGoalAgainst": 4.7
     },
+    "underlying": {
+     "matches": 23,
+     "xg": 37.3,
+     "xgAgainst": 31.9,
+     "goalsMinusXg": 5.7,
+     "concededMinusXga": -0.9,
+     "shotsPerMatch": 13.7,
+     "shotsAgainstPerMatch": 12.0,
+     "sotPerMatch": 5.5,
+     "sotAgainstPerMatch": 4.7,
+     "conversion": 0.34,
+     "savePct": 0.71,
+     "pdo": 1.05
+    },
+    "restDays": 6,
     "coach": "Freyr Alexandersson",
     "topContributors": [
      {
@@ -1247,6 +1279,21 @@
      "pts": 6,
      "ppg": 2.0
     }
+   },
+   "odds": {
+    "odds": {
+     "home": 5.0,
+     "draw": 4.0,
+     "away": 1.62
+    },
+    "implied": {
+     "home": 19,
+     "draw": 23,
+     "away": 58
+    },
+    "margin": 6.7,
+    "oddsenEventId": "8850042.1",
+    "oddsenName": "HamKam - Rosenborg"
    }
   },
   {
@@ -1263,8 +1310,8 @@
        "away": 13
       },
       "peoples": {
-       "home": 77,
-       "draw": 13,
+       "home": 78,
+       "draw": 12,
        "away": 10
       }
      },
@@ -1275,8 +1322,8 @@
        "away": 18
       },
       "peoples": {
-       "home": 60,
-       "draw": 25,
+       "home": 61,
+       "draw": 24,
        "away": 15
       }
      }
@@ -1369,7 +1416,8 @@
      "gd": 38,
      "attackRank": 2,
      "defenceRank": 1,
-     "leaderPoints": 56
+     "leaderPoints": 56,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 700911,
@@ -1514,6 +1562,21 @@
      "totalShotsAgainst": 7.48,
      "shotsOnGoalAgainst": 2.83
     },
+    "underlying": {
+     "matches": 23,
+     "xg": 54.9,
+     "xgAgainst": 19.0,
+     "goalsMinusXg": 3.1,
+     "concededMinusXga": 1.0,
+     "shotsPerMatch": 16.3,
+     "shotsAgainstPerMatch": 7.5,
+     "sotPerMatch": 6.4,
+     "sotAgainstPerMatch": 2.8,
+     "conversion": 0.39,
+     "savePct": 0.69,
+     "pdo": 1.08
+    },
+    "restDays": 4,
     "coach": "Kjetil Knutsen",
     "topContributors": [
      {
@@ -1816,7 +1879,8 @@
      "gd": -8,
      "attackRank": 8,
      "defenceRank": 12,
-     "leaderPoints": 56
+     "leaderPoints": 56,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 700911,
@@ -1961,6 +2025,21 @@
      "totalShotsAgainst": 14.0,
      "shotsOnGoalAgainst": 5.48
     },
+    "underlying": {
+     "matches": 23,
+     "xg": 39.7,
+     "xgAgainst": 39.1,
+     "goalsMinusXg": -1.7,
+     "concededMinusXga": 6.9,
+     "shotsPerMatch": 15.7,
+     "shotsAgainstPerMatch": 14.0,
+     "sotPerMatch": 5.7,
+     "sotAgainstPerMatch": 5.5,
+     "conversion": 0.29,
+     "savePct": 0.63,
+     "pdo": 0.92
+    },
+    "restDays": 6,
     "coach": "Johannes Moesgaard",
     "topContributors": [
      {
@@ -2378,6 +2457,21 @@
      "pts": 6,
      "ppg": 3.0
     }
+   },
+   "odds": {
+    "odds": {
+     "home": 1.14,
+     "draw": 8.5,
+     "away": 13.5
+    },
+    "implied": {
+     "home": 82,
+     "draw": 11,
+     "away": 7
+    },
+    "margin": 6.9,
+    "oddsenEventId": "8850045.1",
+    "oddsenName": "Bodø/Glimt - Vålerenga"
    }
   },
   {
@@ -2500,7 +2594,8 @@
      "gd": 4,
      "attackRank": 3,
      "defenceRank": 14,
-     "leaderPoints": 21
+     "leaderPoints": 21,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711178,
@@ -2645,6 +2740,21 @@
      "totalShotsAgainst": 12.43,
      "shotsOnGoalAgainst": 5.86
     },
+    "underlying": {
+     "matches": 7,
+     "xg": 9.6,
+     "xgAgainst": 11.8,
+     "goalsMinusXg": 7.4,
+     "concededMinusXga": 1.2,
+     "shotsPerMatch": 14.3,
+     "shotsAgainstPerMatch": 12.4,
+     "sotPerMatch": 5.6,
+     "sotAgainstPerMatch": 5.9,
+     "conversion": 0.44,
+     "savePct": 0.68,
+     "pdo": 1.12
+    },
+    "restDays": 7,
     "coach": "Xabi Alonso",
     "topContributors": [
      {
@@ -2878,8 +2988,9 @@
      "ga": 10,
      "gd": -4,
      "attackRank": 17,
-     "defenceRank": 10,
-     "leaderPoints": 21
+     "defenceRank": 9,
+     "leaderPoints": 21,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711178,
@@ -3024,6 +3135,21 @@
      "totalShotsAgainst": 14.29,
      "shotsOnGoalAgainst": 3.71
     },
+    "underlying": {
+     "matches": 7,
+     "xg": 8.3,
+     "xgAgainst": 10.5,
+     "goalsMinusXg": -2.3,
+     "concededMinusXga": -0.5,
+     "shotsPerMatch": 14.1,
+     "shotsAgainstPerMatch": 14.3,
+     "sotPerMatch": 3.9,
+     "sotAgainstPerMatch": 3.7,
+     "conversion": 0.22,
+     "savePct": 0.62,
+     "pdo": 0.84
+    },
+    "restDays": 5,
     "coach": "Roberto De Zerbi",
     "topContributors": [
      {
@@ -3302,6 +3428,21 @@
      "pts": 9,
      "ppg": 3.0
     }
+   },
+   "odds": {
+    "odds": {
+     "home": 1.8,
+     "draw": 3.95,
+     "away": 3.9
+    },
+    "implied": {
+     "home": 52,
+     "draw": 24,
+     "away": 24
+    },
+    "margin": 6.5,
+    "oddsenEventId": "8859742.1",
+    "oddsenName": "Chelsea - Tottenham Hotspur"
    }
   },
   {
@@ -3318,9 +3459,9 @@
        "away": 11
       },
       "peoples": {
-       "home": 74,
+       "home": 75,
        "draw": 15,
-       "away": 11
+       "away": 10
       }
      },
      "halfTime": {
@@ -3330,9 +3471,9 @@
        "away": 16
       },
       "peoples": {
-       "home": 56,
+       "home": 57,
        "draw": 29,
-       "away": 15
+       "away": 14
       }
      }
     }
@@ -3422,9 +3563,10 @@
      "gf": 11,
      "ga": 5,
      "gd": 6,
-     "attackRank": 5,
+     "attackRank": 6,
      "defenceRank": 1,
-     "leaderPoints": 21
+     "leaderPoints": 21,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711178,
@@ -3569,6 +3711,21 @@
      "totalShotsAgainst": 11.14,
      "shotsOnGoalAgainst": 3.0
     },
+    "underlying": {
+     "matches": 7,
+     "xg": 12.5,
+     "xgAgainst": 5.2,
+     "goalsMinusXg": -1.5,
+     "concededMinusXga": -0.2,
+     "shotsPerMatch": 12.4,
+     "shotsAgainstPerMatch": 11.1,
+     "sotPerMatch": 4.4,
+     "sotAgainstPerMatch": 3.0,
+     "conversion": 0.35,
+     "savePct": 0.76,
+     "pdo": 1.11
+    },
+    "restDays": 3,
     "coach": "Mikel Arteta",
     "topContributors": [
      {
@@ -3822,7 +3979,8 @@
      "gd": 1,
      "attackRank": 13,
      "defenceRank": 4,
-     "leaderPoints": 21
+     "leaderPoints": 21,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711178,
@@ -3967,6 +4125,21 @@
      "totalShotsAgainst": 13.71,
      "shotsOnGoalAgainst": 4.29
     },
+    "underlying": {
+     "matches": 7,
+     "xg": 9.3,
+     "xgAgainst": 8.9,
+     "goalsMinusXg": -1.3,
+     "concededMinusXga": -1.9,
+     "shotsPerMatch": 14.4,
+     "shotsAgainstPerMatch": 13.7,
+     "sotPerMatch": 5.0,
+     "sotAgainstPerMatch": 4.3,
+     "conversion": 0.23,
+     "savePct": 0.77,
+     "pdo": 1.0
+    },
+    "restDays": 7,
     "coach": "David Moyes",
     "topContributors": [
      {
@@ -4208,6 +4381,21 @@
      "pts": 7,
      "ppg": 2.33
     }
+   },
+   "odds": {
+    "odds": {
+     "home": 1.45,
+     "draw": 4.3,
+     "away": 7.0
+    },
+    "implied": {
+     "home": 65,
+     "draw": 22,
+     "away": 13
+    },
+    "margin": 6.5,
+    "oddsenEventId": "8859672.1",
+    "oddsenName": "Arsenal - Everton"
    }
   },
   {
@@ -4321,7 +4509,7 @@
      }
     ],
     "table": {
-     "place": 17,
+     "place": 18,
      "of": 20,
      "points": 6,
      "played": 7,
@@ -4330,7 +4518,8 @@
      "gd": -8,
      "attackRank": 17,
      "defenceRank": 16,
-     "leaderPoints": 21
+     "leaderPoints": 21,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711178,
@@ -4475,6 +4664,21 @@
      "totalShotsAgainst": 17.43,
      "shotsOnGoalAgainst": 4.71
     },
+    "underlying": {
+     "matches": 7,
+     "xg": 7.9,
+     "xgAgainst": 11.0,
+     "goalsMinusXg": -1.9,
+     "concededMinusXga": 3.0,
+     "shotsPerMatch": 10.3,
+     "shotsAgainstPerMatch": 17.4,
+     "sotPerMatch": 3.3,
+     "sotAgainstPerMatch": 4.7,
+     "conversion": 0.26,
+     "savePct": 0.58,
+     "pdo": 0.84
+    },
+    "restDays": 5,
     "coach": "Frank Lampard",
     "topContributors": [
      {
@@ -4719,7 +4923,7 @@
      }
     ],
     "table": {
-     "place": 18,
+     "place": 19,
      "of": 20,
      "points": 5,
      "played": 7,
@@ -4727,8 +4931,9 @@
      "ga": 10,
      "gd": -3,
      "attackRank": 15,
-     "defenceRank": 10,
-     "leaderPoints": 21
+     "defenceRank": 9,
+     "leaderPoints": 21,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711178,
@@ -4873,6 +5078,21 @@
      "totalShotsAgainst": 14.14,
      "shotsOnGoalAgainst": 4.14
     },
+    "underlying": {
+     "matches": 7,
+     "xg": 11.2,
+     "xgAgainst": 9.4,
+     "goalsMinusXg": -4.2,
+     "concededMinusXga": 0.6,
+     "shotsPerMatch": 14.7,
+     "shotsAgainstPerMatch": 14.1,
+     "sotPerMatch": 4.7,
+     "sotAgainstPerMatch": 4.1,
+     "conversion": 0.21,
+     "savePct": 0.66,
+     "pdo": 0.87
+    },
+    "restDays": 7,
     "coach": "Álvaro Arbeloa",
     "topContributors": [
      {
@@ -5089,6 +5309,21 @@
      "pts": 3,
      "ppg": 3.0
     }
+   },
+   "odds": {
+    "odds": {
+     "home": 3.05,
+     "draw": 3.45,
+     "away": 2.2
+    },
+    "implied": {
+     "home": 31,
+     "draw": 27,
+     "away": 42
+    },
+    "margin": 7.2,
+    "oddsenEventId": "8859673.1",
+    "oddsenName": "Coventry - Fulham"
    }
   },
   {
@@ -5118,8 +5353,8 @@
       },
       "peoples": {
        "home": 38,
-       "draw": 39,
-       "away": 23
+       "draw": 40,
+       "away": 22
       }
      }
     }
@@ -5211,7 +5446,8 @@
      "gd": 1,
      "attackRank": 9,
      "defenceRank": 11,
-     "leaderPoints": 23
+     "leaderPoints": 25,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711253,
@@ -5354,6 +5590,17 @@
      "totalShotsAgainst": 10.09,
      "shotsOnGoalAgainst": 3.36
     },
+    "underlying": {
+     "matches": 11,
+     "shotsPerMatch": 8.5,
+     "shotsAgainstPerMatch": 10.1,
+     "sotPerMatch": 3.9,
+     "sotAgainstPerMatch": 3.4,
+     "conversion": 0.4,
+     "savePct": 0.57,
+     "pdo": 0.97
+    },
+    "restDays": 7,
     "coach": null,
     "topContributors": [
      {
@@ -5605,9 +5852,10 @@
      "gf": 15,
      "ga": 16,
      "gd": -1,
-     "attackRank": 13,
+     "attackRank": 14,
      "defenceRank": 11,
-     "leaderPoints": 23
+     "leaderPoints": 25,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711253,
@@ -5750,6 +5998,17 @@
      "totalShotsAgainst": 8.45,
      "shotsOnGoalAgainst": 3.82
     },
+    "underlying": {
+     "matches": 11,
+     "shotsPerMatch": 8.0,
+     "shotsAgainstPerMatch": 8.5,
+     "sotPerMatch": 3.5,
+     "sotAgainstPerMatch": 3.8,
+     "conversion": 0.38,
+     "savePct": 0.62,
+     "pdo": 1.0
+    },
+    "restDays": 7,
     "coach": null,
     "topContributors": [
      {
@@ -5958,6 +6217,21 @@
      "pts": 3,
      "ppg": 1.5
     }
+   },
+   "odds": {
+    "odds": {
+     "home": 2.75,
+     "draw": 3.15,
+     "away": 2.6
+    },
+    "implied": {
+     "home": 34,
+     "draw": 30,
+     "away": 36
+    },
+    "margin": 6.6,
+    "oddsenEventId": "8870070.1",
+    "oddsenName": "Blackburn Rovers - Wrexham"
    }
   },
   {
@@ -5974,8 +6248,8 @@
        "away": 31
       },
       "peoples": {
-       "home": 40,
-       "draw": 25,
+       "home": 39,
+       "draw": 26,
        "away": 35
       }
      },
@@ -5987,8 +6261,8 @@
       },
       "peoples": {
        "home": 34,
-       "draw": 38,
-       "away": 28
+       "draw": 39,
+       "away": 27
       }
      }
     }
@@ -6079,8 +6353,9 @@
      "ga": 17,
      "gd": 1,
      "attackRank": 6,
-     "defenceRank": 16,
-     "leaderPoints": 23
+     "defenceRank": 15,
+     "leaderPoints": 25,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711253,
@@ -6223,6 +6498,17 @@
      "totalShotsAgainst": 11.09,
      "shotsOnGoalAgainst": 5.55
     },
+    "underlying": {
+     "matches": 11,
+     "shotsPerMatch": 11.8,
+     "shotsAgainstPerMatch": 11.1,
+     "sotPerMatch": 5.7,
+     "sotAgainstPerMatch": 5.5,
+     "conversion": 0.29,
+     "savePct": 0.72,
+     "pdo": 1.01
+    },
+    "restDays": 7,
     "coach": null,
     "topContributors": [
      {
@@ -6548,7 +6834,8 @@
      "gd": 9,
      "attackRank": 4,
      "defenceRank": 3,
-     "leaderPoints": 23
+     "leaderPoints": 25,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711253,
@@ -6691,6 +6978,17 @@
      "totalShotsAgainst": 8.18,
      "shotsOnGoalAgainst": 3.64
     },
+    "underlying": {
+     "matches": 11,
+     "shotsPerMatch": 9.5,
+     "shotsAgainstPerMatch": 8.2,
+     "sotPerMatch": 4.7,
+     "sotAgainstPerMatch": 3.6,
+     "conversion": 0.38,
+     "savePct": 0.72,
+     "pdo": 1.1
+    },
+    "restDays": 7,
     "coach": null,
     "topContributors": [
      {
@@ -6951,6 +7249,21 @@
      "pts": 4,
      "ppg": 1.33
     }
+   },
+   "odds": {
+    "odds": {
+     "home": 2.7,
+     "draw": 3.65,
+     "away": 2.35
+    },
+    "implied": {
+     "home": 35,
+     "draw": 26,
+     "away": 40
+    },
+    "margin": 7.0,
+    "oddsenEventId": "8870073.1",
+    "oddsenName": "Cardiff City - Birmingham City"
    }
   },
   {
@@ -6979,8 +7292,8 @@
        "away": 30
       },
       "peoples": {
-       "home": 30,
-       "draw": 39,
+       "home": 29,
+       "draw": 40,
        "away": 31
       }
      }
@@ -7072,8 +7385,9 @@
      "ga": 19,
      "gd": -10,
      "attackRank": 22,
-     "defenceRank": 19,
-     "leaderPoints": 23
+     "defenceRank": 18,
+     "leaderPoints": 25,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711253,
@@ -7216,6 +7530,17 @@
      "totalShotsAgainst": 10.73,
      "shotsOnGoalAgainst": 5.45
     },
+    "underlying": {
+     "matches": 11,
+     "shotsPerMatch": 7.7,
+     "shotsAgainstPerMatch": 10.7,
+     "sotPerMatch": 2.9,
+     "sotAgainstPerMatch": 5.5,
+     "conversion": 0.28,
+     "savePct": 0.68,
+     "pdo": 0.96
+    },
+    "restDays": 7,
     "coach": null,
     "topContributors": [
      {
@@ -7558,8 +7883,9 @@
      "ga": 21,
      "gd": -5,
      "attackRank": 11,
-     "defenceRank": 22,
-     "leaderPoints": 23
+     "defenceRank": 21,
+     "leaderPoints": 25,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711253,
@@ -7702,6 +8028,17 @@
      "totalShotsAgainst": 10.0,
      "shotsOnGoalAgainst": 4.82
     },
+    "underlying": {
+     "matches": 11,
+     "shotsPerMatch": 10.0,
+     "shotsAgainstPerMatch": 10.0,
+     "sotPerMatch": 3.7,
+     "sotAgainstPerMatch": 4.8,
+     "conversion": 0.39,
+     "savePct": 0.6,
+     "pdo": 0.99
+    },
+    "restDays": 8,
     "coach": null,
     "topContributors": [
      {
@@ -7895,6 +8232,21 @@
      "pts": 0,
      "ppg": null
     }
+   },
+   "odds": {
+    "odds": {
+     "home": 2.7,
+     "draw": 3.4,
+     "away": 2.45
+    },
+    "implied": {
+     "home": 35,
+     "draw": 27,
+     "away": 38
+    },
+    "margin": 7.3,
+    "oddsenEventId": "8870076.1",
+    "oddsenName": "Lincoln City - Burnley"
    }
   },
   {
@@ -8015,9 +8367,10 @@
      "gf": 15,
      "ga": 12,
      "gd": 3,
-     "attackRank": 13,
+     "attackRank": 14,
      "defenceRank": 4,
-     "leaderPoints": 23
+     "leaderPoints": 25,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711253,
@@ -8160,6 +8513,17 @@
      "totalShotsAgainst": 8.09,
      "shotsOnGoalAgainst": 3.64
     },
+    "underlying": {
+     "matches": 11,
+     "shotsPerMatch": 10.8,
+     "shotsAgainstPerMatch": 8.1,
+     "sotPerMatch": 4.9,
+     "sotAgainstPerMatch": 3.6,
+     "conversion": 0.28,
+     "savePct": 0.7,
+     "pdo": 0.98
+    },
+    "restDays": 7,
     "coach": null,
     "topContributors": [
      {
@@ -8458,7 +8822,7 @@
      }
     ],
     "table": {
-     "place": 1,
+     "place": 2,
      "of": 24,
      "points": 23,
      "played": 11,
@@ -8467,7 +8831,8 @@
      "gd": 8,
      "attackRank": 11,
      "defenceRank": 1,
-     "leaderPoints": 23
+     "leaderPoints": 25,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711253,
@@ -8610,6 +8975,17 @@
      "totalShotsAgainst": 7.18,
      "shotsOnGoalAgainst": 2.64
     },
+    "underlying": {
+     "matches": 11,
+     "shotsPerMatch": 7.7,
+     "shotsAgainstPerMatch": 7.2,
+     "sotPerMatch": 3.9,
+     "sotAgainstPerMatch": 2.6,
+     "conversion": 0.37,
+     "savePct": 0.72,
+     "pdo": 1.09
+    },
+    "restDays": 7,
     "coach": null,
     "topContributors": [
      {
@@ -8870,6 +9246,21 @@
      "pts": 1,
      "ppg": 0.33
     }
+   },
+   "odds": {
+    "odds": {
+     "home": 2.5,
+     "draw": 3.3,
+     "away": 2.75
+    },
+    "implied": {
+     "home": 38,
+     "draw": 28,
+     "away": 34
+    },
+    "margin": 6.7,
+    "oddsenEventId": "8870065.1",
+    "oddsenName": "Queens Park Rangers - Swansea City"
    }
   },
   {
@@ -8886,9 +9277,9 @@
        "away": 28
       },
       "peoples": {
-       "home": 59,
+       "home": 60,
        "draw": 22,
-       "away": 19
+       "away": 18
       }
      },
      "halfTime": {
@@ -8992,7 +9383,8 @@
      "gd": 2,
      "attackRank": 6,
      "defenceRank": 11,
-     "leaderPoints": 23
+     "leaderPoints": 25,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711253,
@@ -9135,6 +9527,17 @@
      "totalShotsAgainst": 10.36,
      "shotsOnGoalAgainst": 4.73
     },
+    "underlying": {
+     "matches": 11,
+     "shotsPerMatch": 8.6,
+     "shotsAgainstPerMatch": 10.4,
+     "sotPerMatch": 3.8,
+     "sotAgainstPerMatch": 4.7,
+     "conversion": 0.43,
+     "savePct": 0.69,
+     "pdo": 1.12
+    },
+    "restDays": 7,
     "coach": null,
     "topContributors": [
      {
@@ -9379,7 +9782,7 @@
      }
     ],
     "table": {
-     "place": 16,
+     "place": 15,
      "of": 24,
      "points": 14,
      "played": 11,
@@ -9388,7 +9791,8 @@
      "gd": -3,
      "attackRank": 19,
      "defenceRank": 9,
-     "leaderPoints": 23
+     "leaderPoints": 25,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711253,
@@ -9531,6 +9935,17 @@
      "totalShotsAgainst": 7.73,
      "shotsOnGoalAgainst": 2.64
     },
+    "underlying": {
+     "matches": 11,
+     "shotsPerMatch": 10.0,
+     "shotsAgainstPerMatch": 7.7,
+     "sotPerMatch": 4.3,
+     "sotAgainstPerMatch": 2.6,
+     "conversion": 0.26,
+     "savePct": 0.48,
+     "pdo": 0.74
+    },
+    "restDays": 7,
     "coach": null,
     "topContributors": [
      {
@@ -9793,6 +10208,21 @@
      "pts": 7,
      "ppg": 2.33
     }
+   },
+   "odds": {
+    "odds": {
+     "home": 2.4,
+     "draw": 3.25,
+     "away": 2.9
+    },
+    "implied": {
+     "home": 39,
+     "draw": 29,
+     "away": 32
+    },
+    "margin": 6.9,
+    "oddsenEventId": "8870074.1",
+    "oddsenName": "Stoke City - Bristol City"
    }
   },
   {
@@ -9809,9 +10239,9 @@
        "away": 28
       },
       "peoples": {
-       "home": 56,
+       "home": 57,
        "draw": 26,
-       "away": 18
+       "away": 17
       }
      },
      "halfTime": {
@@ -9906,7 +10336,7 @@
      }
     ],
     "table": {
-     "place": 2,
+     "place": 3,
      "of": 24,
      "points": 22,
      "played": 11,
@@ -9915,7 +10345,8 @@
      "gd": 18,
      "attackRank": 1,
      "defenceRank": 4,
-     "leaderPoints": 23
+     "leaderPoints": 25,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711253,
@@ -10058,6 +10489,17 @@
      "totalShotsAgainst": 8.18,
      "shotsOnGoalAgainst": 3.09
     },
+    "underlying": {
+     "matches": 11,
+     "shotsPerMatch": 11.6,
+     "shotsAgainstPerMatch": 8.2,
+     "sotPerMatch": 6.1,
+     "sotAgainstPerMatch": 3.1,
+     "conversion": 0.45,
+     "savePct": 0.65,
+     "pdo": 1.1
+    },
+    "restDays": 7,
     "coach": null,
     "topContributors": [
      {
@@ -10311,7 +10753,8 @@
      "gd": 11,
      "attackRank": 3,
      "defenceRank": 2,
-     "leaderPoints": 23
+     "leaderPoints": 25,
+     "withdrawnPoints": 4
     },
     "league": {
      "stageId": 711253,
@@ -10454,6 +10897,17 @@
      "totalShotsAgainst": 10.0,
      "shotsOnGoalAgainst": 3.64
     },
+    "underlying": {
+     "matches": 11,
+     "shotsPerMatch": 10.5,
+     "shotsAgainstPerMatch": 10.0,
+     "sotPerMatch": 4.4,
+     "sotAgainstPerMatch": 3.6,
+     "conversion": 0.44,
+     "savePct": 0.75,
+     "pdo": 1.19
+    },
+    "restDays": 7,
     "coach": null,
     "topContributors": [
      {
@@ -10732,6 +11186,21 @@
      "pts": 4,
      "ppg": 2.0
     }
+   },
+   "odds": {
+    "odds": {
+     "home": 1.65,
+     "draw": 4.2,
+     "away": 4.4
+    },
+    "implied": {
+     "home": 57,
+     "draw": 22,
+     "away": 21
+    },
+    "margin": 7.1,
+    "oddsenEventId": "8870072.1",
+    "oddsenName": "West Ham United - Southampton"
    }
   },
   {
@@ -10748,9 +11217,9 @@
        "away": 22
       },
       "peoples": {
-       "home": 67,
-       "draw": 19,
-       "away": 14
+       "home": 69,
+       "draw": 18,
+       "away": 13
       }
      },
      "halfTime": {
@@ -10760,8 +11229,8 @@
        "away": 28
       },
       "peoples": {
-       "home": 51,
-       "draw": 31,
+       "home": 52,
+       "draw": 30,
        "away": 18
       }
      }
@@ -10854,7 +11323,8 @@
      "gd": 3,
      "attackRank": 5,
      "defenceRank": 11,
-     "leaderPoints": 23
+     "leaderPoints": 25,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711253,
@@ -10997,6 +11467,17 @@
      "totalShotsAgainst": 7.91,
      "shotsOnGoalAgainst": 3.82
     },
+    "underlying": {
+     "matches": 11,
+     "shotsPerMatch": 11.4,
+     "shotsAgainstPerMatch": 7.9,
+     "sotPerMatch": 4.2,
+     "sotAgainstPerMatch": 3.8,
+     "conversion": 0.41,
+     "savePct": 0.62,
+     "pdo": 1.03
+    },
+    "restDays": 4,
     "coach": null,
     "topContributors": [
      {
@@ -11267,8 +11748,9 @@
      "ga": 19,
      "gd": -9,
      "attackRank": 20,
-     "defenceRank": 19,
-     "leaderPoints": 23
+     "defenceRank": 18,
+     "leaderPoints": 25,
+     "withdrawnPoints": 0
     },
     "league": {
      "stageId": 711253,
@@ -11411,6 +11893,17 @@
      "totalShotsAgainst": 10.64,
      "shotsOnGoalAgainst": 5.18
     },
+    "underlying": {
+     "matches": 11,
+     "shotsPerMatch": 9.1,
+     "shotsAgainstPerMatch": 10.6,
+     "sotPerMatch": 4.4,
+     "sotAgainstPerMatch": 5.2,
+     "conversion": 0.21,
+     "savePct": 0.67,
+     "pdo": 0.88
+    },
+    "restDays": 7,
     "coach": null,
     "topContributors": [
      {
@@ -11645,6 +12138,21 @@
      "pts": 3,
      "ppg": 3.0
     }
+   },
+   "odds": {
+    "odds": {
+     "home": 1.35,
+     "draw": 5.1,
+     "away": 7.65
+    },
+    "implied": {
+     "home": 69,
+     "draw": 18,
+     "away": 12
+    },
+    "margin": 6.8,
+    "oddsenEventId": "8870075.1",
+    "oddsenName": "Wolverhampton Wanderers - Watford"
    }
   }
  ]
