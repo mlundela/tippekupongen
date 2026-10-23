@@ -9,7 +9,8 @@ There is no human-written documentation; this file was mapped by probing on 2026
 1. **Send `Accept: application/json`.** A request with no `Accept` header gets a 406, and Varnish caches that 406 *at the URL for every client* for 30 min. Python `urllib` sends no `Accept` by default; curl and browsers do.
 2. **On a 406, retry with a cache-busting param** (`?_=<random>`). A 406 on a known route means the cache is poisoned, not that the route is wrong. Unknown params are ignored, so the busted URL returns the same data.
 3. **Verify a new sub-route by response size.** An unknown sub-path returns the *parent* resource with status 200 (`matches/1/events/` returns match 1). If the body is byte-identical to the parent, the route does not exist.
-4. **Paths end with `/`.** `stages/1` redirects with a 302; query strings go after the slash: `stages/1/matches/?round=3`.
+4. **Throttle to ~3 requests/s.** Bursts get `429` with `Retry-After: 5`. `altomfotball/fetch.py` throttles, honours `Retry-After`, cache-busts 406s and caches to `.cache/`.
+5. **Paths end with `/`.** `stages/1` redirects with a 302; query strings go after the slash: `stages/1/matches/?round=3`.
 
 ## Data model
 
@@ -85,6 +86,16 @@ Other ids: resolve through `countries/1/tournaments/`, `tournaments/{id}/stages/
 **A team's matches**: `stages/{id}/matches/?teamId={teamId}` per stage; get the stages from `teams/{id}/stages/`.
 
 **Matches on a date**: `matches/?date=` returns the whole world. Filter client-side on `tournamentId` / `stageId`; cache the result server-side and never fetch it from a browser.
+
+**Counting goals**: a goal is an event of type 2 or 8 that carries `score` (`"2-1"`, score after the goal); the side whose number went up scored, which also resolves own goals. Type 10 (penalty goal) carries no score and is only a marker on the scorer's next goal. Verified: goal events match `result` in all 184 Eliteserien 2026 matches.
+
+**Event minute**: `timeRounded` when present. It is null in stoppage time (`time` is 45/90, `overtime` holds the added minutes) and for sources without `seconds` (Championship), where `time` already is the minute.
+
+**Which league a team plays**: stage objects embed a compact tournament with no country, type or category; fetch `tournaments/{id}/` for `tournamentTypeId` (2 = club) and `tournamentCategoryId` (1 = national league). Don't match on country: Welsh clubs (Cardiff, Swansea, Wrexham) play in English leagues. Friendlies are `tournamentTypeId` 4/5/6.
+
+**Squads**: `teams/{id}/persons/` items have `uid` prefix `pit_`, but `id` is the person id.
+
+**Data coverage varies by stage**: `stages/{id}/`.`data` flags what is recorded. Eliteserien has player `rating`, xG and head coaches; Premier League has xG but no ratings; Championship has shots, possession and corners but no xG, ratings or coaches. No stage has injuries or suspensions.
 
 **Match report**: `matches/{id}/`. Group `matchEvents` by `sorting`: events sharing a `sorting` belong together (goal + assist, substituted + substitute on, penalty + penalty goal). Order by `periodSorting`, then `sorting`. Use `timeRounded` (+ `overtimeRounded` for stoppage time) as the display minute. Show lineups only when `isLineupConfirmed` is true.
 

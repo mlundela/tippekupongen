@@ -23,7 +23,7 @@ gameDays[]                 one per coupon: dayType SATURDAY | SUNDAY | MIDWEEK
       teams.home|away {id, webName, mobileName, retailerName, acronymName, teletextName}
       status {value, description.mainText}   NOT_STARTED observed
       results, withdraws{fullTime, halfTime}, broadcasts[]
-    tips.fullTime|halfTime.expert|peoples[12]   {home, draw, away} in percent; no match key, so assumed to follow matches[] order
+    tips.fullTime|halfTime.expert|peoples[12]   {home, draw, away} in percent; no match key: they follow matches[] order (checked against match strength on 2026-10-23)
     sales.fullTime|halfTime {saleStopDate, saleAmount{amount, currency}}
     prizes.fullTime|halfTime.tenGroup|elevenGroup|twelveGroup
 probability, bonuspot      coupon-level text
@@ -55,15 +55,6 @@ Result on 2026-10-23: **36/36 matches joined, 55 teams, no conflicts** (no NT id
 
 ### Competitions
 
-Fetching `matches/?date=` from NIFS costs 2–5 MB per day. When the NT competition is known, fetch the NIFS stage's matches instead (`stages/{stageId}/matches/`, filter by date):
+Fetching `matches/?date=` from NIFS costs 2–5 MB per day. When the NT competition is known, fetch the NIFS stage's matches instead (`stages/{stageId}/matches/`, filter by kickoff).
 
-| NT arrangement | NIFS tournament | NIFS current stage (2026 / 2026–27) |
-|---|---|---|
-| 1 ENG Premier League | 7 | 711178 |
-| 2 ENG Championship | 28 | 711253 |
-| 5 NOR Eliteserien | 5 | 700911 |
-| 17 ENG Ligacup | 55 | 711259 |
-| 36 SPA LaLiga | 45 | 711451 |
-| 123 NOR NM, menn | 14 | 711222 |
-
-Stage ids change every season: re-resolve via NIFS `tournaments/{id}/stages/` `[0]`. Unknown arrangements fall back to the date route.
+[`data/nt-nifs-arrangements.json`](../data/nt-nifs-arrangements.json) maps NT `arrangement.id` → NIFS tournament id. The current stage is NIFS `tournaments/{id}/stages/` `[0]` (verified for all six mapped tournaments on 2026-10-23). Unknown arrangements fall back to the date route. Add a row when a new arrangement shows up on a coupon.
