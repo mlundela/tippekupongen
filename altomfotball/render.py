@@ -348,7 +348,7 @@ def _match(f, a, idx, t):
   <p class="headline">{escape(a["headline"])}</p>
   <div class="take">{take}</div>
   <div class="reads">
-    {_reads("signal", "Tallene som støtter oddsen", a.get("signal"))}
+    {_reads("signal", "Tallene som støtter folket", a.get("signal"))}
     {_reads("noise", "Dette kan snu kampen", a.get("noise"))}
   </div>
   {_players(f, a)}
