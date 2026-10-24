@@ -179,13 +179,11 @@ article.match { background: var(--slip); border: 1px solid var(--rule); border-r
 .p-status.s-card_risk { color: var(--muted) }
 .p-why { font-size: 12.5px; line-height: 1.4; color: var(--muted); margin: 2px 0 0 }
 /* Tier 1: what makes the player key. The lead number is big; the rest sit on its baseline, smaller. */
-.p-hero { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 6px 20px }
-.p-hero div { display: grid; gap: 4px; min-width: 0 }
-.p-hero b { font: 700 22px/1 var(--ui); font-variant-numeric: tabular-nums; letter-spacing: -.01em }
-.p-hero .lead b { font-size: 40px; font-weight: 800; letter-spacing: -.035em }
-.p-hero span { font-size: 11.5px; line-height: 1.2; color: var(--muted) }
-.p-hero small { font-size: inherit; opacity: .8 }
-.p-hero .zero b { color: var(--muted); font-weight: 500 }
+.p-hero { display: grid; gap: 4px }
+.p-hero b { font: 800 40px/1 var(--ui); font-variant-numeric: tabular-nums; letter-spacing: -.035em }
+.p-hero b small { font-size: .4em; font-weight: 500; letter-spacing: 0; color: var(--muted); margin-left: 2px }
+.p-hero b em { font-style: normal; font-size: .62em; font-weight: 700; letter-spacing: -.02em; margin-left: 4px }
+.p-hero > span { font-size: 11.5px; line-height: 1.2; color: var(--muted) }
 /* Tier 2: form. Hot form takes the good colour; no goals or assists in five fades. */
 .p-form { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; font-size: 12px; color: var(--muted) }
 .p-form b { font: 650 15px/1.2 var(--ui); color: var(--ink) }
@@ -193,6 +191,25 @@ article.match { background: var(--slip); border: 1px solid var(--rule); border-r
 .p-form.cold b { color: var(--muted); font-weight: 500 }
 .p-form em { font: 700 10.5px/1 var(--ui); font-style: normal; letter-spacing: .08em; text-transform: uppercase; color: var(--pitch);
   border: 1px solid currentColor; border-radius: 3px; padding: 3px 5px }
+/* How much the team leans on the player: goal share as a bar, FotMob rating as a dot among teammates */
+.p-team { display: grid; gap: 14px; padding-top: 12px; border-top: 1px solid var(--rule) }
+.p-team h4 { margin: 0; font: 700 10.5px/1 var(--ui); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
+.p-role { display: grid; gap: 7px }
+.p-big { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px }
+.p-big b { font: 750 24px/1 var(--ui); font-variant-numeric: tabular-nums; letter-spacing: -.02em }
+.p-big span { font-size: 12px; color: var(--muted) }
+.p-big b small { font: 600 12px/1 var(--ui); letter-spacing: 0; color: var(--muted); margin-right: 3px }
+.p-bar { display: flex; height: 8px; border-radius: 99px; background: var(--rule); overflow: hidden }
+.p-bar .g, .k.g { background: var(--pen) }
+.p-bar .a, .k.a { background: color-mix(in srgb, var(--pen) 40%, var(--paper)) }
+.p-note { margin: 0; font-size: 12px; color: var(--muted) }
+.k { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin: 0 4px 0 0; vertical-align: 0 }
+.k.a { margin-left: 6px }
+.p-strip { position: relative; height: 16px; margin: 0 7px }
+.p-strip::before { content: ""; position: absolute; inset: 50% 0 auto; height: 1px; background: var(--rule) }
+.p-strip i { position: absolute; top: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px; border-radius: 50%; background: color-mix(in srgb, var(--ink) 28%, var(--paper)) }
+.p-strip i.me { width: 14px; height: 14px; margin: -7px 0 0 -7px; background: var(--pen); box-shadow: 0 0 0 2px var(--paper) }
+.p-ends { margin: 0; display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums }
 /* Tier 3: context, small and quiet */
 .p-foot { display: grid; gap: 2px; padding-top: 10px; border-top: 1px solid var(--rule) }
 .p-foot p { margin: 0; font-size: 12px; line-height: 1.45; color: var(--muted) }
@@ -241,7 +258,7 @@ SKIN_CSS = "".join(
 :root[data-skin] .read.signal h3 { color: var(--ink) }
 :root[data-skin] .read.signal li { border-left-color: var(--ink) }
 :root[data-skin] .read.noise li { border-left-style: dashed }
-:root[data-skin] :is(.box, .cell, .mark, .p-hero b, .p-form b, .read .stat, .odds, .slip-no) { font-family: var(--num) }
+:root[data-skin] :is(.box, .cell, .mark, .p-hero b, .p-form b, .p-big b, .read .stat, .odds, .slip-no) { font-family: var(--num) }
 :root[data-skin] .box.on:not(.bomb) { background: var(--ink); color: var(--paper); border-color: var(--ink) }
 :root[data-skin] :is(.box.bomb, .mark.bomb) { border-color: var(--accent); color: var(--accent) }
 :root[data-skin] .eyebrow { color: var(--accent) }
@@ -257,7 +274,9 @@ SKIN_CSS = "".join(
 [data-skin="flomlys"] .headline { font: 700 18px/1.4 var(--body) }
 [data-skin="flomlys"] :is(.take p, .intro p) { font-size: 16px; line-height: 1.65 }
 [data-skin="flomlys"] .p-name { font: 700 14px/1.3 var(--display) }
-[data-skin="flomlys"] .p-hero .lead b { color: var(--accent); letter-spacing: -.06em }
+[data-skin="flomlys"] .p-hero b { color: var(--accent); letter-spacing: -.06em }
+[data-skin="flomlys"] .p-hero b em { color: var(--ink) }
+[data-skin="flomlys"] :is(.p-bar, .p-bar i, .k) { border-radius: 0 }
 [data-skin="flomlys"] .p-stars, [data-skin="flomlys"] .mark { color: var(--accent); border-color: var(--accent) }
 
 /* Papir: the sports pages of a broadsheet. Big serif headlines, hairlines instead of boxes, one red. */
@@ -273,8 +292,10 @@ SKIN_CSS = "".join(
 [data-skin="papir"] :is(.player, .box, .cell, .p-status) { border-radius: 0 }
 [data-skin="papir"] .player { background: transparent }
 [data-skin="papir"] .p-name { font: 400 21px/1.1 var(--display) }
-[data-skin="papir"] .p-hero b { font-family: var(--display); font-weight: 400; font-size: 28px; letter-spacing: 0 }
-[data-skin="papir"] .p-hero .lead b { font-size: 54px; font-weight: 400; letter-spacing: -.02em }
+[data-skin="papir"] :is(.p-hero b, .p-hero b em, .p-big b) { font-family: var(--display); font-weight: 400 }
+[data-skin="papir"] .p-hero b { font-size: 54px; letter-spacing: -.02em }
+[data-skin="papir"] .p-big b { font-size: 30px; letter-spacing: 0 }
+[data-skin="papir"] :is(.p-bar, .k) { border-radius: 0 }
 
 /* Kobolt: a cobalt-blue match programme. Soft cards, pill marks, condensed heavy headlines. */
 :root[data-skin="kobolt"] { --slip: color-mix(in srgb, var(--fg) 9%, var(--bg)) }
@@ -290,10 +311,11 @@ SKIN_CSS = "".join(
 [data-skin="kobolt"] :is(.take p, .intro p) { font-size: 16.5px; line-height: 1.6 }
 [data-skin="kobolt"] .read li { border-left-width: 3px }
 /* Schibsted Grotesk's tabular figures space out commas and colons; keep them for the aligned boxes only */
-[data-skin="kobolt"] :is(.read .stat, .odds) { font-variant-numeric: normal }
+[data-skin="kobolt"] :is(.read .stat, .odds, .p-ends) { font-variant-numeric: normal }
 [data-skin="kobolt"] .p-name { font: 800 18px/1.15 var(--display); font-stretch: 85% }
-[data-skin="kobolt"] .p-hero b { font-family: var(--display); font-weight: 800; font-stretch: 75% }
-[data-skin="kobolt"] .p-hero .lead b { font-size: 50px }
+[data-skin="kobolt"] :is(.p-hero b, .p-big b) { font-family: var(--display); font-weight: 800; font-stretch: 75% }
+[data-skin="kobolt"] .p-hero b { font-size: 50px }
+[data-skin="kobolt"] .p-big b { font-size: 28px }
 [data-skin="kobolt"] .p-stars, [data-skin="kobolt"] .mark { color: var(--accent); border-color: var(--accent) }
 """
 
@@ -416,16 +438,13 @@ def _player_card(team, p):
     played = (team.get("overall") or {}).get("p")
     scorer = bool(p["goals"] or p["assists"])
 
+    # Goals and assists always read {goals}({penalties})+{assists}
     if scorer:
-        pens = f' <small>{p["penalties"]} str.</small>' if p["penalties"] else ""
-        hero = [(p["goals"], "mål" + pens), (p["assists"], "målgivende")]
-        hero.sort(key=lambda h: -h[0])  # the larger of the two leads; goals on a tie
-        if p["goals"] and p.get("goalShare") is not None:
-            hero.append((f'{round(100 * p["goalShare"])} %', "av lagets mål"))
+        hero = (f'<b aria-label="{p["goals"]} mål, {p["penalties"]} på straffe, {p["assists"]} målgivende">'
+                f'{p["goals"]}<small>({p["penalties"]})</small><em>+{p["assists"]}</em></b>'
+                f'<span>mål (straffe) + målgivende</span>')
     else:
-        hero = [(p["starts"], f"av {played} kamper fra start" if played else "kamper fra start")]
-    hero_html = "".join(f'<div class="{"lead" if i == 0 else ""}{" zero" if v == 0 else ""}"><b>{v}</b><span>{label}</span></div>'
-                        for i, (v, label) in enumerate(hero))
+        hero = f'<b>{p["starts"]}</b><span>{f"av {played} kamper fra start" if played else "kamper fra start"}</span>'
 
     form = ""
     if scorer:
@@ -433,7 +452,7 @@ def _player_card(team, p):
         tone = " hot" if last5 >= HOT_LAST5 else " cold" if not last5 and p["goals"] + p["assists"] >= KEY_MIN_CONTRIBUTIONS else ""
         flag = "<em>i form</em>" if tone == " hot" else ""
         form = (f'<p class="p-form{tone}"><span>Siste 5</span>'
-                f'<b>{p["last5Goals"]} mål, {p["last5Assists"]} målgivende</b>{flag}</p>')
+                f'<b aria-label="{p["last5Goals"]} mål, {p["last5Assists"]} målgivende">{p["last5Goals"]}+{p["last5Assists"]}</b>{flag}</p>')
 
     fine = [f'{p["apps"]} kamper' + (f', {p["starts"]} fra start' if scorer else ""), f'{_int(p["minutes"])} min']
     if p["yellows"] or p["reds"]:
@@ -454,8 +473,41 @@ def _player_card(team, p):
                  if n else "")
     return (f'<div class="player"><div class="p-head"><div class="p-top"><span class="p-name">{escape(p["name"])}</span>{star_html}</div>'
             f'<span class="p-meta">{escape(" · ".join(meta))}</span>{badge}{why}</div>'
-            f'<div class="p-hero" aria-label="Tall fra {league}">{hero_html}</div>{form}'
+            f'<div class="p-hero" aria-label="Tall fra {league}">{hero}</div>{form}{_team_role(team, p)}'
             f'<div class="p-foot"><p>{" · ".join(fine)}</p><p>{rating}</p></div></div>')
+
+
+def _team_role(team, p):
+    """How much the team leans on the player: share of the team's league goals, and FotMob rating against teammates."""
+    blocks = []
+    gf = (team.get("overall") or {}).get("gf")
+    if gf and (p["goals"] or p["assists"]):
+        involved = p["goals"] + p["assists"]
+        lead, label = ((f'{round(100 * p["goals"] / gf)}\u202f%', f"av lagets {gf} seriemål") if p["goals"] else
+                       (f'{round(100 * involved / gf)}\u202f%', f"av lagets {gf} seriemål kom etter målgivende"))
+        note = (f'<p class="p-note"><span class="k g"></span>{p["goals"]} mål <span class="k a"></span>{p["assists"]} målgivende'
+                f' · med på {round(100 * involved / gf)} %</p>' if p["goals"] and p["assists"] else "")
+        blocks.append(
+            f'<div class="p-role"><p class="p-big"><b>{lead}</b><span>{label}</span></p>'
+            f'<div class="p-bar" role="img" aria-label="{p["goals"]} mål og {p["assists"]} målgivende av lagets {gf} mål">'
+            f'<i class="g" style="width:{100 * p["goals"] / gf:.1f}%"></i><i class="a" style="width:{100 * p["assists"] / gf:.1f}%"></i></div>'
+            f'{note}</div>')
+
+    sr = p.get("seasonRating")
+    mates = [q["seasonRating"]["rating"] for q in team.get("players") or [] if q.get("seasonRating")]
+    if sr and len(mates) > 1:
+        rank = 1 + sum(r > sr["rating"] for r in mates)
+        lo, hi = min(mates), max(mates)
+        pos = lambda r: 100 * (r - lo) / (hi - lo) if hi > lo else 50
+        dots = "".join(f'<i style="left:{pos(r):.1f}%"></i>' for r in mates if r != sr["rating"])
+        blocks.append(
+            f'<div class="p-role"><p class="p-big"><b><small>nr.</small>{rank}</b><span>av {len(mates)} i {escape(team["name"])} på FotMob-snitt</span></p>'
+            f'<div class="p-strip" role="img" aria-label="FotMob-snitt {_dec(sr["rating"], 2)}, lagkameratene fra {_dec(lo, 2)} til {_dec(hi, 2)}">'
+            f'{dots}<i class="me" style="left:{pos(sr["rating"]):.1f}%"></i></div>'
+            f'<p class="p-ends"><span>{_dec(lo, 2)}</span><span>{_dec(hi, 2)}</span></p></div>')
+    if not blocks:
+        return ""
+    return f'<section class="p-team"><h4>Betydning for {escape(team["name"])}</h4>{"".join(blocks)}</section>'
 
 
 def _players(f, a):
