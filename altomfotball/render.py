@@ -186,7 +186,7 @@ article.match { background: var(--slip); border: 1px solid var(--rule); border-r
 .p-hero span { font-size: 11.5px; line-height: 1.2; color: var(--muted) }
 .p-hero small { font-size: inherit; opacity: .8 }
 .p-hero .zero b { color: var(--muted); font-weight: 500 }
-/* Tier 2: form. Hot form takes the accent; no goals or assists in five fades. */
+/* Tier 2: form. Hot form takes the good colour; no goals or assists in five fades. */
 .p-form { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; font-size: 12px; color: var(--muted) }
 .p-form b { font: 650 15px/1.2 var(--ui); color: var(--ink) }
 .p-form.hot b { color: var(--pitch); font-weight: 750 }
@@ -214,32 +214,37 @@ footer dd { margin: 0; display: inline }
 .sw { flex: none; width: 14px; height: 14px; border-radius: 50%; box-shadow: 0 0 0 1px var(--rule) }
 """
 
-# Themes besides the default: three colours each (background, ink, accent) and their own type.
-# Every other shade on the page is a mix of those three. Picked on the page, remembered per browser.
+# Themes besides the default: four colours each (background, ink, good, bad) and their own type.
+# Good marks positive labels (in form, back from injury), bad the negative ones (injured, suspended, what could
+# turn the match). One of the two doubles as the theme's accent. Every other shade is a mix of those four.
+# Picked on the page, remembered per browser.
 SKINS = {
-    "klassisk": ("Klassisk", ("#f2f5f3", "#15222b", "#0d6a4e"), None),
-    "flomlys": ("Flomlys", ("#0e0f0c", "#f1efe6", "#c6ff3d"),
-                ('"Unbounded", system-ui, sans-serif', '"Manrope", system-ui, sans-serif', '"JetBrains Mono", ui-monospace, monospace', "dark")),
-    "papir": ("Papir", ("#f4f1ea", "#1a1a1a", "#cf3a1d"),
-              ('"Instrument Serif", Georgia, serif', '"Geist", system-ui, sans-serif', '"Geist Mono", ui-monospace, monospace', "light")),
-    "kobolt": ("Kobolt", ("#2a3cff", "#f7f5ee", "#ffd23f"),
-               ('"Bricolage Grotesque", system-ui, sans-serif', '"Schibsted Grotesk", system-ui, sans-serif', '"Schibsted Grotesk", system-ui, sans-serif', "dark")),
+    "klassisk": ("Klassisk", ("#f2f5f3", "#15222b", "#0d6a4e", "#9a5b00"), None),
+    "flomlys": ("Flomlys", ("#0e0f0c", "#f1efe6", "#c6ff3d", "#ff5c39"),
+                ('"Unbounded", system-ui, sans-serif', '"Manrope", system-ui, sans-serif', '"JetBrains Mono", ui-monospace, monospace', "dark", "good")),
+    "papir": ("Papir", ("#f4f1ea", "#1a1a1a", "#1f7a4a", "#cf3a1d"),
+              ('"Instrument Serif", Georgia, serif', '"Geist", system-ui, sans-serif', '"Geist Mono", ui-monospace, monospace', "light", "bad")),
+    "kobolt": ("Kobolt", ("#2a3cff", "#f7f5ee", "#5cf2a4", "#ffd23f"),
+               ('"Bricolage Grotesque", system-ui, sans-serif', '"Schibsted Grotesk", system-ui, sans-serif', '"Schibsted Grotesk", system-ui, sans-serif', "dark", "bad")),
 }
 
 SKIN_CSS = "".join(
-    f':root[data-skin="{key}"] {{ --bg: {bg}; --fg: {fg}; --accent: {accent}; --display: {display}; '
-    f'--body: {body}; --ui: {body}; --num: {num}; color-scheme: {scheme} }}\n'
-    for key, (_, (bg, fg, accent), fonts) in SKINS.items() if fonts for display, body, num, scheme in [fonts]) + """
+    f':root[data-skin="{key}"] {{ --bg: {bg}; --fg: {fg}; --good: {good}; --bad: {bad}; --accent: var(--{accent}); '
+    f'--display: {display}; --body: {body}; --ui: {body}; --num: {num}; color-scheme: {scheme} }}\n'
+    for key, (_, (bg, fg, good, bad), fonts) in SKINS.items() if fonts
+    for display, body, num, scheme, accent in [fonts]) + """
 :root[data-skin] {
   --paper: var(--bg); --ink: var(--fg); --slip: color-mix(in srgb, var(--fg) 4%, var(--bg));
   --muted: color-mix(in srgb, var(--fg) 64%, var(--bg)); --rule: color-mix(in srgb, var(--fg) 20%, var(--bg));
-  --pitch: var(--accent); --warn: var(--accent); --pen: var(--fg); --pen-soft: color-mix(in srgb, var(--fg) 12%, var(--bg)) }
-/* With one accent, «støtter folket» is ink and «kan snu kampen» is the accent, dashed like the bombs */
+  --pitch: var(--good); --warn: var(--bad); --pen: var(--fg); --pen-soft: color-mix(in srgb, var(--fg) 12%, var(--bg)) }
+/* «Støtter folket» is ink and «kan snu kampen» the bad colour, dashed. Bombs are a pick, not a warning: accent. */
 :root[data-skin] .read.signal h3 { color: var(--ink) }
 :root[data-skin] .read.signal li { border-left-color: var(--ink) }
 :root[data-skin] .read.noise li { border-left-style: dashed }
 :root[data-skin] :is(.box, .cell, .mark, .p-hero b, .p-form b, .read .stat, .odds, .slip-no) { font-family: var(--num) }
 :root[data-skin] .box.on:not(.bomb) { background: var(--ink); color: var(--paper); border-color: var(--ink) }
+:root[data-skin] :is(.box.bomb, .mark.bomb) { border-color: var(--accent); color: var(--accent) }
+:root[data-skin] .eyebrow { color: var(--accent) }
 
 /* Flomlys: night match under floodlights. Square edges, wide display type, volt accent. */
 [data-skin="flomlys"] h1 { font: 800 clamp(22px, 6.4vw, 40px)/1.05 var(--display); text-transform: uppercase; letter-spacing: -.02em }
@@ -275,7 +280,6 @@ SKIN_CSS = "".join(
 :root[data-skin="kobolt"] { --slip: color-mix(in srgb, var(--fg) 9%, var(--bg)) }
 [data-skin="kobolt"] h1 { font: 800 clamp(42px, 12vw, 62px)/.88 var(--display); font-stretch: 75%; letter-spacing: -.03em }
 [data-skin="kobolt"] .intro h2 { font: 800 24px/1.1 var(--display); font-stretch: 80%; letter-spacing: -.01em }
-[data-skin="kobolt"] .eyebrow { color: var(--accent) }
 [data-skin="kobolt"] :is(.slip, article.match) { border: 0; border-radius: 20px }
 [data-skin="kobolt"] article.match { padding: 18px }
 [data-skin="kobolt"] .player { border: 0; border-radius: 14px; background: color-mix(in srgb, var(--fg) 7%, var(--bg)) }
@@ -289,7 +293,7 @@ SKIN_CSS = "".join(
 [data-skin="kobolt"] :is(.read .stat, .odds) { font-variant-numeric: normal }
 [data-skin="kobolt"] .p-name { font: 800 18px/1.15 var(--display); font-stretch: 85% }
 [data-skin="kobolt"] .p-hero b { font-family: var(--display); font-weight: 800; font-stretch: 75% }
-[data-skin="kobolt"] .p-hero .lead b { font-size: 50px; color: var(--accent) }
+[data-skin="kobolt"] .p-hero .lead b { font-size: 50px }
 [data-skin="kobolt"] .p-stars, [data-skin="kobolt"] .mark { color: var(--accent); border-color: var(--accent) }
 """
 
@@ -311,7 +315,7 @@ try{localStorage.setItem("%s",s)}catch(e){}sync()})});sync()})();</script>""" % 
 def _skin_picker():
     buttons = "".join(
         f'<button type="button" data-skin-pick="{key}" aria-pressed="{str(key == "klassisk").lower()}">'
-        f'<span class="sw" aria-hidden="true" style="background:conic-gradient({colors[0]} 0 120deg, {colors[1]} 0 240deg, {colors[2]} 0)"></span>{name}</button>'
+        f'<span class="sw" aria-hidden="true" style="background:conic-gradient({colors[0]} 0 90deg, {colors[1]} 0 180deg, {colors[2]} 0 270deg, {colors[3]} 0)"></span>{name}</button>'
         for key, (name, colors, _) in SKINS.items())
     return f'<div class="skins" role="group" aria-label="Tema">{buttons}</div>'
 

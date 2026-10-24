@@ -120,7 +120,7 @@ article.match { background: var(--slip); border: 1px solid var(--rule); border-r
 .p-hero span { font-size: 11.5px; line-height: 1.2; color: var(--muted) }
 .p-hero small { font-size: inherit; opacity: .8 }
 .p-hero .zero b { color: var(--muted); font-weight: 500 }
-/* Tier 2: form. Hot form takes the accent; no goals or assists in five fades. */
+/* Tier 2: form. Hot form takes the good colour; no goals or assists in five fades. */
 .p-form { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; font-size: 12px; color: var(--muted) }
 .p-form b { font: 650 15px/1.2 var(--ui); color: var(--ink) }
 .p-form.hot b { color: var(--pitch); font-weight: 750 }
@@ -146,20 +146,22 @@ footer dd { margin: 0; display: inline }
 .skins button[aria-pressed="true"] { border-color: var(--ink); background: var(--pen-soft) }
 .skins button:focus-visible { outline: 2px solid var(--pen); outline-offset: 2px }
 .sw { flex: none; width: 14px; height: 14px; border-radius: 50%; box-shadow: 0 0 0 1px var(--rule) }
-:root[data-skin="flomlys"] { --bg: #0e0f0c; --fg: #f1efe6; --accent: #c6ff3d; --display: "Unbounded", system-ui, sans-serif; --body: "Manrope", system-ui, sans-serif; --ui: "Manrope", system-ui, sans-serif; --num: "JetBrains Mono", ui-monospace, monospace; color-scheme: dark }
-:root[data-skin="papir"] { --bg: #f4f1ea; --fg: #1a1a1a; --accent: #cf3a1d; --display: "Instrument Serif", Georgia, serif; --body: "Geist", system-ui, sans-serif; --ui: "Geist", system-ui, sans-serif; --num: "Geist Mono", ui-monospace, monospace; color-scheme: light }
-:root[data-skin="kobolt"] { --bg: #2a3cff; --fg: #f7f5ee; --accent: #ffd23f; --display: "Bricolage Grotesque", system-ui, sans-serif; --body: "Schibsted Grotesk", system-ui, sans-serif; --ui: "Schibsted Grotesk", system-ui, sans-serif; --num: "Schibsted Grotesk", system-ui, sans-serif; color-scheme: dark }
+:root[data-skin="flomlys"] { --bg: #0e0f0c; --fg: #f1efe6; --good: #c6ff3d; --bad: #ff5c39; --accent: var(--good); --display: "Unbounded", system-ui, sans-serif; --body: "Manrope", system-ui, sans-serif; --ui: "Manrope", system-ui, sans-serif; --num: "JetBrains Mono", ui-monospace, monospace; color-scheme: dark }
+:root[data-skin="papir"] { --bg: #f4f1ea; --fg: #1a1a1a; --good: #1f7a4a; --bad: #cf3a1d; --accent: var(--bad); --display: "Instrument Serif", Georgia, serif; --body: "Geist", system-ui, sans-serif; --ui: "Geist", system-ui, sans-serif; --num: "Geist Mono", ui-monospace, monospace; color-scheme: light }
+:root[data-skin="kobolt"] { --bg: #2a3cff; --fg: #f7f5ee; --good: #5cf2a4; --bad: #ffd23f; --accent: var(--bad); --display: "Bricolage Grotesque", system-ui, sans-serif; --body: "Schibsted Grotesk", system-ui, sans-serif; --ui: "Schibsted Grotesk", system-ui, sans-serif; --num: "Schibsted Grotesk", system-ui, sans-serif; color-scheme: dark }
 
 :root[data-skin] {
   --paper: var(--bg); --ink: var(--fg); --slip: color-mix(in srgb, var(--fg) 4%, var(--bg));
   --muted: color-mix(in srgb, var(--fg) 64%, var(--bg)); --rule: color-mix(in srgb, var(--fg) 20%, var(--bg));
-  --pitch: var(--accent); --warn: var(--accent); --pen: var(--fg); --pen-soft: color-mix(in srgb, var(--fg) 12%, var(--bg)) }
-/* With one accent, «støtter folket» is ink and «kan snu kampen» is the accent, dashed like the bombs */
+  --pitch: var(--good); --warn: var(--bad); --pen: var(--fg); --pen-soft: color-mix(in srgb, var(--fg) 12%, var(--bg)) }
+/* «Støtter folket» is ink and «kan snu kampen» the bad colour, dashed. Bombs are a pick, not a warning: accent. */
 :root[data-skin] .read.signal h3 { color: var(--ink) }
 :root[data-skin] .read.signal li { border-left-color: var(--ink) }
 :root[data-skin] .read.noise li { border-left-style: dashed }
 :root[data-skin] :is(.box, .cell, .mark, .p-hero b, .p-form b, .read .stat, .odds, .slip-no) { font-family: var(--num) }
 :root[data-skin] .box.on:not(.bomb) { background: var(--ink); color: var(--paper); border-color: var(--ink) }
+:root[data-skin] :is(.box.bomb, .mark.bomb) { border-color: var(--accent); color: var(--accent) }
+:root[data-skin] .eyebrow { color: var(--accent) }
 
 /* Flomlys: night match under floodlights. Square edges, wide display type, volt accent. */
 [data-skin="flomlys"] h1 { font: 800 clamp(22px, 6.4vw, 40px)/1.05 var(--display); text-transform: uppercase; letter-spacing: -.02em }
@@ -195,7 +197,6 @@ footer dd { margin: 0; display: inline }
 :root[data-skin="kobolt"] { --slip: color-mix(in srgb, var(--fg) 9%, var(--bg)) }
 [data-skin="kobolt"] h1 { font: 800 clamp(42px, 12vw, 62px)/.88 var(--display); font-stretch: 75%; letter-spacing: -.03em }
 [data-skin="kobolt"] .intro h2 { font: 800 24px/1.1 var(--display); font-stretch: 80%; letter-spacing: -.01em }
-[data-skin="kobolt"] .eyebrow { color: var(--accent) }
 [data-skin="kobolt"] :is(.slip, article.match) { border: 0; border-radius: 20px }
 [data-skin="kobolt"] article.match { padding: 18px }
 [data-skin="kobolt"] .player { border: 0; border-radius: 14px; background: color-mix(in srgb, var(--fg) 7%, var(--bg)) }
@@ -209,7 +210,7 @@ footer dd { margin: 0; display: inline }
 [data-skin="kobolt"] :is(.read .stat, .odds) { font-variant-numeric: normal }
 [data-skin="kobolt"] .p-name { font: 800 18px/1.15 var(--display); font-stretch: 85% }
 [data-skin="kobolt"] .p-hero b { font-family: var(--display); font-weight: 800; font-stretch: 75% }
-[data-skin="kobolt"] .p-hero .lead b { font-size: 50px; color: var(--accent) }
+[data-skin="kobolt"] .p-hero .lead b { font-size: 50px }
 [data-skin="kobolt"] .p-stars, [data-skin="kobolt"] .mark { color: var(--accent); border-color: var(--accent) }
 </style>
 <script>(function(){try{var s=localStorage.getItem("altomfotball-tema");if(s&&s!=="klassisk"&&["klassisk", "flomlys", "papir", "kobolt"].indexOf(s)>=0)document.documentElement.setAttribute("data-skin",s)}catch(e){}})();</script>
@@ -218,7 +219,7 @@ footer dd { margin: 0; display: inline }
     <span class="eyebrow">Tipping · Lørdag 24. oktober</span>
     <h1>Lørdagskupongen</h1>
     <div class="meta"><span>Spillestopp <b>lør. 15.55</b></span><span>Omsetning <b>1,62 mill. kr</b></span><span><b>12</b> kamper</span></div>
-    <div class="skins" role="group" aria-label="Tema"><button type="button" data-skin-pick="klassisk" aria-pressed="true"><span class="sw" aria-hidden="true" style="background:conic-gradient(#f2f5f3 0 120deg, #15222b 0 240deg, #0d6a4e 0)"></span>Klassisk</button><button type="button" data-skin-pick="flomlys" aria-pressed="false"><span class="sw" aria-hidden="true" style="background:conic-gradient(#0e0f0c 0 120deg, #f1efe6 0 240deg, #c6ff3d 0)"></span>Flomlys</button><button type="button" data-skin-pick="papir" aria-pressed="false"><span class="sw" aria-hidden="true" style="background:conic-gradient(#f4f1ea 0 120deg, #1a1a1a 0 240deg, #cf3a1d 0)"></span>Papir</button><button type="button" data-skin-pick="kobolt" aria-pressed="false"><span class="sw" aria-hidden="true" style="background:conic-gradient(#2a3cff 0 120deg, #f7f5ee 0 240deg, #ffd23f 0)"></span>Kobolt</button></div>
+    <div class="skins" role="group" aria-label="Tema"><button type="button" data-skin-pick="klassisk" aria-pressed="true"><span class="sw" aria-hidden="true" style="background:conic-gradient(#f2f5f3 0 90deg, #15222b 0 180deg, #0d6a4e 0 270deg, #9a5b00 0)"></span>Klassisk</button><button type="button" data-skin-pick="flomlys" aria-pressed="false"><span class="sw" aria-hidden="true" style="background:conic-gradient(#0e0f0c 0 90deg, #f1efe6 0 180deg, #c6ff3d 0 270deg, #ff5c39 0)"></span>Flomlys</button><button type="button" data-skin-pick="papir" aria-pressed="false"><span class="sw" aria-hidden="true" style="background:conic-gradient(#f4f1ea 0 90deg, #1a1a1a 0 180deg, #1f7a4a 0 270deg, #cf3a1d 0)"></span>Papir</button><button type="button" data-skin-pick="kobolt" aria-pressed="false"><span class="sw" aria-hidden="true" style="background:conic-gradient(#2a3cff 0 90deg, #f7f5ee 0 180deg, #5cf2a4 0 270deg, #ffd23f 0)"></span>Kobolt</button></div>
   </header>
   <section class="intro"><h2>Der folket og oddsen er uenige</h2><p>Oddsen viser hva bookmakeren mener, og folkets fordeling viser hva tipperne tror. På denne kupongen er de mest uenige om Stoke (60 % hos folket, 39 i oddsen), Blackburn (49 mot 34), Arsenal (75 mot 64) og Chelsea (61 mot 53).</p><p>For hver kamp viser vi først tallene som støtter folkets fordeling, og deretter det som kan snu kampen mot folket. Tendensen følger oddsen: spik når favoritten har minst 55 % sjanse, ellers halvgardering med tegnene folket undervurderer mest. Systemet har minst tre bomber, tegn folket gir under 20 %, der oddsen ligger høyere enn folket.</p></section>
   <nav class="slip" aria-label="Kupongen">
@@ -488,7 +489,7 @@ footer dd { margin: 0; display: inline }
       <div><dt>Stjerner</dt> <dd>nøkkelspillerens plass blant alle spillere i ligaen på FotMobs snittkarakter for sesongen: ★★★ topp 15 %, ★★ topp halvdel, ★ resten.</dd></div>
       <div><dt>Bombe</dt> <dd>et tegn folket gir under 20 %. Systemet har minst 3. Mangler det bomber, legges de på spikene der oddsen ligger mest over folket, og halvgarderingen med det svakeste tegnet blir spik, slik at antallet rekker er det samme.</dd></div>
     </dl>
-    <span>Statistikk fra NIFS, folkets fordeling og odds fra Norsk Tipping. Hentet 24.10.2026 10.58. Skader og utestengelser fra FotMob. Karantenefare er beregnet fra gule kort i NIFS etter seriens regler.</span>
+    <span>Statistikk fra NIFS, folkets fordeling og odds fra Norsk Tipping. Hentet 24.10.2026 11.05. Skader og utestengelser fra FotMob. Karantenefare er beregnet fra gule kort i NIFS etter seriens regler.</span>
     <span>18-årsgrense for pengespill. Spill ansvarlig.</span>
   </footer>
 </div>
