@@ -191,7 +191,111 @@ footer dl { margin: 0; display: grid; gap: 4px }
 footer dt { font-weight: 700; color: var(--ink); display: inline }
 footer dd { margin: 0; display: inline }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth } }
+
+/* Theme picker */
+.skins { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin-top: 8px; max-width: 440px }
+.skins button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 36px; padding: 0 6px; border: 1px solid var(--rule); border-radius: 999px;
+  background: transparent; color: var(--ink); font: 600 12.5px/1 var(--ui); cursor: pointer; white-space: nowrap }
+.skins button[aria-pressed="true"] { border-color: var(--ink); background: var(--pen-soft) }
+.skins button:focus-visible { outline: 2px solid var(--pen); outline-offset: 2px }
+.sw { flex: none; width: 14px; height: 14px; border-radius: 50%; box-shadow: 0 0 0 1px var(--rule) }
 """
+
+# Themes besides the default: three colours each (background, ink, accent) and their own type.
+# Every other shade on the page is a mix of those three. Picked on the page, remembered per browser.
+SKINS = {
+    "klassisk": ("Klassisk", ("#f2f5f3", "#15222b", "#0d6a4e"), None),
+    "flomlys": ("Flomlys", ("#0e0f0c", "#f1efe6", "#c6ff3d"),
+                ('"Unbounded", system-ui, sans-serif', '"Manrope", system-ui, sans-serif', '"JetBrains Mono", ui-monospace, monospace', "dark")),
+    "papir": ("Papir", ("#f4f1ea", "#1a1a1a", "#cf3a1d"),
+              ('"Instrument Serif", Georgia, serif', '"Geist", system-ui, sans-serif', '"Geist Mono", ui-monospace, monospace', "light")),
+    "kobolt": ("Kobolt", ("#2a3cff", "#f7f5ee", "#ffd23f"),
+               ('"Bricolage Grotesque", system-ui, sans-serif', '"Schibsted Grotesk", system-ui, sans-serif', '"Schibsted Grotesk", system-ui, sans-serif', "dark")),
+}
+
+SKIN_CSS = "".join(
+    f':root[data-skin="{key}"] {{ --bg: {bg}; --fg: {fg}; --accent: {accent}; --display: {display}; '
+    f'--body: {body}; --ui: {body}; --num: {num}; color-scheme: {scheme} }}\n'
+    for key, (_, (bg, fg, accent), fonts) in SKINS.items() if fonts for display, body, num, scheme in [fonts]) + """
+:root[data-skin] {
+  --paper: var(--bg); --ink: var(--fg); --slip: color-mix(in srgb, var(--fg) 4%, var(--bg));
+  --muted: color-mix(in srgb, var(--fg) 64%, var(--bg)); --rule: color-mix(in srgb, var(--fg) 20%, var(--bg));
+  --pitch: var(--accent); --warn: var(--accent); --pen: var(--fg); --pen-soft: color-mix(in srgb, var(--fg) 12%, var(--bg)) }
+/* With one accent, «støtter folket» is ink and «kan snu kampen» is the accent, dashed like the bombs */
+:root[data-skin] .read.signal h3 { color: var(--ink) }
+:root[data-skin] .read.signal li { border-left-color: var(--ink) }
+:root[data-skin] .read.noise li { border-left-style: dashed }
+:root[data-skin] :is(.box, .cell, .mark, .p-stats dd, .read .stat, .odds, .slip-no) { font-family: var(--num) }
+:root[data-skin] .box.on:not(.bomb) { background: var(--ink); color: var(--paper); border-color: var(--ink) }
+
+/* Flomlys: night match under floodlights. Square edges, wide display type, volt accent. */
+[data-skin="flomlys"] h1 { font: 800 clamp(22px, 6.4vw, 40px)/1.05 var(--display); text-transform: uppercase; letter-spacing: -.02em }
+[data-skin="flomlys"] .intro h2 { font: 700 19px/1.25 var(--display); letter-spacing: -.01em }
+[data-skin="flomlys"] .eyebrow { font-family: var(--num); letter-spacing: .06em }
+[data-skin="flomlys"] :is(.slip, article.match, .player, .box, .cell, .p-status) { border-radius: 0 }
+[data-skin="flomlys"] .box.on:not(.bomb) { background: var(--accent); border-color: var(--accent); color: var(--bg) }
+[data-skin="flomlys"] .m-no { font: 800 32px/1 var(--display); color: var(--accent) }
+[data-skin="flomlys"] .m-teams { font: 700 18px/1.25 var(--display); letter-spacing: -.01em }
+[data-skin="flomlys"] .headline { font: 700 18px/1.4 var(--body) }
+[data-skin="flomlys"] :is(.take p, .intro p) { font-size: 16px; line-height: 1.65 }
+[data-skin="flomlys"] .p-name { font: 700 14px/1.3 var(--display) }
+[data-skin="flomlys"] .p-stars, [data-skin="flomlys"] .mark { color: var(--accent); border-color: var(--accent) }
+
+/* Papir: the sports pages of a broadsheet. Big serif headlines, hairlines instead of boxes, one red. */
+[data-skin="papir"] h1 { font: 400 clamp(46px, 13vw, 68px)/.92 var(--display); letter-spacing: -.015em }
+[data-skin="papir"] .intro h2 { font: 400 italic 28px/1.1 var(--display) }
+[data-skin="papir"] .slip { background: transparent; border: 0; border-top: 3px solid var(--ink); border-bottom: 1px solid var(--ink); border-radius: 0 }
+[data-skin="papir"] article.match { background: transparent; border: 0; border-top: 3px solid var(--ink); border-radius: 0; padding: 14px 0 8px }
+[data-skin="papir"] .m-no { font: 400 italic 54px/.85 var(--display); color: var(--accent) }
+[data-skin="papir"] .m-teams { font: 400 32px/1.02 var(--display); letter-spacing: -.01em }
+[data-skin="papir"] .m-teams .vs { font-style: italic }
+[data-skin="papir"] .headline { font: 400 italic 23px/1.25 var(--display) }
+[data-skin="papir"] :is(.take p, .intro p) { font-size: 16px; line-height: 1.65 }
+[data-skin="papir"] :is(.player, .box, .cell, .p-status) { border-radius: 0 }
+[data-skin="papir"] .player { background: transparent }
+[data-skin="papir"] .p-name { font: 400 21px/1.1 var(--display) }
+
+/* Kobolt: a cobalt-blue match programme. Soft cards, pill marks, condensed heavy headlines. */
+:root[data-skin="kobolt"] { --slip: color-mix(in srgb, var(--fg) 9%, var(--bg)) }
+[data-skin="kobolt"] h1 { font: 800 clamp(42px, 12vw, 62px)/.88 var(--display); font-stretch: 75%; letter-spacing: -.03em }
+[data-skin="kobolt"] .intro h2 { font: 800 24px/1.1 var(--display); font-stretch: 80%; letter-spacing: -.01em }
+[data-skin="kobolt"] .eyebrow { color: var(--accent) }
+[data-skin="kobolt"] :is(.slip, article.match) { border: 0; border-radius: 20px }
+[data-skin="kobolt"] article.match { padding: 18px }
+[data-skin="kobolt"] .player { border: 0; border-radius: 14px; background: color-mix(in srgb, var(--fg) 7%, var(--bg)) }
+[data-skin="kobolt"] :is(.box, .cell, .p-status) { border-radius: 999px }
+[data-skin="kobolt"] .m-no { font: 800 50px/.85 var(--display); font-stretch: 75%; color: var(--accent) }
+[data-skin="kobolt"] .m-teams { font: 800 27px/1.02 var(--display); font-stretch: 80%; letter-spacing: -.02em }
+[data-skin="kobolt"] .headline { font: 700 19px/1.35 var(--body) }
+[data-skin="kobolt"] :is(.take p, .intro p) { font-size: 16.5px; line-height: 1.6 }
+[data-skin="kobolt"] .read li { border-left-width: 3px }
+/* Schibsted Grotesk's tabular figures space out commas and colons; keep them for the aligned boxes only */
+[data-skin="kobolt"] :is(.read .stat, .odds, .p-stats dd) { font-variant-numeric: normal }
+[data-skin="kobolt"] .p-name { font: 800 18px/1.15 var(--display); font-stretch: 85% }
+[data-skin="kobolt"] .p-stars, [data-skin="kobolt"] .mark { color: var(--accent); border-color: var(--accent) }
+"""
+
+FONTS = ("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800"
+         "&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Unbounded:wght@400..800&family=Manrope:wght@400..800"
+         "&family=JetBrains+Mono:wght@400..700&family=Instrument+Serif:ital@0;1&family=Geist:wght@400..700"
+         "&family=Geist+Mono:wght@400..700&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800"
+         "&family=Schibsted+Grotesk:wght@400..800&display=swap")
+
+SKIN_KEY = "altomfotball-tema"
+# Runs before the page paints, so a remembered theme doesn't flash the default first
+SKIN_BOOT = f"""<script>(function(){{try{{var s=localStorage.getItem("{SKIN_KEY}");if(s&&s!=="klassisk"&&{json.dumps(list(SKINS))}.indexOf(s)>=0)document.documentElement.setAttribute("data-skin",s)}}catch(e){{}}}})();</script>"""
+SKIN_PICKER = """<script>(function(){var r=document.documentElement,bs=document.querySelectorAll("[data-skin-pick]");
+function sync(){var s=r.getAttribute("data-skin")||"klassisk";bs.forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.skinPick===s))})}
+bs.forEach(function(b){b.addEventListener("click",function(){var s=b.dataset.skinPick;if(s==="klassisk")r.removeAttribute("data-skin");else r.setAttribute("data-skin",s);
+try{localStorage.setItem("%s",s)}catch(e){}sync()})});sync()})();</script>""" % SKIN_KEY
+
+
+def _skin_picker():
+    buttons = "".join(
+        f'<button type="button" data-skin-pick="{key}" aria-pressed="{str(key == "klassisk").lower()}">'
+        f'<span class="sw" aria-hidden="true" style="background:conic-gradient({colors[0]} 0 120deg, {colors[1]} 0 240deg, {colors[2]} 0)"></span>{name}</button>'
+        for key, (name, colors, _) in SKINS.items())
+    return f'<div class="skins" role="group" aria-label="Tema">{buttons}</div>'
 
 
 def _dt(ts):
@@ -407,13 +511,15 @@ def render(coupon_dir, site_dir, fragment_path=None):
     body = f"""<title>{title} {_date_long(first)}</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
-<style>{CSS}</style>
+<link rel="stylesheet" href="{FONTS}">
+<style>{CSS}{SKIN_CSS}</style>
+{SKIN_BOOT}
 <div class="wrap">
   <header class="top">
     <span class="eyebrow">Tipping · {c["dayName"]} {_date_long(first)}</span>
     <h1>{title}</h1>
     <div class="meta"><span>Spillestopp <b>{_kick(c["saleStop"])}</b></span><span>Omsetning <b>{_nok(c["turnover"]["amount"])}</b></span><span><b>12</b> kamper</span></div>
+    {_skin_picker()}
   </header>
   {intro}
   <nav class="slip" aria-label="Kupongen">
@@ -434,7 +540,8 @@ def render(coupon_dir, site_dir, fragment_path=None):
     <span>Statistikk fra NIFS, folkets fordeling og odds fra Norsk Tipping. Hentet {datetime.now().strftime("%d.%m.%Y %H.%M")}. Skader og utestengelser fra FotMob. Karantenefare er beregnet fra gule kort i NIFS etter seriens regler.</span>
     <span>18-årsgrense for pengespill. Spill ansvarlig.</span>
   </footer>
-</div>"""
+</div>
+{SKIN_PICKER}"""
     site_dir.mkdir(parents=True, exist_ok=True)
     out = site_dir / f"{coupon_dir.name}.html"
     out.write_text(f'<!doctype html>\n<html lang="nb">\n<head>\n<meta charset="utf-8">\n'
