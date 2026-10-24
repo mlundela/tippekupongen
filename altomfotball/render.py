@@ -165,25 +165,38 @@ article.match { background: var(--slip); border: 1px solid var(--rule); border-r
 /* Key players: one card per player named in the analysis */
 .players h3 { margin: 0 0 8px; font: 700 11px/1 var(--ui); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
 .p-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 10px }
-.player { border: 1px solid var(--rule); border-radius: 6px; padding: 12px; display: grid; gap: 10px; background: var(--paper); min-width: 0 }
-.p-head { display: grid; gap: 2px }
+.player { border: 1px solid var(--rule); border-radius: 6px; padding: 14px; display: grid; gap: 14px; align-content: start; background: var(--paper); min-width: 0 }
+.p-head { display: grid; gap: 3px }
 .p-name { font: 700 16px/1.2 var(--display); font-stretch: 90% }
 .p-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px }
 .p-stars { font-size: 15px; letter-spacing: 1px; color: var(--pen); white-space: nowrap }
 .p-stars .off { color: var(--rule) }
-.p-rating { font-size: 12px; color: var(--muted) }
 .p-meta { font-size: 12.5px; color: var(--muted) }
-.p-status { justify-self: start; margin-top: 4px; font: 600 11px/1 var(--ui); letter-spacing: .04em; padding: 4px 6px; border-radius: 3px; border: 1px solid currentColor }
+.p-status { justify-self: start; margin-top: 6px; font: 600 11px/1 var(--ui); letter-spacing: .04em; padding: 4px 6px; border-radius: 3px; border: 1px solid currentColor }
 .p-status.s-suspended, .p-status.s-injured, .p-status.s-missing { color: var(--warn) }
 .p-status.s-doubtful { color: var(--ink) }
 .p-status.s-returning { color: var(--pitch) }
 .p-status.s-card_risk { color: var(--muted) }
-.p-why { font-size: 12.5px; color: var(--muted); margin: 0 }
-.p-stats { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 6px }
-.p-stats div { display: grid; gap: 1px; min-width: 0 }
-.p-stats dt { font-size: 11px; color: var(--muted); line-height: 1.2 }
-.p-stats dd { margin: 0; font: 700 17px/1.2 var(--ui); font-variant-numeric: tabular-nums }
-.p-stats dd small { font: 400 11.5px/1 var(--ui); color: var(--muted) }
+.p-why { font-size: 12.5px; line-height: 1.4; color: var(--muted); margin: 2px 0 0 }
+/* Tier 1: what makes the player key. The lead number is big; the rest sit on its baseline, smaller. */
+.p-hero { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 6px 20px }
+.p-hero div { display: grid; gap: 4px; min-width: 0 }
+.p-hero b { font: 700 22px/1 var(--ui); font-variant-numeric: tabular-nums; letter-spacing: -.01em }
+.p-hero .lead b { font-size: 40px; font-weight: 800; letter-spacing: -.035em }
+.p-hero span { font-size: 11.5px; line-height: 1.2; color: var(--muted) }
+.p-hero small { font-size: inherit; opacity: .8 }
+.p-hero .zero b { color: var(--muted); font-weight: 500 }
+/* Tier 2: form. Hot form takes the accent; no goals or assists in five fades. */
+.p-form { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; font-size: 12px; color: var(--muted) }
+.p-form b { font: 650 15px/1.2 var(--ui); color: var(--ink) }
+.p-form.hot b { color: var(--pitch); font-weight: 750 }
+.p-form.cold b { color: var(--muted); font-weight: 500 }
+.p-form em { font: 700 10.5px/1 var(--ui); font-style: normal; letter-spacing: .08em; text-transform: uppercase; color: var(--pitch);
+  border: 1px solid currentColor; border-radius: 3px; padding: 3px 5px }
+/* Tier 3: context, small and quiet */
+.p-foot { display: grid; gap: 2px; padding-top: 10px; border-top: 1px solid var(--rule) }
+.p-foot p { margin: 0; font-size: 12px; line-height: 1.45; color: var(--muted) }
+.p-foot b { color: var(--ink); font-weight: 650 }
 
 .empty { color: var(--muted); font-size: 14px; margin: 0 }
 footer { font-size: 12.5px; color: var(--muted); display: grid; gap: 8px; max-width: 65ch }
@@ -225,7 +238,7 @@ SKIN_CSS = "".join(
 :root[data-skin] .read.signal h3 { color: var(--ink) }
 :root[data-skin] .read.signal li { border-left-color: var(--ink) }
 :root[data-skin] .read.noise li { border-left-style: dashed }
-:root[data-skin] :is(.box, .cell, .mark, .p-stats dd, .read .stat, .odds, .slip-no) { font-family: var(--num) }
+:root[data-skin] :is(.box, .cell, .mark, .p-hero b, .p-form b, .read .stat, .odds, .slip-no) { font-family: var(--num) }
 :root[data-skin] .box.on:not(.bomb) { background: var(--ink); color: var(--paper); border-color: var(--ink) }
 
 /* Flomlys: night match under floodlights. Square edges, wide display type, volt accent. */
@@ -239,6 +252,7 @@ SKIN_CSS = "".join(
 [data-skin="flomlys"] .headline { font: 700 18px/1.4 var(--body) }
 [data-skin="flomlys"] :is(.take p, .intro p) { font-size: 16px; line-height: 1.65 }
 [data-skin="flomlys"] .p-name { font: 700 14px/1.3 var(--display) }
+[data-skin="flomlys"] .p-hero .lead b { color: var(--accent); letter-spacing: -.06em }
 [data-skin="flomlys"] .p-stars, [data-skin="flomlys"] .mark { color: var(--accent); border-color: var(--accent) }
 
 /* Papir: the sports pages of a broadsheet. Big serif headlines, hairlines instead of boxes, one red. */
@@ -254,6 +268,8 @@ SKIN_CSS = "".join(
 [data-skin="papir"] :is(.player, .box, .cell, .p-status) { border-radius: 0 }
 [data-skin="papir"] .player { background: transparent }
 [data-skin="papir"] .p-name { font: 400 21px/1.1 var(--display) }
+[data-skin="papir"] .p-hero b { font-family: var(--display); font-weight: 400; font-size: 28px; letter-spacing: 0 }
+[data-skin="papir"] .p-hero .lead b { font-size: 54px; font-weight: 400; letter-spacing: -.02em }
 
 /* Kobolt: a cobalt-blue match programme. Soft cards, pill marks, condensed heavy headlines. */
 :root[data-skin="kobolt"] { --slip: color-mix(in srgb, var(--fg) 9%, var(--bg)) }
@@ -270,8 +286,10 @@ SKIN_CSS = "".join(
 [data-skin="kobolt"] :is(.take p, .intro p) { font-size: 16.5px; line-height: 1.6 }
 [data-skin="kobolt"] .read li { border-left-width: 3px }
 /* Schibsted Grotesk's tabular figures space out commas and colons; keep them for the aligned boxes only */
-[data-skin="kobolt"] :is(.read .stat, .odds, .p-stats dd) { font-variant-numeric: normal }
+[data-skin="kobolt"] :is(.read .stat, .odds) { font-variant-numeric: normal }
 [data-skin="kobolt"] .p-name { font: 800 18px/1.15 var(--display); font-stretch: 85% }
+[data-skin="kobolt"] .p-hero b { font-family: var(--display); font-weight: 800; font-stretch: 75% }
+[data-skin="kobolt"] .p-hero .lead b { font-size: 50px; color: var(--accent) }
 [data-skin="kobolt"] .p-stars, [data-skin="kobolt"] .mark { color: var(--accent); border-color: var(--accent) }
 """
 
@@ -380,34 +398,60 @@ def _mentioned(f, a):
     return [(side, p) for _, side, p in sorted(found.values(), key=lambda t: t[0])]
 
 
+HOT_LAST5 = 3  # goals + assists in the last five matches that mark a player as in form
+
+
+def _int(n):
+    return f"{n:,}".replace(",", " ")
+
+
 def _player_card(team, p):
+    """Three tiers: the number that makes the player key (big), current form (medium), the rest (small, muted)."""
     meta = [team["name"]] + ([POSITIONS.get(p["position"])] if POSITIONS.get(p["position"]) else [])
     meta += [f'nr. {p["shirtNumber"]}'] if p.get("shirtNumber") else []
-    stats = []
-    if p["goals"] or p["assists"]:
-        pens = f' <small>({p["penalties"]} str.)</small>' if p["penalties"] else ""
-        stats += [("Mål", f'{p["goals"]}{pens}'), ("Målgivende", p["assists"]),
-                  ("Siste 5", f'{p["last5Goals"]}+{p["last5Assists"]} <small>mål+mg</small>')]
-    stats += [("Kamper", f'{p["apps"]} <small>({p["starts"]} fra start)</small>'), ("Minutter", p["minutes"])]
-    if p["goals"] and p.get("goalShare") is not None:
-        stats.append(("Andel av lagets mål", f'{round(100 * p["goalShare"])} %'))
+    played = (team.get("overall") or {}).get("p")
+    scorer = bool(p["goals"] or p["assists"])
+
+    if scorer:
+        pens = f' <small>{p["penalties"]} str.</small>' if p["penalties"] else ""
+        hero = [(p["goals"], "mål" + pens), (p["assists"], "målgivende")]
+        hero.sort(key=lambda h: -h[0])  # the larger of the two leads; goals on a tie
+        if p["goals"] and p.get("goalShare") is not None:
+            hero.append((f'{round(100 * p["goalShare"])} %', "av lagets mål"))
+    else:
+        hero = [(p["starts"], f"av {played} kamper fra start" if played else "kamper fra start")]
+    hero_html = "".join(f'<div class="{"lead" if i == 0 else ""}{" zero" if v == 0 else ""}"><b>{v}</b><span>{label}</span></div>'
+                        for i, (v, label) in enumerate(hero))
+
+    form = ""
+    if scorer:
+        last5 = p["last5Goals"] + p["last5Assists"]
+        tone = " hot" if last5 >= HOT_LAST5 else " cold" if not last5 and p["goals"] + p["assists"] >= KEY_MIN_CONTRIBUTIONS else ""
+        flag = "<em>i form</em>" if tone == " hot" else ""
+        form = (f'<p class="p-form{tone}"><span>Siste 5</span>'
+                f'<b>{p["last5Goals"]} mål, {p["last5Assists"]} målgivende</b>{flag}</p>')
+
+    fine = [f'{p["apps"]} kamper' + (f', {p["starts"]} fra start' if scorer else ""), f'{_int(p["minutes"])} min']
     if p["yellows"] or p["reds"]:
-        stats.append(("Kort", f'{p["yellows"]} gule' + (f', {p["reds"]} rødt' if p["reds"] else "")))
+        fine.append(", ".join(t for n, t in ((p["yellows"], f'{p["yellows"]} gule'), (p["reds"], f'{p["reds"]} rødt')) if n))
     if p.get("avgRatingLast5"):
-        stats.append(("Karakter siste 5", _dec(p["avgRatingLast5"])))
-    tiles = "".join(f"<div><dt>{escape(k)}</dt><dd>{v}</dd></div>" for k, v in stats)
+        fine.append(f'karakter siste 5: {_dec(p["avgRatingLast5"])}')
+    sr, n = p.get("seasonRating"), stars(p.get("seasonRating"))
+    rating = (f'FotMob-snitt <b>{_dec(sr["rating"], 2)}</b> · nr. {sr["rank"]} av {sr["of"]} i {escape(sr["league"])}'
+              if sr else "For få minutter til FotMob-rating i ligaen")
+
     st = p.get("status")
     badge = f'<span class="p-status s-{st["kind"]}">{STATUS[st["kind"]]}</span>' if st else ""
-    why = f'<p class="p-why">{escape(st["reason"][:1].upper() + st["reason"][1:])}.</p>' if st else ""
+    # FotMob's reason is sometimes just the status again («utestengt»); the badge already says that
+    why = (f'<p class="p-why">{escape(st["reason"][:1].upper() + st["reason"][1:])}.</p>'
+           if st and st.get("reason") and st["reason"].strip(". ").lower() != STATUS[st["kind"]].lower() else "")
     league = escape(team["league"]["name"]) if team.get("league") else "serien"
-    sr, n = p.get("seasonRating"), stars(p.get("seasonRating"))
     star_html = (f'<span class="p-stars" role="img" aria-label="{n} av 3 stjerner">{"★" * n}<span class="off">{"★" * (3 - n)}</span></span>'
                  if n else "")
-    rating = (f'<span class="p-rating">FotMob-snitt {_dec(sr["rating"], 2)} · nr. {sr["rank"]} av {sr["of"]} i {escape(sr["league"])}</span>'
-              if sr else '<span class="p-rating">For få minutter til FotMob-rating i ligaen</span>')
     return (f'<div class="player"><div class="p-head"><div class="p-top"><span class="p-name">{escape(p["name"])}</span>{star_html}</div>'
-            f'<span class="p-meta">{escape(" · ".join(meta))}</span>{rating}{badge}</div>'
-            f'<dl class="p-stats" aria-label="Tall fra {league}">{tiles}</dl>{why}</div>')
+            f'<span class="p-meta">{escape(" · ".join(meta))}</span>{badge}{why}</div>'
+            f'<div class="p-hero" aria-label="Tall fra {league}">{hero_html}</div>{form}'
+            f'<div class="p-foot"><p>{" · ".join(fine)}</p><p>{rating}</p></div></div>')
 
 
 def _players(f, a):
