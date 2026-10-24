@@ -76,139 +76,139 @@ def system(matches):
     return picks
 
 CSS = """
-/* Layout: one column. A printed coupon slip up top; each match is a slip with the take first and the crowd comparison last. */
+/* Flomlys: a night match under floodlights. One column, square edges, wide display type.
+   Four colours: background, ink, good (volt, also the accent) and bad. Every other shade is a mix of those.
+   Good marks positive labels (in form, back from injury), bad the negative ones (injured, suspended, what could turn the match). */
 :root {
-  --paper: #f2f5f3; --slip: #ffffff; --ink: #15222b; --muted: #5a6a71; --rule: #d3ddd8;
-  --pitch: #0d6a4e; --pen: #2445c4; --pen-soft: #e3e8fb; --warn: #9a5b00;
-  --display: "Archivo", "Arial Narrow", system-ui, sans-serif;
-  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --ui: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --bg: #0e0f0c; --ink: #f1efe6; --good: #c6ff3d; --bad: #ff5c39; --accent: var(--good);
+  --slip: color-mix(in srgb, var(--ink) 4%, var(--bg)); --tint: color-mix(in srgb, var(--ink) 12%, var(--bg));
+  --muted: color-mix(in srgb, var(--ink) 64%, var(--bg)); --rule: color-mix(in srgb, var(--ink) 20%, var(--bg));
+  --display: "Unbounded", system-ui, sans-serif;
+  --body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --num: "JetBrains Mono", ui-monospace, monospace;
+  color-scheme: dark;
 }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --paper: #0f1619; --slip: #172126; --ink: #e6eeea; --muted: #93a4a9; --rule: #2a383d;
-  --pitch: #4cc79a; --pen: #8ea2ff; --pen-soft: #222c52; --warn: #e0aa45; color-scheme: dark } }
-:root[data-theme="dark"] {
-  --paper: #0f1619; --slip: #172126; --ink: #e6eeea; --muted: #93a4a9; --rule: #2a383d;
-  --pitch: #4cc79a; --pen: #8ea2ff; --pen-soft: #222c52; --warn: #e0aa45; color-scheme: dark }
 
 * { box-sizing: border-box }
-body { margin: 0; background: var(--paper); color: var(--ink); font: 400 16px/1.5 var(--ui);
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.5 var(--body);
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
   padding-block: 20px 48px; -webkit-text-size-adjust: 100% }
 .wrap { max-width: 640px; margin: 0 auto; display: grid; gap: 20px }
 .num { font-variant-numeric: tabular-nums }
 
 header.top { display: grid; gap: 6px }
-.eyebrow { font: 600 12px/1 var(--ui); letter-spacing: .12em; text-transform: uppercase; color: var(--pitch) }
-h1 { margin: 0; font: 800 clamp(34px, 9vw, 48px)/.95 var(--display); font-stretch: 75%; letter-spacing: -.01em; text-wrap: balance }
+.eyebrow { font: 600 12px/1 var(--num); letter-spacing: .06em; text-transform: uppercase; color: var(--accent) }
+h1 { margin: 0; font: 800 clamp(22px, 6.4vw, 40px)/1.05 var(--display); text-transform: uppercase; letter-spacing: -.02em; text-wrap: balance }
 .meta { display: flex; flex-wrap: wrap; gap: 4px 16px; color: var(--muted); font-size: 14px }
 .meta b { color: var(--ink); font-weight: 600 }
 .intro { display: grid; gap: 10px }
-.intro h2 { margin: 0; font: 700 22px/1.2 var(--display); font-stretch: 85%; text-wrap: balance }
-.intro p { margin: 0; font: 400 16.5px/1.6 var(--body); max-width: 65ch }
+.intro h2 { margin: 0; font: 700 19px/1.25 var(--display); letter-spacing: -.01em; text-wrap: balance }
+.intro p { margin: 0; font: 400 16px/1.65 var(--body); max-width: 65ch }
 
-/* Coupon overview: a printed slip with pen marks */
-.slip { background: var(--slip); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden }
+/* Coupon overview: a slip with marked boxes */
+.slip { background: var(--slip); border: 1px solid var(--rule); overflow: hidden }
 .slip-head, .slip-row { display: grid; grid-template-columns: 28px minmax(0, 1fr) repeat(3, 34px); align-items: center; gap: 0 4px; padding: 0 10px }
-.slip-head { font: 600 11px/1 var(--ui); letter-spacing: .1em; color: var(--muted); padding-block: 10px 6px; border-bottom: 1px solid var(--rule) }
+.slip-head { font: 600 11px/1 var(--body); letter-spacing: .1em; color: var(--muted); padding-block: 10px 6px; border-bottom: 1px solid var(--rule) }
 .slip-head span:nth-child(n+3) { text-align: center }
 .slip-row { min-height: 44px; border-bottom: 1px dashed var(--rule); text-decoration: none; color: inherit }
 .slip-row:last-child { border-bottom: 0 }
-.slip-row:focus-visible { outline: 2px solid var(--pen); outline-offset: -2px }
-.slip-no { font: 700 15px/1 var(--display); color: var(--muted) }
+.slip-row:focus-visible { outline: 2px solid var(--ink); outline-offset: -2px }
+.slip-no { font: 700 15px/1 var(--num); color: var(--muted) }
 .slip-name { font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
-.box { justify-self: center; width: 30px; height: 26px; border: 1.5px solid var(--rule); border-radius: 4px; font-variant-numeric: tabular-nums;
-  display: grid; place-items: center; font: 700 12px/1 var(--ui); color: var(--muted) }
-.box.on { border-color: var(--pen); background: var(--pen-soft); color: var(--pen); border-width: 2px }
-.box.bomb { border-color: var(--warn); color: var(--warn); background: transparent; border-style: dashed }
-.mark.bomb { border-color: var(--warn); color: var(--warn); border-style: dashed }
+.box { justify-self: center; width: 30px; height: 26px; border: 1.5px solid var(--rule); font-variant-numeric: tabular-nums;
+  display: grid; place-items: center; font: 700 12px/1 var(--num); color: var(--muted) }
+.box.on { border: 2px solid var(--accent); background: var(--accent); color: var(--bg) }
+/* Bombs are a pick, not a warning: accent, dashed */
+.box.bomb { border-color: var(--accent); color: var(--accent); background: transparent; border-style: dashed }
+.mark.bomb { border-style: dashed }
 .legend { font-size: 13.5px; color: var(--muted); margin: 0 }
 .legend b { color: var(--ink) }
 
-/* Match slip */
-article.match { background: var(--slip); border: 1px solid var(--rule); border-radius: 6px; display: grid; gap: 16px; padding: 16px; scroll-margin-top: 12px }
+/* Match: no box, a rule on top, so the text runs to the page gutter */
+article.match { display: grid; gap: 16px; padding: 18px 0 8px; border-top: 2px solid var(--ink); scroll-margin-top: 12px }
 .m-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 12px; align-items: start }
-.m-no { grid-row: span 2; font: 800 40px/.9 var(--display); font-stretch: 75%; color: var(--pitch); min-width: 1.4ch }
-.m-teams { margin: 0; font: 750 24px/1.1 var(--display); font-stretch: 85%; text-wrap: balance }
+.m-no { grid-row: span 2; font: 800 32px/1 var(--display); color: var(--accent); min-width: 1.4ch }
+.m-teams { margin: 0; font: 700 18px/1.25 var(--display); letter-spacing: -.01em; text-wrap: balance }
 .m-teams .vs { color: var(--muted); font-weight: 400 }
 .m-sub { color: var(--muted); font-size: 13px }
-.headline { margin: 0; font: 600 19px/1.35 var(--body); text-wrap: balance }
+.headline { margin: 0; font: 700 18px/1.4 var(--body); text-wrap: balance }
 .take { display: grid; gap: 10px }
-.take p { margin: 0; font: 400 16.5px/1.6 var(--body); max-width: 65ch }
+.take p { margin: 0; font: 400 16px/1.65 var(--body); max-width: 65ch }
 
+/* «Støtter folket» in ink; «kan snu kampen» in the bad colour, dashed */
 .reads { display: grid; gap: 14px }
-.read h3, .crowd h3 { margin: 0 0 8px; font: 700 11px/1 var(--ui); letter-spacing: .12em; text-transform: uppercase }
-.read.signal h3 { color: var(--pitch) } .read.noise h3 { color: var(--warn) } .crowd h3 { color: var(--pen) }
+.read h3, .crowd h3 { margin: 0 0 8px; font: 700 11px/1 var(--body); letter-spacing: .12em; text-transform: uppercase }
+.read.signal h3, .crowd h3 { color: var(--ink) } .read.noise h3 { color: var(--bad) }
 .read ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px }
-.read li { display: grid; gap: 2px; padding-left: 12px; border-left: 2px solid var(--rule) }
-.read.signal li { border-left-color: var(--pitch) } .read.noise li { border-left-color: var(--warn) }
-.read .stat { font: 700 14.5px/1.3 var(--ui); font-variant-numeric: tabular-nums }
+.read li { display: grid; gap: 2px; padding-left: 12px; border-left: 2px solid var(--ink) }
+.read.noise li { border-left: 2px dashed var(--bad) }
+.read .stat { font: 700 14.5px/1.3 var(--num); font-variant-numeric: tabular-nums }
 .read .why { font-size: 14.5px; line-height: 1.45; color: var(--muted) }
 
-/* Crowd vs us */
+/* Crowd vs odds */
 .crowd { display: grid; gap: 8px; border-top: 1px solid var(--rule); padding-top: 14px }
 .crowd p { margin: 0; font-size: 14.5px; line-height: 1.5 }
 .dist { display: grid; grid-template-columns: 76px repeat(3, minmax(0, 1fr)); gap: 4px 6px; align-items: center; font-variant-numeric: tabular-nums }
 .dist .lbl { font-size: 12px; color: var(--muted) }
-.dist .hd { font: 700 11px/1 var(--ui); color: var(--muted); text-align: center; letter-spacing: .08em }
-.cell { position: relative; height: 26px; border-radius: 3px; background: var(--paper); overflow: hidden; display: grid; place-items: center; font: 600 12.5px/1 var(--ui) }
+.dist .hd { font: 700 11px/1 var(--body); color: var(--muted); text-align: center; letter-spacing: .08em }
+.cell { position: relative; height: 26px; background: var(--bg); overflow: hidden; display: grid; place-items: center; font: 600 12.5px/1 var(--num) }
 .cell i { position: absolute; inset: auto 0 0 0; background: var(--rule) }
 .cell span { position: relative }
-.us .cell i { background: var(--pen-soft) }
-.us .cell.value { outline: 2px solid var(--pen); outline-offset: -2px; color: var(--pen) }
-.us .lbl { color: var(--pen); font-weight: 700 }
+.us .cell i { background: var(--tint) }
+.us .cell.value { outline: 2px solid var(--ink); outline-offset: -2px }
+.us .lbl { color: var(--ink); font-weight: 700 }
 .verdict { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 13px; color: var(--muted) }
 .marks { display: flex; gap: 4px }
-.mark { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--pen); color: var(--pen); display: grid; place-items: center; font: 700 13px/1 var(--ui) }
-.odds { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums }
+.mark { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--accent); color: var(--accent); display: grid; place-items: center; font: 700 13px/1 var(--num) }
+.odds { font: 12.5px/1.4 var(--num); color: var(--muted); font-variant-numeric: tabular-nums }
 
 /* Key players: one card per player named in the analysis */
-.players h3 { margin: 0 0 8px; font: 700 11px/1 var(--ui); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
+.players h3 { margin: 0 0 8px; font: 700 11px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
 .p-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 10px }
-.player { border: 1px solid var(--rule); border-radius: 6px; padding: 14px; display: grid; gap: 14px; align-content: start; background: var(--paper); min-width: 0 }
+.player { border: 1px solid var(--rule); padding: 14px; display: grid; gap: 14px; align-content: start; background: var(--slip); min-width: 0 }
 .p-head { display: grid; gap: 3px }
-.p-name { font: 700 16px/1.2 var(--display); font-stretch: 90% }
+.p-name { font: 700 14px/1.3 var(--display) }
 .p-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px }
-.p-stars { font-size: 15px; letter-spacing: 1px; color: var(--pen); white-space: nowrap }
+.p-stars { font-size: 15px; letter-spacing: 1px; color: var(--accent); white-space: nowrap }
 .p-stars .off { color: var(--rule) }
 .p-meta { font-size: 12.5px; color: var(--muted) }
-.p-status { justify-self: start; margin-top: 6px; font: 600 11px/1 var(--ui); letter-spacing: .04em; padding: 4px 6px; border-radius: 3px; border: 1px solid currentColor }
-.p-status.s-suspended, .p-status.s-injured, .p-status.s-missing { color: var(--warn) }
+.p-status { justify-self: start; margin-top: 6px; font: 600 11px/1 var(--body); letter-spacing: .04em; padding: 4px 6px; border: 1px solid currentColor }
+.p-status.s-suspended, .p-status.s-injured, .p-status.s-missing { color: var(--bad) }
 .p-status.s-doubtful { color: var(--ink) }
-.p-status.s-returning { color: var(--pitch) }
+.p-status.s-returning { color: var(--good) }
 .p-status.s-card_risk { color: var(--muted) }
 .p-why { font-size: 12.5px; line-height: 1.4; color: var(--muted); margin: 2px 0 0 }
-/* Tier 1: what makes the player key. The lead number is big; the rest sit on its baseline, smaller. */
+/* Tier 1: what makes the player key, as {goals}({penalties})+{assists} */
 .p-hero { display: grid; gap: 4px }
-.p-hero b { font: 800 40px/1 var(--ui); font-variant-numeric: tabular-nums; letter-spacing: -.035em }
+.p-hero b { font: 800 40px/1 var(--num); font-variant-numeric: tabular-nums; letter-spacing: -.06em; color: var(--accent) }
 .p-hero b small { font-size: .4em; font-weight: 500; letter-spacing: 0; color: var(--muted); margin-left: 2px }
-.p-hero b em { font-style: normal; font-size: .62em; font-weight: 700; letter-spacing: -.02em; margin-left: 4px }
+.p-hero b em { font-style: normal; font-size: .62em; font-weight: 700; letter-spacing: -.02em; margin-left: 4px; color: var(--ink) }
 .p-hero > span { font-size: 11.5px; line-height: 1.2; color: var(--muted) }
 /* Tier 2: form. Hot form takes the good colour; no goals or assists in five fades. */
 .p-form { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; font-size: 12px; color: var(--muted) }
-.p-form b { font: 650 15px/1.2 var(--ui); color: var(--ink) }
-.p-form.hot b { color: var(--pitch); font-weight: 750 }
+.p-form b { font: 650 15px/1.2 var(--num); color: var(--ink) }
+.p-form.hot b { color: var(--good); font-weight: 750 }
 .p-form.cold b { color: var(--muted); font-weight: 500 }
-.p-form em { font: 700 10.5px/1 var(--ui); font-style: normal; letter-spacing: .08em; text-transform: uppercase; color: var(--pitch);
-  border: 1px solid currentColor; border-radius: 3px; padding: 3px 5px }
+.p-form em { font: 700 10.5px/1 var(--body); font-style: normal; letter-spacing: .08em; text-transform: uppercase; color: var(--good);
+  border: 1px solid currentColor; padding: 3px 5px }
 /* How much the team leans on the player: goal share as a bar, FotMob rating as a dot among teammates */
 .p-team { display: grid; gap: 14px; padding-top: 12px; border-top: 1px solid var(--rule) }
-.p-team h4 { margin: 0; font: 700 10.5px/1 var(--ui); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
+.p-team h4 { margin: 0; font: 700 10.5px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
 .p-role { display: grid; gap: 7px }
 .p-big { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px }
-.p-big b { font: 750 24px/1 var(--ui); font-variant-numeric: tabular-nums; letter-spacing: -.02em }
+.p-big b { font: 750 24px/1 var(--num); font-variant-numeric: tabular-nums; letter-spacing: -.02em }
 .p-big span { font-size: 12px; color: var(--muted) }
-.p-big b small { font: 600 12px/1 var(--ui); letter-spacing: 0; color: var(--muted); margin-right: 3px }
-.p-bar { display: flex; height: 8px; border-radius: 99px; background: var(--rule); overflow: hidden }
-.p-bar .g, .k.g { background: var(--pen) }
-.p-bar .a, .k.a { background: color-mix(in srgb, var(--pen) 40%, var(--paper)) }
+.p-big b small { font: 600 12px/1 var(--body); letter-spacing: 0; color: var(--muted); margin-right: 3px }
+.p-bar { display: flex; height: 8px; background: var(--rule); overflow: hidden }
+.p-bar .g, .k.g { background: var(--ink) }
+.p-bar .a, .k.a { background: color-mix(in srgb, var(--ink) 40%, var(--bg)) }
 .p-note { margin: 0; font-size: 12px; color: var(--muted) }
-.k { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin: 0 4px 0 0; vertical-align: 0 }
+.k { display: inline-block; width: 8px; height: 8px; margin: 0 4px 0 0; vertical-align: 0 }
 .k.a { margin-left: 6px }
 .p-strip { position: relative; height: 16px; margin: 0 7px }
 .p-strip::before { content: ""; position: absolute; inset: 50% 0 auto; height: 1px; background: var(--rule) }
-.p-strip i { position: absolute; top: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px; border-radius: 50%; background: color-mix(in srgb, var(--ink) 28%, var(--paper)) }
-.p-strip i.me { width: 14px; height: 14px; margin: -7px 0 0 -7px; background: var(--pen); box-shadow: 0 0 0 2px var(--paper) }
+.p-strip i { position: absolute; top: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px; border-radius: 50%; background: color-mix(in srgb, var(--ink) 28%, var(--bg)) }
+.p-strip i.me { width: 14px; height: 14px; margin: -7px 0 0 -7px; background: var(--ink); box-shadow: 0 0 0 2px var(--slip) }
 .p-ends { margin: 0; display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums }
 /* Tier 3: context, small and quiet */
 .p-foot { display: grid; gap: 2px; padding-top: 10px; border-top: 1px solid var(--rule) }
@@ -221,125 +221,10 @@ footer dl { margin: 0; display: grid; gap: 4px }
 footer dt { font-weight: 700; color: var(--ink); display: inline }
 footer dd { margin: 0; display: inline }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth } }
-
-/* Theme picker */
-.skins { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin-top: 8px; max-width: 440px }
-.skins button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 36px; padding: 0 6px; border: 1px solid var(--rule); border-radius: 999px;
-  background: transparent; color: var(--ink); font: 600 12.5px/1 var(--ui); cursor: pointer; white-space: nowrap }
-.skins button[aria-pressed="true"] { border-color: var(--ink); background: var(--pen-soft) }
-.skins button:focus-visible { outline: 2px solid var(--pen); outline-offset: 2px }
-.sw { flex: none; width: 14px; height: 14px; border-radius: 50%; box-shadow: 0 0 0 1px var(--rule) }
 """
 
-# Themes besides the default: four colours each (background, ink, good, bad) and their own type.
-# Good marks positive labels (in form, back from injury), bad the negative ones (injured, suspended, what could
-# turn the match). One of the two doubles as the theme's accent. Every other shade is a mix of those four.
-# Picked on the page, remembered per browser.
-SKINS = {
-    "klassisk": ("Klassisk", ("#f2f5f3", "#15222b", "#0d6a4e", "#9a5b00"), None),
-    "flomlys": ("Flomlys", ("#0e0f0c", "#f1efe6", "#c6ff3d", "#ff5c39"),
-                ('"Unbounded", system-ui, sans-serif', '"Manrope", system-ui, sans-serif', '"JetBrains Mono", ui-monospace, monospace', "dark", "good")),
-    "papir": ("Papir", ("#f4f1ea", "#1a1a1a", "#1f7a4a", "#cf3a1d"),
-              ('"Instrument Serif", Georgia, serif', '"Geist", system-ui, sans-serif', '"Geist Mono", ui-monospace, monospace', "light", "bad")),
-    "kobolt": ("Kobolt", ("#2a3cff", "#f7f5ee", "#5cf2a4", "#ffd23f"),
-               ('"Bricolage Grotesque", system-ui, sans-serif', '"Schibsted Grotesk", system-ui, sans-serif', '"Schibsted Grotesk", system-ui, sans-serif', "dark", "bad")),
-}
-
-SKIN_CSS = "".join(
-    f':root[data-skin="{key}"] {{ --bg: {bg}; --fg: {fg}; --good: {good}; --bad: {bad}; --accent: var(--{accent}); '
-    f'--display: {display}; --body: {body}; --ui: {body}; --num: {num}; color-scheme: {scheme} }}\n'
-    for key, (_, (bg, fg, good, bad), fonts) in SKINS.items() if fonts
-    for display, body, num, scheme, accent in [fonts]) + """
-:root[data-skin] {
-  --paper: var(--bg); --ink: var(--fg); --slip: color-mix(in srgb, var(--fg) 4%, var(--bg));
-  --muted: color-mix(in srgb, var(--fg) 64%, var(--bg)); --rule: color-mix(in srgb, var(--fg) 20%, var(--bg));
-  --pitch: var(--good); --warn: var(--bad); --pen: var(--fg); --pen-soft: color-mix(in srgb, var(--fg) 12%, var(--bg)) }
-/* «Støtter folket» is ink and «kan snu kampen» the bad colour, dashed. Bombs are a pick, not a warning: accent. */
-:root[data-skin] .read.signal h3 { color: var(--ink) }
-:root[data-skin] .read.signal li { border-left-color: var(--ink) }
-:root[data-skin] .read.noise li { border-left-style: dashed }
-:root[data-skin] :is(.box, .cell, .mark, .p-hero b, .p-form b, .p-big b, .read .stat, .odds, .slip-no) { font-family: var(--num) }
-:root[data-skin] .box.on:not(.bomb) { background: var(--ink); color: var(--paper); border-color: var(--ink) }
-:root[data-skin] :is(.box.bomb, .mark.bomb) { border-color: var(--accent); color: var(--accent) }
-:root[data-skin] .eyebrow { color: var(--accent) }
-
-/* Flomlys: night match under floodlights. Square edges, wide display type, volt accent. */
-[data-skin="flomlys"] h1 { font: 800 clamp(22px, 6.4vw, 40px)/1.05 var(--display); text-transform: uppercase; letter-spacing: -.02em }
-[data-skin="flomlys"] .intro h2 { font: 700 19px/1.25 var(--display); letter-spacing: -.01em }
-[data-skin="flomlys"] .eyebrow { font-family: var(--num); letter-spacing: .06em }
-[data-skin="flomlys"] :is(.slip, article.match, .player, .box, .cell, .p-status) { border-radius: 0 }
-[data-skin="flomlys"] .box.on:not(.bomb) { background: var(--accent); border-color: var(--accent); color: var(--bg) }
-[data-skin="flomlys"] .m-no { font: 800 32px/1 var(--display); color: var(--accent) }
-[data-skin="flomlys"] .m-teams { font: 700 18px/1.25 var(--display); letter-spacing: -.01em }
-[data-skin="flomlys"] .headline { font: 700 18px/1.4 var(--body) }
-[data-skin="flomlys"] :is(.take p, .intro p) { font-size: 16px; line-height: 1.65 }
-[data-skin="flomlys"] .p-name { font: 700 14px/1.3 var(--display) }
-[data-skin="flomlys"] .p-hero b { color: var(--accent); letter-spacing: -.06em }
-[data-skin="flomlys"] .p-hero b em { color: var(--ink) }
-[data-skin="flomlys"] :is(.p-bar, .p-bar i, .k) { border-radius: 0 }
-[data-skin="flomlys"] .p-stars, [data-skin="flomlys"] .mark { color: var(--accent); border-color: var(--accent) }
-
-/* Papir: the sports pages of a broadsheet. Big serif headlines, hairlines instead of boxes, one red. */
-[data-skin="papir"] h1 { font: 400 clamp(46px, 13vw, 68px)/.92 var(--display); letter-spacing: -.015em }
-[data-skin="papir"] .intro h2 { font: 400 italic 28px/1.1 var(--display) }
-[data-skin="papir"] .slip { background: transparent; border: 0; border-top: 3px solid var(--ink); border-bottom: 1px solid var(--ink); border-radius: 0 }
-[data-skin="papir"] article.match { background: transparent; border: 0; border-top: 3px solid var(--ink); border-radius: 0; padding: 14px 0 8px }
-[data-skin="papir"] .m-no { font: 400 italic 54px/.85 var(--display); color: var(--accent) }
-[data-skin="papir"] .m-teams { font: 400 32px/1.02 var(--display); letter-spacing: -.01em }
-[data-skin="papir"] .m-teams .vs { font-style: italic }
-[data-skin="papir"] .headline { font: 400 italic 23px/1.25 var(--display) }
-[data-skin="papir"] :is(.take p, .intro p) { font-size: 16px; line-height: 1.65 }
-[data-skin="papir"] :is(.player, .box, .cell, .p-status) { border-radius: 0 }
-[data-skin="papir"] .player { background: transparent }
-[data-skin="papir"] .p-name { font: 400 21px/1.1 var(--display) }
-[data-skin="papir"] :is(.p-hero b, .p-hero b em, .p-big b) { font-family: var(--display); font-weight: 400 }
-[data-skin="papir"] .p-hero b { font-size: 54px; letter-spacing: -.02em }
-[data-skin="papir"] .p-big b { font-size: 30px; letter-spacing: 0 }
-[data-skin="papir"] :is(.p-bar, .k) { border-radius: 0 }
-
-/* Kobolt: a cobalt-blue match programme. Soft cards, pill marks, condensed heavy headlines. */
-:root[data-skin="kobolt"] { --slip: color-mix(in srgb, var(--fg) 9%, var(--bg)) }
-[data-skin="kobolt"] h1 { font: 800 clamp(42px, 12vw, 62px)/.88 var(--display); font-stretch: 75%; letter-spacing: -.03em }
-[data-skin="kobolt"] .intro h2 { font: 800 24px/1.1 var(--display); font-stretch: 80%; letter-spacing: -.01em }
-[data-skin="kobolt"] :is(.slip, article.match) { border: 0; border-radius: 20px }
-[data-skin="kobolt"] article.match { padding: 18px }
-[data-skin="kobolt"] .player { border: 0; border-radius: 14px; background: color-mix(in srgb, var(--fg) 7%, var(--bg)) }
-[data-skin="kobolt"] :is(.box, .cell, .p-status) { border-radius: 999px }
-[data-skin="kobolt"] .m-no { font: 800 50px/.85 var(--display); font-stretch: 75%; color: var(--accent) }
-[data-skin="kobolt"] .m-teams { font: 800 27px/1.02 var(--display); font-stretch: 80%; letter-spacing: -.02em }
-[data-skin="kobolt"] .headline { font: 700 19px/1.35 var(--body) }
-[data-skin="kobolt"] :is(.take p, .intro p) { font-size: 16.5px; line-height: 1.6 }
-[data-skin="kobolt"] .read li { border-left-width: 3px }
-/* Schibsted Grotesk's tabular figures space out commas and colons; keep them for the aligned boxes only */
-[data-skin="kobolt"] :is(.read .stat, .odds, .p-ends) { font-variant-numeric: normal }
-[data-skin="kobolt"] .p-name { font: 800 18px/1.15 var(--display); font-stretch: 85% }
-[data-skin="kobolt"] :is(.p-hero b, .p-big b) { font-family: var(--display); font-weight: 800; font-stretch: 75% }
-[data-skin="kobolt"] .p-hero b { font-size: 50px }
-[data-skin="kobolt"] .p-big b { font-size: 28px }
-[data-skin="kobolt"] .p-stars, [data-skin="kobolt"] .mark { color: var(--accent); border-color: var(--accent) }
-"""
-
-FONTS = ("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800"
-         "&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Unbounded:wght@400..800&family=Manrope:wght@400..800"
-         "&family=JetBrains+Mono:wght@400..700&family=Instrument+Serif:ital@0;1&family=Geist:wght@400..700"
-         "&family=Geist+Mono:wght@400..700&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800"
-         "&family=Schibsted+Grotesk:wght@400..800&display=swap")
-
-SKIN_KEY = "altomfotball-tema"
-# Runs before the page paints, so a remembered theme doesn't flash the default first
-SKIN_BOOT = f"""<script>(function(){{try{{var s=localStorage.getItem("{SKIN_KEY}");if(s&&s!=="klassisk"&&{json.dumps(list(SKINS))}.indexOf(s)>=0)document.documentElement.setAttribute("data-skin",s)}}catch(e){{}}}})();</script>"""
-SKIN_PICKER = """<script>(function(){var r=document.documentElement,bs=document.querySelectorAll("[data-skin-pick]");
-function sync(){var s=r.getAttribute("data-skin")||"klassisk";bs.forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.skinPick===s))})}
-bs.forEach(function(b){b.addEventListener("click",function(){var s=b.dataset.skinPick;if(s==="klassisk")r.removeAttribute("data-skin");else r.setAttribute("data-skin",s);
-try{localStorage.setItem("%s",s)}catch(e){}sync()})});sync()})();</script>""" % SKIN_KEY
-
-
-def _skin_picker():
-    buttons = "".join(
-        f'<button type="button" data-skin-pick="{key}" aria-pressed="{str(key == "klassisk").lower()}">'
-        f'<span class="sw" aria-hidden="true" style="background:conic-gradient({colors[0]} 0 90deg, {colors[1]} 0 180deg, {colors[2]} 0 270deg, {colors[3]} 0)"></span>{name}</button>'
-        for key, (name, colors, _) in SKINS.items())
-    return f'<div class="skins" role="group" aria-label="Tema">{buttons}</div>'
+FONTS = ("https://fonts.googleapis.com/css2?family=Unbounded:wght@400..800&family=Manrope:wght@400..800"
+         "&family=JetBrains+Mono:wght@400..700&display=swap")
 
 
 def _dt(ts):
@@ -612,14 +497,12 @@ def render(coupon_dir, site_dir, fragment_path=None):
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}">
-<style>{CSS}{SKIN_CSS}</style>
-{SKIN_BOOT}
+<style>{CSS}</style>
 <div class="wrap">
   <header class="top">
     <span class="eyebrow">Tipping · {c["dayName"]} {_date_long(first)}</span>
     <h1>{title}</h1>
     <div class="meta"><span>Spillestopp <b>{_kick(c["saleStop"])}</b></span><span>Omsetning <b>{_nok(c["turnover"]["amount"])}</b></span><span><b>12</b> kamper</span></div>
-    {_skin_picker()}
   </header>
   {intro}
   <nav class="slip" aria-label="Kupongen">
@@ -640,8 +523,7 @@ def render(coupon_dir, site_dir, fragment_path=None):
     <span>Statistikk fra NIFS, folkets fordeling og odds fra Norsk Tipping. Hentet {datetime.now().strftime("%d.%m.%Y %H.%M")}. Skader og utestengelser fra FotMob. Karantenefare er beregnet fra gule kort i NIFS etter seriens regler.</span>
     <span>18-årsgrense for pengespill. Spill ansvarlig.</span>
   </footer>
-</div>
-{SKIN_PICKER}"""
+</div>"""
     site_dir.mkdir(parents=True, exist_ok=True)
     out = site_dir / f"{coupon_dir.name}.html"
     out.write_text(f'<!doctype html>\n<html lang="nb">\n<head>\n<meta charset="utf-8">\n'
