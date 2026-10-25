@@ -76,156 +76,179 @@ def system(matches):
         picks[j] = picks[j].replace(weaker, "")
     return picks
 
+# Dagkamp: the same page in daylight, on white. Volt and orange are too pale on white,
+# so good and bad darken to grass and brick (both ≥ 5:1 on the cards too); the player cards are chalk.
+LIGHT = """--bg: #fff; --ink: #15160f; --good: #377000; --bad: #b8321a; --slip: #fff; --card: #f4f2ea;
+  color-scheme: light;"""
+
 CSS = """
-/* Flomlys: a night match under floodlights. One column, square edges, wide display type.
+/* Flomlys: a night match under floodlights. One column, square edges.
+   Type as on svelte.dev: DM Serif Display for headings, EB Garamond (Georgia on low-res screens) for the prose,
+   Fira Sans for labels, Fira Mono for numbers; everything sized from the --font-* tokens below.
    Four colours: background, ink, good (volt, also the accent) and bad. Every other shade is a mix of those.
-   Good marks positive labels (in form, back from injury), bad the negative ones (injured, suspended, what could turn the match). */
+   Good marks positive labels (in form, back from injury), bad the negative ones (injured, suspended, what could turn the match).
+   Dark by default; Dagkamp (light) when the browser prefers it. data-theme on <html> overrides either way. */
 :root {
   --bg: #0e0f0c; --ink: #f1efe6; --good: #c6ff3d; --bad: #ff5c39; --accent: var(--good);
   --slip: color-mix(in srgb, var(--ink) 4%, var(--bg)); --tint: color-mix(in srgb, var(--ink) 12%, var(--bg));
   --muted: color-mix(in srgb, var(--ink) 64%, var(--bg)); --rule: color-mix(in srgb, var(--ink) 20%, var(--bg));
-  --display: "Unbounded", system-ui, sans-serif;
-  --body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --num: "JetBrains Mono", ui-monospace, monospace;
+  --card: var(--slip);
+  --display: "DM Serif Display", Georgia, serif;
+  --body: Georgia, serif;
+  --ui: "Fira Sans", -apple-system, system-ui, sans-serif;
+  --num: "Fira Mono", ui-monospace, monospace;
+  /* Sizes, weights and line heights from svelte.dev's --sk-font-* (1rem = 10px there) */
+  --fs-h1: 36px; --fs-h2: 30px; --fs-h3: 24px; --fs-body: 18px; --fs-body-small: 16px;
+  --font-h1: 500 var(--fs-h1)/1.2 var(--display); --font-h2: 500 var(--fs-h2)/1.2 var(--display);
+  --font-h3: 500 var(--fs-h3)/1.2 var(--display);
+  --font-body: 400 var(--fs-body)/1.5 var(--body); --font-body-small: 400 var(--fs-body-small)/1.5 var(--body);
+  --font-ui-medium: 400 16px/1.5 var(--ui); --font-ui-small: 400 13px/1.5 var(--ui);
+  --font-mono: 400 14px/1.7 var(--num);
   color-scheme: dark;
 }
+/* Like svelte.dev: Garamond only on sharp screens, where it renders well, and larger to match Georgia's x-height */
+@media (-webkit-min-device-pixel-ratio: 1.75), (min-resolution: 1.75dppx) {
+  :root { --body: "EB Garamond", Georgia, serif; --fs-body: 22px; --fs-body-small: 20px } }
+@media (min-width: 800px) { :root { --fs-h1: 54px } }
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { """ + LIGHT + """ } }
+:root[data-theme="light"] { """ + LIGHT + """ }
 
 * { box-sizing: border-box }
-body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.5 var(--body);
+body { margin: 0; background: var(--bg); color: var(--ink); font: var(--font-ui-medium);
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
   padding-block: 20px 48px; -webkit-text-size-adjust: 100% }
 .wrap { max-width: 640px; margin: 0 auto; display: grid; gap: 20px }
 .num { font-variant-numeric: tabular-nums }
 
 header.top { display: grid; gap: 6px }
-.eyebrow { font: 600 12px/1 var(--num); letter-spacing: .06em; text-transform: uppercase; color: var(--accent) }
-h1 { margin: 0; font: 800 clamp(22px, 6.4vw, 40px)/1.05 var(--display); text-transform: uppercase; letter-spacing: -.02em; text-wrap: balance }
-.meta { display: flex; flex-wrap: wrap; gap: 4px 16px; color: var(--muted); font-size: 14px }
+.eyebrow { font: var(--font-ui-small); letter-spacing: .06em; text-transform: uppercase; color: var(--accent) }
+h1 { margin: 0; font: var(--font-h1); text-wrap: balance }
+.meta { display: flex; flex-wrap: wrap; gap: 4px 16px; color: var(--muted); font: var(--font-ui-small) }
 .meta b { color: var(--ink); font-weight: 600 }
 .intro { display: grid; gap: 10px }
-.intro h2 { margin: 0; font: 700 19px/1.25 var(--display); letter-spacing: -.01em; text-wrap: balance }
-.intro p { margin: 0; font: 400 16px/1.65 var(--body); max-width: 65ch }
+.intro h2 { margin: 0; font: var(--font-h2); text-wrap: balance }
+.intro p { margin: 0; font: var(--font-body); max-width: 65ch }
 
 /* Coupon overview: a slip with marked boxes */
 .slip { background: var(--slip); border: 1px solid var(--rule); overflow: hidden }
 .slip-head, .slip-row { display: grid; grid-template-columns: 28px minmax(0, 1fr) repeat(3, 34px); align-items: center; gap: 0 4px; padding: 0 10px }
-.slip-head { font: 600 11px/1 var(--body); letter-spacing: .1em; color: var(--muted); padding-block: 10px 6px; border-bottom: 1px solid var(--rule) }
+.slip-head { font: var(--font-ui-small); letter-spacing: .1em; color: var(--muted); padding-block: 10px 6px; border-bottom: 1px solid var(--rule) }
 .slip-head span:nth-child(n+3) { text-align: center }
 .slip-row { min-height: 44px; border-bottom: 1px dashed var(--rule); text-decoration: none; color: inherit }
 .slip-row:last-child { border-bottom: 0 }
 .slip-row:focus-visible { outline: 2px solid var(--ink); outline-offset: -2px }
-.slip-no { font: 700 15px/1 var(--num); color: var(--muted) }
-.slip-name { font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.slip-no { font: var(--font-mono); color: var(--muted) }
+.slip-name { font: var(--font-ui-medium); overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
 .box { justify-self: center; width: 30px; height: 26px; border: 1.5px solid var(--rule); font-variant-numeric: tabular-nums;
-  display: grid; place-items: center; font: 700 12px/1 var(--num); color: var(--muted) }
+  display: grid; place-items: center; font: var(--font-mono); color: var(--muted) }
 .box.on { border: 2px solid var(--accent); background: var(--accent); color: var(--bg) }
 /* Bombs are a pick, not a warning: accent, dashed */
 .box.bomb { border-color: var(--accent); color: var(--accent); background: transparent; border-style: dashed }
 .mark.bomb { border-style: dashed }
-.legend { font-size: 13.5px; color: var(--muted); margin: 0 }
+.legend { font: var(--font-ui-small); color: var(--muted); margin: 0 }
 .legend b { color: var(--ink) }
 
 /* Match: no box, a rule on top, so the text runs to the page gutter */
 article.match { display: grid; gap: 16px; padding: 18px 0 8px; border-top: 2px solid var(--ink); scroll-margin-top: 12px }
 .m-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 12px; align-items: start }
-.m-no { grid-row: span 2; font: 800 32px/1 var(--display); color: var(--accent); min-width: 1.4ch }
-.m-teams { margin: 0; font: 700 18px/1.25 var(--display); letter-spacing: -.01em; text-wrap: balance }
+.m-no { grid-row: span 2; font: var(--font-h2); color: var(--accent); min-width: 1.4ch }
+.m-teams { margin: 0; font: var(--font-h2); text-wrap: balance }
 .m-teams .vs { color: var(--muted); font-weight: 400 }
-.m-sub { color: var(--muted); font-size: 13px }
-.headline { margin: 0; font: 700 18px/1.4 var(--body); text-wrap: balance }
+.m-sub { color: var(--muted); font: var(--font-ui-small) }
+.headline { margin: 0; font: var(--font-h3); text-wrap: balance }
 .take { display: grid; gap: 10px }
-.take p { margin: 0; font: 400 16px/1.65 var(--body); max-width: 65ch }
+.take p { margin: 0; font: var(--font-body); max-width: 65ch }
 
 /* «Støtter folket» in ink; «kan snu kampen» in the bad colour, dashed */
 .reads { display: grid; gap: 14px }
-.read h3, .crowd h3 { margin: 0 0 8px; font: 700 11px/1 var(--body); letter-spacing: .12em; text-transform: uppercase }
+.read h3, .crowd h3 { margin: 0 0 8px; font: var(--font-ui-small); letter-spacing: .12em; text-transform: uppercase }
 .read.signal h3, .crowd h3 { color: var(--ink) } .read.noise h3 { color: var(--bad) }
 .read ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px }
 .read li { display: grid; gap: 2px; padding-left: 12px; border-left: 2px solid var(--ink) }
 .read.noise li { border-left: 2px dashed var(--bad) }
-.read .stat { font: 700 14.5px/1.3 var(--num); font-variant-numeric: tabular-nums }
-.read .why { font-size: 14.5px; line-height: 1.45; color: var(--muted) }
+.read .stat { font: var(--font-mono); font-variant-numeric: tabular-nums }
+.read .why { font: var(--font-ui-medium); color: var(--muted) }
 
 /* Crowd vs odds */
 .crowd { display: grid; gap: 8px; border-top: 1px solid var(--rule); padding-top: 14px }
-.crowd p { margin: 0; font-size: 14.5px; line-height: 1.5 }
+.crowd p { margin: 0; font: var(--font-body-small) }
 .dist { display: grid; grid-template-columns: 76px repeat(3, minmax(0, 1fr)); gap: 4px 6px; align-items: center; font-variant-numeric: tabular-nums }
-.dist .lbl { font-size: 12px; color: var(--muted) }
-.dist .hd { font: 700 11px/1 var(--body); color: var(--muted); text-align: center; letter-spacing: .08em }
-.cell { position: relative; height: 26px; background: var(--bg); overflow: hidden; display: grid; place-items: center; font: 600 12.5px/1 var(--num) }
+.dist .lbl { font: var(--font-ui-small); color: var(--muted) }
+.dist .hd { font: var(--font-ui-small); color: var(--muted); text-align: center; letter-spacing: .08em }
+.cell { position: relative; height: 26px; background: var(--bg); overflow: hidden; display: grid; place-items: center; font: var(--font-mono) }
 .cell i { position: absolute; inset: auto 0 0 0; background: var(--rule) }
 .cell span { position: relative }
 .us .cell i { background: var(--tint) }
 .us .cell.value { outline: 2px solid var(--ink); outline-offset: -2px }
 .us .lbl { color: var(--ink); font-weight: 700 }
-.verdict { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 13px; color: var(--muted) }
+.verdict { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font: var(--font-ui-small); color: var(--muted) }
 .marks { display: flex; gap: 4px }
-.mark { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--accent); color: var(--accent); display: grid; place-items: center; font: 700 13px/1 var(--num) }
-.odds { font: 12.5px/1.4 var(--num); color: var(--muted); font-variant-numeric: tabular-nums }
+.mark { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--accent); color: var(--accent); display: grid; place-items: center; font: var(--font-mono) }
+.odds { font: var(--font-mono); color: var(--muted); font-variant-numeric: tabular-nums }
 
 /* Key players: one card per player named in the analysis */
-.players h3 { margin: 0 0 8px; font: 700 11px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
+.players h3 { margin: 0 0 8px; font: var(--font-ui-small); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
 .p-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 10px }
-.player { border: 1px solid var(--rule); padding: 14px; display: grid; gap: 14px; align-content: start; background: var(--slip); min-width: 0 }
+.player { border: 1px solid var(--rule); padding: 14px; display: grid; gap: 14px; align-content: start; background: var(--card); min-width: 0 }
 .p-head { display: grid; gap: 3px }
-.p-name { font: 700 14px/1.3 var(--display) }
+.p-name { font: var(--font-h3) }
 .p-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px }
 .p-stars { font-size: 15px; letter-spacing: 1px; color: var(--accent); white-space: nowrap }
 .p-stars .off { color: var(--rule) }
-.p-meta { font-size: 12.5px; color: var(--muted) }
-.p-status { justify-self: start; margin-top: 6px; font: 600 11px/1 var(--body); letter-spacing: .04em; padding: 4px 6px; border: 1px solid currentColor }
+.p-meta { font: var(--font-ui-small); color: var(--muted) }
+.p-status { justify-self: start; margin-top: 6px; font: var(--font-ui-small); letter-spacing: .04em; padding: 4px 6px; border: 1px solid currentColor }
 .p-status.s-suspended, .p-status.s-injured, .p-status.s-missing { color: var(--bad) }
 .p-status.s-doubtful { color: var(--ink) }
 .p-status.s-returning { color: var(--good) }
 .p-status.s-card_risk { color: var(--muted) }
-.p-why { font-size: 12.5px; line-height: 1.4; color: var(--muted); margin: 2px 0 0 }
+.p-why { font: var(--font-ui-small); color: var(--muted); margin: 2px 0 0 }
 /* Tier 1: what makes the player key, as {goals}({penalties})+{assists} */
 .p-hero { display: grid; gap: 4px }
-.p-hero b { font: 800 40px/1 var(--num); font-variant-numeric: tabular-nums; letter-spacing: -.06em; color: var(--accent) }
-.p-hero b small { font-size: .4em; font-weight: 500; letter-spacing: 0; color: var(--muted); margin-left: 2px }
-.p-hero b em { font-style: normal; font-size: .62em; font-weight: 700; letter-spacing: -.02em; margin-left: 4px; color: var(--ink) }
-.p-hero > span { font-size: 11.5px; line-height: 1.2; color: var(--muted) }
+.p-hero b { font: 500 36px/1.2 var(--num); font-variant-numeric: tabular-nums; letter-spacing: -.06em; color: var(--accent) }
+.p-hero b small { font-size: .4em; font-weight: 400; letter-spacing: 0; color: var(--muted); margin-left: 2px }
+.p-hero b em { font-style: normal; font-size: .62em; font-weight: 500; letter-spacing: -.02em; margin-left: 4px; color: var(--ink) }
+.p-hero > span { font: var(--font-ui-small); color: var(--muted) }
 /* Tier 2: form. Hot form takes the good colour; no goals or assists in five fades. */
-.p-form { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; font-size: 12px; color: var(--muted) }
-.p-form b { font: 650 15px/1.2 var(--num); color: var(--ink) }
-.p-form.hot b { color: var(--good); font-weight: 750 }
-.p-form.cold b { color: var(--muted); font-weight: 500 }
-.p-form em { font: 700 10.5px/1 var(--body); font-style: normal; letter-spacing: .08em; text-transform: uppercase; color: var(--good);
+.p-form { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; font: var(--font-ui-small); color: var(--muted) }
+.p-form b { font: var(--font-mono); color: var(--ink) }
+.p-form.hot b { color: var(--good); font-weight: 700 }
+.p-form.cold b { color: var(--muted) }
+.p-form em { font: var(--font-ui-small); font-style: normal; letter-spacing: .08em; text-transform: uppercase; color: var(--good);
   border: 1px solid currentColor; padding: 3px 5px }
 /* How much the team leans on the player: goal share as a bar, FotMob rating as a dot among teammates */
 .p-team { display: grid; gap: 14px; padding-top: 12px; border-top: 1px solid var(--rule) }
-.p-team h4 { margin: 0; font: 700 10.5px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
+.p-team h4 { margin: 0; font: var(--font-ui-small); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
 .p-role { display: grid; gap: 7px }
 .p-big { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px }
-.p-big b { font: 750 24px/1 var(--num); font-variant-numeric: tabular-nums; letter-spacing: -.02em }
-.p-big span { font-size: 12px; color: var(--muted) }
-.p-big b small { font: 600 12px/1 var(--body); letter-spacing: 0; color: var(--muted); margin-right: 3px }
+.p-big b { font: 500 24px/1.2 var(--num); font-variant-numeric: tabular-nums; letter-spacing: -.02em }
+.p-big span { font: var(--font-ui-small); color: var(--muted) }
+.p-big b small { font: var(--font-ui-small); letter-spacing: 0; color: var(--muted); margin-right: 3px }
 .p-bar { display: flex; height: 8px; background: var(--rule); overflow: hidden }
 .p-bar .g, .k.g { background: var(--ink) }
 .p-bar .a, .k.a { background: color-mix(in srgb, var(--ink) 40%, var(--bg)) }
-.p-note { margin: 0; font-size: 12px; color: var(--muted) }
+.p-note { margin: 0; font: var(--font-ui-small); color: var(--muted) }
 .k { display: inline-block; width: 8px; height: 8px; margin: 0 4px 0 0; vertical-align: 0 }
 .k.a { margin-left: 6px }
 .p-strip { position: relative; height: 16px; margin: 0 7px }
 .p-strip::before { content: ""; position: absolute; inset: 50% 0 auto; height: 1px; background: var(--rule) }
 .p-strip i { position: absolute; top: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px; border-radius: 50%; background: color-mix(in srgb, var(--ink) 28%, var(--bg)) }
-.p-strip i.me { width: 14px; height: 14px; margin: -7px 0 0 -7px; background: var(--ink); box-shadow: 0 0 0 2px var(--slip) }
-.p-ends { margin: 0; display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums }
+.p-strip i.me { width: 14px; height: 14px; margin: -7px 0 0 -7px; background: var(--ink); box-shadow: 0 0 0 2px var(--card) }
+.p-ends { margin: 0; display: flex; justify-content: space-between; font: var(--font-ui-small); color: var(--muted); font-variant-numeric: tabular-nums }
 /* Tier 3: context, small and quiet */
 .p-foot { display: grid; gap: 2px; padding-top: 10px; border-top: 1px solid var(--rule) }
-.p-foot p { margin: 0; font-size: 12px; line-height: 1.45; color: var(--muted) }
+.p-foot p { margin: 0; font: var(--font-ui-small); color: var(--muted) }
 .p-foot b { color: var(--ink); font-weight: 650 }
 
-.empty { color: var(--muted); font-size: 14px; margin: 0 }
-footer { font-size: 12.5px; color: var(--muted); display: grid; gap: 8px; max-width: 65ch }
+.empty { color: var(--muted); font: var(--font-ui-small); margin: 0 }
+footer { font: var(--font-ui-small); color: var(--muted); display: grid; gap: 8px; max-width: 65ch }
 footer dl { margin: 0; display: grid; gap: 4px }
 footer dt { font-weight: 700; color: var(--ink); display: inline }
 footer dd { margin: 0; display: inline }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth } }
 """
 
-FONTS = ("https://fonts.googleapis.com/css2?family=Unbounded:wght@400..800&family=Manrope:wght@400..800"
-         "&family=JetBrains+Mono:wght@400..700&display=swap")
+FONTS = ("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=EB+Garamond:wght@400..800"
+         "&family=Fira+Sans:wght@400;500;600;700&family=Fira+Mono:wght@400;500;700&display=swap")
 
 
 def _dt(ts):
@@ -496,6 +519,7 @@ def render(coupon_dir, site_dir, fragment_path=None):
     title = f'{c["dayName"]}skupongen' if c["dayType"] != "MIDWEEK" else "Midtukekupongen"
     body = f"""<title>{title} {_date_long(first)}</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<meta name="color-scheme" content="dark light">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}">
 <style>{CSS}</style>
