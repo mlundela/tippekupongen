@@ -1,0 +1,74 @@
+# Every night: fetch the next coupon, let Claude write analysis.json, render it and publish it as the
+# site's only page. Nothing is committed. If any step fails, yesterday's page stays up.
+name: Kupong
+
+on:
+  schedule:
+    - cron: "0 2 * * *" # 03:00 norsk vintertid, 04:00 sommertid (cron er UTC)
+  workflow_dispatch:
+
+concurrency:
+  group: kupong
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      # Finished matches are cached forever by fetch.get_json; keep them between nights to spare the APIs.
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: api-${{ github.run_id }}
+          restore-keys: api-
+
+      - name: Neste kupong
+        run: echo "DAY=$(python3 -m altomfotball next)" >> "$GITHUB_ENV"
+
+      - name: Fakta
+        run: echo "FACTS=$(python3 -m altomfotball facts "$DAY")" >> "$GITHUB_ENV"
+
+      - name: Analyse
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          claude -p "Skriv analysis.json ved siden av $FACTS for $DAY-kupongen, etter steg 2 i AGENTS.md. Les docs/sprak.md før du skriver. facts.json er nettopp hentet; ikke kjør facts på nytt. Sjekk hvert tall mot facts.json. Kjør så python3 -m altomfotball check $DAY og python3 -m altomfotball render $DAY, rett opp til check er grønn, og sjekk at det teksten sier om vår anbefaling stemmer med den rendrede kupongen." \
+            --model claude-opus-5-5 \
+            --max-turns 200 \
+            --allowedTools "Read,Write,Edit,Glob,Grep,Bash(python3:*)"
+
+      - name: Kontroll
+        run: python3 -m altomfotball check "$DAY"
+
+      - name: Side
+        run: |
+          mkdir _site
+          cp "$(python3 -m altomfotball render "$DAY")" _site/index.html
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4
