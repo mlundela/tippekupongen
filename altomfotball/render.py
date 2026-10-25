@@ -15,7 +15,7 @@ WEEKDAYS = ["man.", "tir.", "ons.", "tor.", "fre.", "lør.", "søn."]
 MONTHS = ["januar", "februar", "mars", "april", "mai", "juni", "juli", "august",
           "september", "oktober", "november", "desember"]
 SIGNS = (("home", "H"), ("draw", "U"), ("away", "B"))
-KIND = ["", "spik", "halvgardering", "helgardering"]
+KIND = ["", "sikker", "halvgardering", "helgardering"]
 POSITIONS = {"Keeper": "Keeper", "Defender": "Forsvar", "Midfielder": "Midtbane", "Attacker": "Angrep"}
 STATUS = {"suspended": "Utestengt", "injured": "Skadet", "doubtful": "Usikker", "missing": "Ute av troppen",
           "returning": "Tilbake", "card_risk": "Karantenefare"}
@@ -431,7 +431,7 @@ def _match(f, a, idx, t):
         marks = "".join(f'<span class="mark{" bomb" if is_bomb(c, tips["peoples"]) else ""}">{c}</span>' for c in t)
         n_bombs = sum(is_bomb(c, tips["peoples"]) for c in t)
         bomb_txt = f'<span>med bombe (folket under {BOMB_BELOW} %)</span>' if n_bombs else ""
-        verdict = f'<div class="verdict"><span>Tendens</span><span class="marks">{marks}</span><span>{KIND[len(t)]}</span>{bomb_txt}</div>'
+        verdict = f'<div class="verdict"><span>Vår anbefaling</span><span class="marks">{marks}</span><span>{KIND[len(t)]}</span>{bomb_txt}</div>'
     return f"""
 <article class="match" id="kamp-{idx}">{head}
   <p class="headline">{escape(a["headline"])}</p>
@@ -480,9 +480,9 @@ def render(coupon_dir, site_dir, fragment_path=None):
         for p in picks:
             n_rows *= len(p)
         counts = {k: sum(len(p) == k for p in picks) for k in (1, 2, 3)}
-        names = {1: ("spik", "spiker"), 2: ("halvgardering", "halvgarderinger"), 3: ("helgardering", "helgarderinger")}
+        names = {1: ("sikker", "sikre"), 2: ("halvgardering", "halvgarderinger"), 3: ("helgardering", "helgarderinger")}
         parts = [f"{n} {names[k][n != 1]}" for k, n in counts.items() if n]
-        legend = (f'<p class="legend">Tallene er folkets prosent. Markerte ruter er tendensen fra oddsen: {", ".join(parts)}, '
+        legend = (f'<p class="legend">Tallene er folkets prosent. Markerte ruter er vår anbefaling, regnet fra oddsen: {", ".join(parts)}, '
                   f'med <b class="num">{n_bombs}</b> bomber (stiplet, tegn folket gir under {BOMB_BELOW} %). Som system blir det '
                   f'<b class="num">{n_rows}</b> rekker ({_nok(n_rows)} med 1 kr per rekke). Trykk på en kamp for vurderingen.</p>')
 
@@ -513,12 +513,11 @@ def render(coupon_dir, site_dir, fragment_path=None):
   {"".join(_match(m, per_match[str(m["nt"]["eventId"])], m["nt"]["line"], chosen[str(m["nt"]["eventId"])]) for m in matches)}
   <footer>
     <dl>
-      <div><dt>xG</dt> <dd>forventede mål: hvor mange mål sjansene et lag skaper, er verdt i snitt.</dd></div>
-      <div><dt>PDO</dt> <dd>andel skudd på mål som blir mål, pluss andel motstanderskudd på mål som reddes. 1,00 er normalt. Langt over eller under pleier å jevne seg ut.</dd></div>
+      <div><dt>Effektivitet</dt> <dd>hvor mange mål et lag scorer, sammenlignet med hvor mange sjansene vanligvis gir. Langt over eller under pleier å jevne seg ut.</dd></div>
       <div><dt>Oddsen</dt> <dd>oddsen fra Norsk Tippings Oddsen, regnet om til sannsynlighet uten bookmakerens margin. Innrammede tall er tegn der oddsen ligger minst {VALUE_GAP} prosentpoeng over folkets fordeling.</dd></div>
-      <div><dt>Tendens</dt> <dd>spik når oddsen gir favoritten minst {SPIKE_AT} %. Ellers halvgardering med tegn over {KEEP_AT} % og tegnene folket undervurderer mest i forhold til oddsen.</dd></div>
+      <div><dt>Vår anbefaling</dt> <dd>sikker når oddsen gir favoritten minst {SPIKE_AT} %. Ellers halvgardering med tegn over {KEEP_AT} % og tegnene folket undervurderer mest i forhold til oddsen.</dd></div>
       <div><dt>Stjerner</dt> <dd>nøkkelspillerens plass blant alle spillere i ligaen på FotMobs snittkarakter for sesongen: ★★★ topp 15 %, ★★ topp halvdel, ★ resten.</dd></div>
-      <div><dt>Bombe</dt> <dd>et tegn folket gir under {BOMB_BELOW} %. Systemet har minst {MIN_BOMBS}. Mangler det bomber, legges de på spikene der oddsen ligger mest over folket, og halvgarderingen med det svakeste tegnet blir spik, slik at antallet rekker er det samme.</dd></div>
+      <div><dt>Bombe</dt> <dd>et tegn folket gir under {BOMB_BELOW} %. Systemet har minst {MIN_BOMBS}. Mangler det bomber, legges de på de sikre kampene der oddsen ligger mest over folket, og halvgarderingen med det svakeste tegnet blir sikker, slik at antallet rekker er det samme.</dd></div>
     </dl>
     <span>Statistikk fra NIFS, folkets fordeling og odds fra Norsk Tipping. Hentet {datetime.now().strftime("%d.%m.%Y %H.%M")}. Skader og utestengelser fra FotMob. Karantenefare er beregnet fra gule kort i NIFS etter seriens regler.</span>
     <span>18-årsgrense for pengespill. Spill ansvarlig.</span>

@@ -11,6 +11,8 @@ def coupons(max_age=600):
     """Open coupons keyed by dayType. Tips are zipped onto their matches by position."""
     out = {}
     for day in get_json(LIVE_INFO, max_age=max_age)["gameDays"]:
+        if "game" not in day:  # a closed coupon stays listed with only its dayType
+            continue
         game = day["game"]
         matches = sorted(game["matches"], key=lambda m: m["gameEngineSortingNumber"])
         for i, m in enumerate(game["matches"]):

@@ -1,0 +1,437 @@
+{
+  "_coupon": {
+    "headline": "Folket har gått all-in på et United uten seier",
+    "intro": [
+      "Søndagskupongen har seks kamper fra Eliteserien, fem fra Premier League og El Clásico på Camp Nou. Den største uenigheten er på Old Trafford: folket gir Manchester United 60 %, mens oddsen bare gir 43, og det til et lag uten seier på fem seriekamper. Leeds (52 mot 37), Liverpool (58 mot 46), Molde (75 mot 65) og Sarpsborg (61 mot 51) er også spilt langt opp. Motsatt vei går Start: oddsen gir jumboen 44 %, folket bare 35.",
+      "For hver kamp viser vi først tallene som støtter folket, og så det som kan snu kampen. Vår anbefaling følger oddsen: sikker når favoritten har minst 55 % sjanse, ellers halvgardering med tegnene folket undervurderer mest. Systemet har minst tre bomber, tegn folket gir under 20 %, der oddsen ligger høyere enn folket. Denne uka er bombene Fredrikstad, Tromsø og Real Madrid, og for å holde antallet rekker blir tre halvgarderinger sikre: Brann, Start og Newcastle, der oddsen gir tegnet vårt mellom 33 og 44 %."
+    ]
+  },
+  "2417859": {
+    "headline": "Molde smalt til med seks og tar imot et Fredrikstad uten seier",
+    "take": [
+      "Molde smalt til med 6–1 mot Start sist, der Sander Hestetun Kilen scoret tre og Molde skapte over dobbelt så mye som bortelaget. Hjemme er Tjelmelands mannskap sterke: 8-1-3 og 30–14 i mål. Fredrikstad er uten seier på fem seriekamper og gikk på en smell på Stavanger-gresset sist: 2–1-ledelse til pause, så to Viking-mål på to minutter og 2–3. Viking skapte over fire ganger så mye, og Fredrikstad hadde ikke én stor sjanse.",
+      "Over sesongen skaper Molde over 40 % mer enn de slipper til, mens motstanderne skaper halvparten mer enn Fredrikstad. Begge lag har scoret en femdel til en firedel mer enn sjansene tilsier. Fredrikstad er labre 3-2-7 borte, og Daniel Eid, som har startet alle 22 kampene han har spilt, er utestengt. Molde skal vinne denne, men Fredrikstad har slått Molde i de to siste oppgjørene, og det gjør borteseier verdt en bombe."
+    ],
+    "signal": [
+      {
+        "stat": "Sterke hjemme: 8-1-3",
+        "text": "30–14 i mål på Aker stadion, og 6–1 mot Start sist med åtte store sjanser."
+      },
+      {
+        "stat": "Fredrikstad: fem uten seier",
+        "text": "Tre uavgjorte og to tap på de fem siste seriekampene, og bare tre seire på tolv bortekamper."
+      },
+      {
+        "stat": "Eid utestengt",
+        "text": "Daniel Eid står over, og Sigurd Kvile er ute resten av sesongen. Bakre ledd hos Fredrikstad blir tynt."
+      }
+    ],
+    "noise": [
+      {
+        "stat": "Fredrikstad har slått Molde to ganger på rad",
+        "text": "4–2 og 2–1 i fjor, sistnevnte i Molde. Molde har bare én seier på de fem siste oppgjørene."
+      },
+      {
+        "stat": "Molde uten Eirik Hestad",
+        "text": "Eirik Hestad, med åtte seriemål, er skadet sammen med Sivert Sira Hansen og Halldor Stenevik."
+      },
+      {
+        "stat": "Breivik på tre gule",
+        "text": "Emil Breivik, med ni mål og ni målgivende, er ett gult kort fra karantene."
+      }
+    ],
+    "crowd": "Folket gir Molde 75 %, oddsen 65. Både uavgjort (14 mot 20) og borteseier (11 mot 16) er spilt for lite."
+  },
+  "2417595": {
+    "headline": "Kristiansund i fritt fall møter et ubeseiret KFUM",
+    "take": [
+      "Kristiansund har tapt fire seriekamper på rad, sist 1–4 hjemme mot Aalesund. Kristiansund hadde mest ballen, men bare to skudd på mål mot Aalesunds åtte. KFUM er ubeseiret i fire seriekamper og hentet 1–1 i Tromsø sist, selv om Tromsø skapte dobbelt så mye. Isnes' mannskap har tre seire og én uavgjort på den rekka.",
+      "Bak tabellen ser det stygt ut for begge. Motstanderne skaper nesten dobbelt så mye som Kristiansund, og to tredjedeler mer enn KFUM. KFUM har vært effektive, med 22 % flere mål enn sjansene tilsier, og er labre 2-3-6 borte. Kristiansund har 19 poeng og trenger poeng i bunnstriden, men har bare vunnet én av de seks siste oppgjørene mot KFUM. Dette er en vrien kamp, men KFUM skal ikke tape denne."
+    ],
+    "signal": [
+      {
+        "stat": "Alvheim i form: fire mål på fem",
+        "text": "Leander Næss Alvheim har elleve seriemål, fire av dem i de fem siste kampene."
+      },
+      {
+        "stat": "KFUM labre borte: 2-3-6",
+        "text": "13–23 i mål på bortebane, og motstanderne skaper to tredjedeler mer enn KFUM over sesongen."
+      },
+      {
+        "stat": "KFUMs effektivitet",
+        "text": "22 % flere mål enn sjansene tilsier. Slikt pleier å jevne seg ut."
+      }
+    ],
+    "noise": [
+      {
+        "stat": "Fire tap på rad",
+        "text": "Kristiansund har tapt de fire siste seriekampene og sluppet inn 18 mål på dem."
+      },
+      {
+        "stat": "Svak innbyrdes: 1-2-3",
+        "text": "Kristiansund har 1–8 i mål på tre hjemmekamper mot KFUM og tapte 1–2 i Oslo tidligere i år."
+      },
+      {
+        "stat": "Seks på tre gule",
+        "text": "Alvheim og fem lagkamerater er ett gult kort fra karantene, og det kan gjøre Kristiansund forsiktige i duellene."
+      }
+    ],
+    "crowd": "Folket og oddsen er nesten enige: 40 mot 37 % på Kristiansund, 34 mot 35 på KFUM. Ingen tegn skiller seg ut."
+  },
+  "2417593": {
+    "headline": "Lillestrøm får Brann tre dager etter 0–6",
+    "take": [
+      "Lillestrøm tapte 0–6 hjemme mot Real Sociedad torsdag, men skapte omtrent like mye som spanjolene og hadde bare to skudd på mål. I serien vant Ødegaards lag 2–0 i Sandefjord sist, selv om Sandefjord skapte over to og en halv gang så mye. Brann vant 4–1 i Litauen samme kveld, med hattrick av Noah Holm, og skapte nesten dobbelt så mye. I serien har Brann tapt de to siste.",
+      "Tabellen sier Lillestrøm, med 36 poeng mot Branns 29. Tallene bak er jevnere: Brann skaper nesten en tredjedel mer enn Lillestrøm over sesongen, og Lillestrøm har hatt flyt i begge ender. Keeper Pontus Dahlberg redder 75 % av skuddene på mål. Begge lag har bare tre dagers hvile. Vi tror mer på Brann enn folket gjør, selv uten Jacob Lungi Sørensen."
+    ],
+    "signal": [
+      {
+        "stat": "Sju poeng foran Brann",
+        "text": "Lillestrøm har 36 poeng og er ubeseiret i de to siste seriekampene."
+      },
+      {
+        "stat": "Brann: to tap på rad i serien",
+        "text": "0–2 hjemme mot Viking og 1–3 mot Vålerenga. Brann er middels 3-2-6 borte."
+      },
+      {
+        "stat": "Brann uten Lungi Sørensen",
+        "text": "Jacob Lungi Sørensen er utestengt, og Sondre Tronstad og Ulrik Mathisen er skadet."
+      }
+    ],
+    "noise": [
+      {
+        "stat": "Dahlberg redder 75 %",
+        "text": "Lillestrøm har scoret 16 % mer enn sjansene tilsier og har en keeper i toppform. Slikt varer sjelden."
+      },
+      {
+        "stat": "Utspilt i Sandefjord",
+        "text": "Lillestrøm vant 2–0, men Sandefjord skapte over to og en halv gang så mye."
+      },
+      {
+        "stat": "Innbyrdes: 1-1-4",
+        "text": "Lillestrøm har 0–4 i mål på de to siste hjemmekampene mot Brann."
+      }
+    ],
+    "crowd": "Folket gir Lillestrøm 45 %, oddsen 43. Brann er tegnet folket gir litt for lite: 31 mot 33 %."
+  },
+  "2417592": {
+    "headline": "Sarpsborg får besøk av Aalesund uten Reed",
+    "take": [
+      "Sarpsborg ble utspilt hjemme mot Rosenborg sist, 0–3, der Rosenborg skapte over tre ganger så mye. Uka før vant Sel-mannskapet 4–2 i Ålesund. Aalesund slo kraftig tilbake med 4–1 i Kristiansund sist, med to mål av Marcus Haagensen Reed, men Reed er nå skadet. Aalesund har vekslet mellom seier og tap i de seks siste seriekampene.",
+      "Sarpsborg skaper omtrent like mye som de slipper til, men har vært ineffektive: bare fire femdeler av målene sjansene tilsier. Aalesund har ligaens nest svakeste forsvar, motstanderne skaper en firedel mer enn laget selv, og Rekdals mannskap har mistet ledelsen åtte ganger i år. Sarpsborg er middels 4-3-4 hjemme med 12–15 i mål. Sarpsborg er favoritter, men ikke så store som folket tror."
+    ],
+    "signal": [
+      {
+        "stat": "4–2 i Ålesund for to uker siden",
+        "text": "Sarpsborg har 4-0-2 i de seks siste oppgjørene."
+      },
+      {
+        "stat": "Reed skadet",
+        "text": "Marcus Haagensen Reed har seks mål og fire målgivende, tre og tre på de fem siste kampene."
+      },
+      {
+        "stat": "Mistet ledelsen åtte ganger",
+        "text": "Aalesund har seriens nest svakeste forsvar og har kastet bort åtte ledelser."
+      },
+      {
+        "stat": "Sarpsborg ineffektive",
+        "text": "Bare fire femdeler av målene sjansene tilsier. Snur det, kommer målene."
+      }
+    ],
+    "noise": [
+      {
+        "stat": "Middels hjemme: 4-3-4",
+        "text": "Bare tolv mål på elleve hjemmekamper, og 0–3 mot Rosenborg sist."
+      },
+      {
+        "stat": "Christensen i form",
+        "text": "Mathias Christensen har ni seriemål og tre mål og to målgivende på de fem siste."
+      },
+      {
+        "stat": "Karlsbakk på tre gule",
+        "text": "Daniel Karlsbakk, med sju mål, og tre lagkamerater er ett gult kort fra karantene."
+      }
+    ],
+    "crowd": "Folket gir Sarpsborg 61 %, oddsen 51. Både uavgjort (19 mot 23) og borteseier (20 mot 26) er spilt for lite."
+  },
+  "2417594": {
+    "headline": "Uheldige Start tar imot et Sandefjord uten førstekeeperen",
+    "take": [
+      "Start gikk på en smell på Aker stadion sist, 1–6, der Molde skapte over dobbelt så mye. Jumboen har 16 poeng og har tapt de tre siste seriekampene. Sandefjord tapte 0–2 hjemme mot Lillestrøm sist, selv om Sandefjord skapte over to og en halv gang så mye. Det er bare én seier på de seks siste seriekampene for Tegströms lag, men den kom mot Start: 3–0 i september.",
+      "Tabellen lyver her. Start skaper nesten like mye som laget slipper til, men har hatt uflaks i begge ender: under tre firedeler av målene sjansene tilsier, 40 % flere mål imot, og keeperne redder bare 57 %. Sandefjord er motsatt: seriens svakeste angrep, men bare tre firedeler av baklengsmålene sjansene tilsier, og nå er keeper Elias Hadaya skadet. Start skal vinne denne."
+    ],
+    "signal": [
+      {
+        "stat": "3–0 i september",
+        "text": "Sandefjord slo Start på hjemmebane for en måned siden, og Start har ikke slått Sandefjord i de seks siste oppgjørene."
+      },
+      {
+        "stat": "Tre tap på rad",
+        "text": "Start har sluppet inn 13 mål på de tre siste seriekampene og har seriens svakeste forsvar."
+      },
+      {
+        "stat": "Segberg utestengt",
+        "text": "Erlend Segberg har startet alle 22 kampene han har spilt, og står over."
+      }
+    ],
+    "noise": [
+      {
+        "stat": "Start: uflaks i begge ender",
+        "text": "40 % flere mål imot enn sjansene tilsier, og keeperne redder bare 57 %. Slik uflaks varer sjelden."
+      },
+      {
+        "stat": "Hadaya skadet",
+        "text": "Elias Hadaya har stått alle 23 seriekampene og holdt Sandefjord oppe, med 74 % redninger."
+      },
+      {
+        "stat": "Svakeste angrep: 22 mål",
+        "text": "Sandefjord har scoret bare fire femdeler av det sjansene tilsier, og er labre 3-1-7 borte."
+      }
+    ],
+    "crowd": "Folket gir Sandefjord 39 %, oddsen bare 31. Start er spilt langt ned: 35 % hos folket mot oddsens 44."
+  },
+  "2417396": {
+    "headline": "Knallsterke Viking tar imot Tromsø etter Villa-tapet",
+    "take": [
+      "Viking tapte 1–3 mot Aston Villa onsdag, der Villa skapte nesten fire ganger så mye. Peter Christiansen scoret, og han har 14 seriemål, fem av dem på de fem siste. I serien har Jensens mannskap fire strake seire og er knallsterke 11-0-0 hjemme med 41–12 i mål. Tromsø har ikke vunnet på de to siste og spilte 1–1 hjemme mot KFUM sist, selv om Tromsø skapte dobbelt så mye.",
+      "Viking skaper dobbelt så mye som motstanderne, og 43 % av skuddene på mål går inn, mot normalt rundt en tredjedel. Det er flyt, men laget har 56 poeng og er med i gullkampen. Tromsø er middels 4-3-4 borte, men har gitt Viking mye bry: 4–4 og 3–4 i Stavanger de siste årene. Viking skal vinne, men fire dager etter Villa og uten Kristoffer Askildsen er borteseier verdt en bombe."
+    ],
+    "signal": [
+      {
+        "stat": "Knallsterke hjemme: 11-0-0",
+        "text": "Viking har vunnet alle hjemmekampene i serien, med 41–12 i mål."
+      },
+      {
+        "stat": "Christiansen og Tripic",
+        "text": "Peter Christiansen har 14 mål og sju målgivende. Zlatko Tripic har 19 målgivende."
+      },
+      {
+        "stat": "Tromsø: to uten seier",
+        "text": "Uavgjort mot Fredrikstad og KFUM, og Leon Hien er utestengt."
+      }
+    ],
+    "noise": [
+      {
+        "stat": "Fire dager etter Villa",
+        "text": "Viking ble utspilt i Birmingham onsdag. Tromsø har hatt en hel uke."
+      },
+      {
+        "stat": "Askildsen utestengt",
+        "text": "Kristoffer Askildsen, med fem seriemål, står over. Tripic står på sju gule kort og er ett fra karantene."
+      },
+      {
+        "stat": "Vikings flyt",
+        "text": "43 % av skuddene på mål går inn, mot normalt rundt en tredjedel. Slik flyt pleier å jevne seg ut."
+      }
+    ],
+    "crowd": "Folket gir Viking 72 %, oddsen 62. Tromsø er spilt for lite: 12 % hos folket mot oddsens 17."
+  },
+  "2417500": {
+    "headline": "Slitne Palace med ligaens svakeste forsvar møter Newcastle",
+    "take": [
+      "Crystal Palace tapte 0–5 i Brighton for en uke siden og spilte 2–2 mot Beşiktaş i Istanbul torsdag, der Beşiktaş skapte halvparten mer. Sages lag har bare tre dagers hvile. Newcastle har tapt to strake, sist 0–1 hjemme mot Aston Villa, der Villa skapte over halvparten mer og Newcastle hadde ett skudd på mål.",
+      "Palace har seriens svakeste forsvar: motstanderne skyter 17,9 ganger per kamp og skaper 70 % mer enn Palace. Newcastle slipper også til mer enn laget skaper, men har hatt over en uke på seg siden sist. Palace er 1-0-2 hjemme, og Jørgen Strand Larsen er usikker. Vi tror Newcastle tar med seg poengene fra London."
+    ],
+    "signal": [
+      {
+        "stat": "Selhurst Park: 2-1-0",
+        "text": "Palace er ubeseiret hjemme mot Newcastle de siste årene og vant 2–1 der tidligere i år."
+      },
+      {
+        "stat": "Newcastle: to tap på rad",
+        "text": "1–4 mot Coventry og 0–1 mot Aston Villa, og 1-0-2 borte."
+      }
+    ],
+    "noise": [
+      {
+        "stat": "Tre dager etter Istanbul",
+        "text": "Palace spilte i Europa torsdag. Newcastle har hatt åtte dager."
+      },
+      {
+        "stat": "17,9 skudd imot per kamp",
+        "text": "Palace har ligaens svakeste forsvar og tapte 0–5 i Brighton sist."
+      },
+      {
+        "stat": "Strand Larsen usikker",
+        "text": "Jørgen Strand Larsen er usikker, sammen med Quinten Timber og keeper Dean Henderson."
+      }
+    ],
+    "crowd": "Folket gir Palace 40 %, oddsen 33. Newcastle er spilt for lite: 33 % hos folket mot oddsens 41."
+  },
+  "2417501": {
+    "headline": "Brentford uten to sentrale møter et Hull som ikke treffer mål",
+    "take": [
+      "Brentford tapte 1–2 mot Liverpool sist og endte kampen med ni mann: Yehor Yarmoliuk fikk rødt før pause og Vitaly Janelt to gule til slutt. Begge er utestengt. Hull er uten seier på fem seriekamper og hadde ikke ett skudd på mål i 0–1-tapet mot Fulham, der Fulham skapte over åtte ganger så mye.",
+      "Hull er ubeseiret hjemme (1-2-0), men forsvaret lever på keeperen: Hull har sluppet inn bare to tredjedeler av det sjansene tilsier, og keeperen redder 79 %. Brentford skaper en femdel mer enn laget slipper til, og 45 % av skuddene på mål går inn. Andrews' lag har ikke vunnet borte (0-3-0) og har mistet ledelsen fem ganger. Brentford skal likevel vinne denne."
+    ],
+    "signal": [
+      {
+        "stat": "Hull: fem uten seier",
+        "text": "Null skudd på mål i Fulham sist, og bare åtte mål på sju kamper."
+      },
+      {
+        "stat": "Keeperen holder Hull oppe",
+        "text": "79 % redninger og bare to tredjedeler av baklengsmålene sjansene tilsier. Det pleier ikke å vare."
+      },
+      {
+        "stat": "Brentford skaper mer",
+        "text": "15 skudd per kamp mot Hulls 10,7."
+      }
+    ],
+    "noise": [
+      {
+        "stat": "Janelt og Yarmoliuk utestengt",
+        "text": "Vitaly Janelt har startet alle sju kampene. Brentford mister begge på midtbanen."
+      },
+      {
+        "stat": "Ingen borteseier: 0-3-0",
+        "text": "Brentford har mistet ledelsen fem ganger i år."
+      },
+      {
+        "stat": "Brentfords flyt",
+        "text": "45 % av skuddene på mål går inn, mot normalt rundt en tredjedel."
+      }
+    ],
+    "crowd": "Folket og oddsen er nesten helt enige: 57 og 55 % på Brentford. Uavgjort er gitt litt for lite: 21 mot 24 %."
+  },
+  "2417502": {
+    "headline": "Hjemmesvake Liverpool møter kupongens mest effektive lag",
+    "take": [
+      "Liverpool slo Villarreal 4–3 tirsdag etter å ha ligget under 0–2, og skapte nesten halvparten mer. Iraolas lag er 3-1-0 borte, men 0-2-1 på Anfield, med to mål på tre kamper. Brighton har vunnet fire seriekamper på rad, blant dem 5–0 over Crystal Palace, og spilte 0–0 i Jablonec torsdag med 26 skudd.",
+      "Brighton har ligaens beste angrep og forsvar, men har hatt flyt i begge ender: 59 % av skuddene på mål går inn, mot normalt rundt en tredjedel, og laget har scoret 70 % mer enn sjansene tilsier. Brighton skaper likevel 40 % mer enn motstanderne, mens Liverpool skaper litt mer enn de slipper til. Liverpool mangler Dominik Szoboszlai, Brighton en rekke angrepsspillere. Liverpool er favoritter, men Brighton kan ikke utelates."
+    ],
+    "signal": [
+      {
+        "stat": "Anfield: 3-0-0",
+        "text": "Liverpool har vunnet de tre siste hjemmekampene mot Brighton, med 7–1 i mål."
+      },
+      {
+        "stat": "Isak i form",
+        "text": "Alexander Isak har fem seriemål, fire av dem på de fem siste."
+      },
+      {
+        "stat": "Brightons flyt",
+        "text": "59 % av skuddene på mål går inn. Slikt jevner seg ut, og Brighton har bare tre dagers hvile."
+      }
+    ],
+    "noise": [
+      {
+        "stat": "Hjemmesvake: 0-2-1",
+        "text": "Liverpool har ikke vunnet en seriekamp på Anfield i år og tapte 0–3 mot City."
+      },
+      {
+        "stat": "Beste angrep og forsvar",
+        "text": "Brighton har 23–5 i mål på sju kamper og skaper 40 % mer enn motstanderne."
+      },
+      {
+        "stat": "Szoboszlai skadet",
+        "text": "Dominik Szoboszlai er ute, sammen med Hugo Ekitiké og Jeremie Frimpong."
+      }
+    ],
+    "crowd": "Folket gir Liverpool 58 %, oddsen bare 46. Brighton er spilt for lite: 20 % hos folket mot oddsens 30."
+  },
+  "2417503": {
+    "headline": "Bournemouth er langt bedre enn tabellen sier",
+    "take": [
+      "Manchester United tapte 1–4 i Como onsdag, der Como skapte dobbelt så mye, og er uten seier på fem seriekamper. Carricks lag skyter 19,7 ganger per kamp, men har bare scoret fire femdeler av det sjansene tilsier. Bournemouth knuste Milan 3–0 torsdag, og Milan skapte nesten ingenting. Mike Maignan fikk rødt etter 28 minutter.",
+      "Bournemouth har bare seks poeng, men har hatt uflaks i begge ender. Laget skaper over halvparten mer enn det slipper til, har sluppet inn over 70 % flere mål enn sjansene tilsier, og keeperen redder bare halvparten. United har ikke slått Bournemouth i de seks siste oppgjørene og har 4–10 i mål på de tre siste hjemme. United skal ikke være så store favoritter, og vi går mot folket."
+    ],
+    "signal": [
+      {
+        "stat": "Bournemouth: tre dagers hvile",
+        "text": "Milan-kampen torsdag og 0-1-2 borte i serien."
+      },
+      {
+        "stat": "United skaper mer",
+        "text": "En firedel mer enn laget slipper til, og Bryan Mbeumo har fire seriemål."
+      }
+    ],
+    "noise": [
+      {
+        "stat": "Innbyrdes: 0-4-2",
+        "text": "United har ikke vunnet mot Bournemouth på seks forsøk, og tapte 0–3 hjemme to ganger."
+      },
+      {
+        "stat": "Bournemouth: uflaks i begge ender",
+        "text": "Over 70 % flere baklengsmål enn sjansene tilsier, og bare 50 % redninger. Det snur."
+      },
+      {
+        "stat": "United uten seier i fem",
+        "text": "Fire uavgjorte og et tap, og Kobbie Mainoo er skadet."
+      }
+    ],
+    "crowd": "Kupongens største uenighet: folket gir United 60 %, oddsen 43. Både uavgjort (20 mot 26) og borteseier (20 mot 31) er spilt for lite."
+  },
+  "2417709": {
+    "headline": "Jumboen Sunderland får et Leeds som lever på keeperen",
+    "take": [
+      "Sunderland spilte 1–1 i Polen torsdag og skapte litt mer enn Lech Poznań, med elleve skudd på mål. I serien har Le Bris' lag tapt fire på rad og har bare fire poeng. Leeds spilte 1–1 mot Manchester United sist og skapte halvparten mer, men har ikke vunnet på tre.",
+      "Tabellen lyver i begge ender. Sunderland har hatt kupongens største uflaks: keeperen redder bare 39 %, og laget har bare scoret to tredjedeler av det sjansene tilsier. Leeds har ligaens tredje beste forsvar, men har sluppet inn litt over halvparten av det sjansene tilsier, med James Trafford på 80 % redninger. Leeds er ikke så store favoritter som folket tror, og vi tror Sunderland tar poeng."
+    ],
+    "signal": [
+      {
+        "stat": "Fire tap på rad",
+        "text": "Sunderland har ett mål på tre hjemmekamper i serien, og Kevin Danso er utestengt."
+      },
+      {
+        "stat": "Sju mot tre dagers hvile",
+        "text": "Leeds har hatt en hel uke. Sunderland spilte i Poznań torsdag."
+      },
+      {
+        "stat": "Motstanderne skaper halvparten mer",
+        "text": "Sunderland slipper til halvparten mer enn laget skaper selv."
+      }
+    ],
+    "noise": [
+      {
+        "stat": "Sunderlands keeper redder 39 %",
+        "text": "Uflaks i begge ender. Ingen på kupongen har hatt det verre, og slikt snur."
+      },
+      {
+        "stat": "Trafford redder 80 %",
+        "text": "Leeds har sluppet inn seks mål der sjansene tilsier nesten elleve."
+      },
+      {
+        "stat": "Calvert-Lewin usikker",
+        "text": "Dominic Calvert-Lewin, med fire seriemål, er usikker sammen med tre andre."
+      }
+    ],
+    "crowd": "Folket gir Leeds 52 %, oddsen bare 37. Sunderland er spilt for lite: 22 % hos folket mot oddsens 33."
+  },
+  "2417881": {
+    "headline": "Ubeseirede Barcelona tar imot et Real uten Vinícius",
+    "take": [
+      "Barcelona tapte 2–4 i Paris tirsdag, der PSG skapte to tredjedeler mer, men i ligaen er katalanerne 9-0-0 med 39–9 i mål. Lamine Yamal har åtte mål og seks målgivende, Raphinha tolv mål. Real Madrid slo RB Leipzig 4–1 onsdag og skapte dobbelt så mye, men Vinícius Júnior er utestengt.",
+      "Barcelona skaper fire ganger så mye som motstanderne, og 51 % av skuddene på mål går inn. Det er flyt, men nivået er ekte. Real skaper over dobbelt så mye som laget slipper til, og Kylian Mbappé har ni mål, fem av dem på de fem siste. Real har seks poeng opp og er bare 2-0-2 borte. Barcelona skal vinne, men Real har nok kvalitet til at borteseier er verdt en bombe."
+    ],
+    "signal": [
+      {
+        "stat": "Ubeseirede: 9-0-0",
+        "text": "Barcelona har vunnet alle ligakampene, med 39–9 i mål."
+      },
+      {
+        "stat": "Camp Nou: 4-0-0",
+        "text": "Barcelona har vunnet de fire siste hjemmekampene mot Real og fem av de seks siste oppgjørene."
+      },
+      {
+        "stat": "Vinícius utestengt",
+        "text": "Vinícius Júnior står over, og Rodrygo er skadet."
+      }
+    ],
+    "noise": [
+      {
+        "stat": "Barcelona uten tre forsvarere",
+        "text": "Jules Koundé, Andreas Christensen og Eric García er skadet, i tillegg til Dani Olmo."
+      },
+      {
+        "stat": "Mbappé i form",
+        "text": "Kylian Mbappé har fem mål på de fem siste ligakampene."
+      },
+      {
+        "stat": "Barcelonas flyt",
+        "text": "51 % av skuddene på mål går inn, mot normalt rundt en tredjedel."
+      }
+    ],
+    "crowd": "Folket og oddsen er nesten enige om Barcelona (61 og 59 %). Real er spilt for lite: 18 % hos folket mot oddsens 24, mens uavgjort er spilt opp (21 mot 16)."
+  }
+}
