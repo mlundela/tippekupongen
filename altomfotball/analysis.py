@@ -5,6 +5,7 @@ Event rules (verified against Eliteserien 2026 results):
 - Type 10 (penalty goal) carries no score: it marks the scorer's next goal as a penalty.
 """
 
+import sys
 from collections import defaultdict
 from datetime import datetime, timedelta
 
@@ -412,7 +413,7 @@ def match_facts(nt_match, nifs_match):
     try:
         fm = fotmob.unavailable(kickoff, nifs_match["homeTeam"]["name"], nifs_match["awayTeam"]["name"])
     except Exception as e:  # FotMob is unofficial; fall back to inferred absences
-        print(f"FotMob failed for {nifs_match['name']}: {e}")
+        print(f"FotMob failed for {nifs_match['name']}: {e}", file=sys.stderr)
         fm = None
     return {
         "nt": {"eventId": nt_match["gameEngineEventId"], "line": nt_match["gameEngineSortingNumber"],
@@ -435,7 +436,7 @@ def _with_ratings(team, fm):
     try:
         ratings = fotmob.league_ratings(fm["leagueId"])
     except Exception as e:  # FotMob is unofficial; cards render without stars
-        print(f"FotMob ratings failed for league {fm['leagueId']}: {e}")
+        print(f"FotMob ratings failed for league {fm['leagueId']}: {e}", file=sys.stderr)
         ratings = None
     if not ratings:
         return team
@@ -456,7 +457,7 @@ def _with_last_match(team):
         report = fotmob.match_report(datetime.fromisoformat(last["timestamp"]),
                                      last["homeTeam"]["name"], last["awayTeam"]["name"])
     except Exception as e:  # FotMob is unofficial; the page renders without a recap
-        print(f"FotMob report failed for {last['name']}: {e}")
+        print(f"FotMob report failed for {last['name']}: {e}", file=sys.stderr)
         report = None
     if report:
         report["date"] = last["timestamp"][:10]
