@@ -51,11 +51,15 @@ def _candidates(nt_match):
     kickoff = datetime.fromisoformat(nt_match["date"])
     arrangements = {a["ntArrangementId"]: a for a in json.loads(ARRANGEMENTS.read_text())}
     arr = arrangements.get(nt_match["arrangement"]["id"])
-    if arr and arr["nifsTournamentId"]:
-        pool = nifs.stage_matches(nifs.current_stage(arr["nifsTournamentId"])["id"])
-    else:
-        pool = nifs.get(f"matches/?date={kickoff.date().isoformat()}")
-    return [m for m in pool if datetime.fromisoformat(m["timestamp"]) == kickoff]
+
+    def at_kickoff(pool):
+        return [m for m in pool if datetime.fromisoformat(m["timestamp"]) == kickoff]
+
+    if arr:
+        found = at_kickoff(m for s in nifs.current_stages(arr["nifsTournamentId"]) for m in nifs.stage_matches(s["id"]))
+        if found:
+            return found
+    return at_kickoff(nifs.get(f"matches/?date={kickoff.date().isoformat()}"))
 
 
 def link(nt_matches):
