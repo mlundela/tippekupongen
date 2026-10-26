@@ -57,4 +57,8 @@ Result on 2026-10-23: **36/36 matches joined, 55 teams, no conflicts** (no NT id
 
 Fetching `matches/?date=` from NIFS costs 2–5 MB per day. When the NT competition is known, fetch the NIFS stage's matches instead (`stages/{stageId}/matches/`, filter by kickoff).
 
-[`data/nt-nifs-arrangements.json`](../data/nt-nifs-arrangements.json) maps NT `arrangement.id` → NIFS tournament id. The current stage is NIFS `tournaments/{id}/stages/` `[0]` (verified for all six mapped tournaments on 2026-10-23). Unknown arrangements fall back to the date route. Add a row when a new arrangement shows up on a coupon.
+[`data/nt-nifs-arrangements.json`](../data/nt-nifs-arrangements.json) maps NT `arrangement.id` → NIFS tournament id. The current stage is NIFS `tournaments/{id}/stages/` `[0]` (verified for all six mapped tournaments on 2026-10-23). That holds only for one-stage leagues: a tournament with groups or phases (2. divisjon's two avdelinger, Champions League ligaspill + sluttspill, VM, EM, Nations League) has several current stages, so its row has `nifsTournamentId: null` and uses the date route, like an unknown arrangement. Add a row when a new arrangement shows up on a coupon.
+
+NT arrangement ids for international football are often per group or edition (`UEFA Nations League, A, Gr. 4`, `Fotball-VM, Gr C`), and the knockout rounds have their own id (`Champions League` 23 vs the league phase `UEFA Champions League` 100185211). Recurring ones keep their id across seasons. To find ids for competitions not on an open coupon, walk past coupons:
+
+`GET …/tipping/game/resulted-and-closest-before-date?date=<ISO instant, e.g. 2026-10-20T00:00:00Z>` returns the last coupon resulted before that instant, in the same shape as one `gameDays[].game`. Step back with each coupon's `sales.fullTime.saleStopDate`; three years is ~990 coupons. The map was filled this way on 2026-10-26.

@@ -51,7 +51,7 @@ def _candidates(nt_match):
     kickoff = datetime.fromisoformat(nt_match["date"])
     arrangements = {a["ntArrangementId"]: a for a in json.loads(ARRANGEMENTS.read_text())}
     arr = arrangements.get(nt_match["arrangement"]["id"])
-    if arr:
+    if arr and arr["nifsTournamentId"]:
         pool = nifs.stage_matches(nifs.current_stage(arr["nifsTournamentId"])["id"])
     else:
         pool = nifs.get(f"matches/?date={kickoff.date().isoformat()}")
